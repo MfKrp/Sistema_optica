@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matias\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj": {}
+    "C:\\Users\\matias\\Source\\Repos\\Sistema_Optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matias\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj": {
+    "C:\\Users\\matias\\Source\\Repos\\Sistema_Optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matias\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj",
+        "projectUniqueName": "C:\\Users\\matias\\Source\\Repos\\Sistema_Optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj",
         "projectName": "CapaDatos",
-        "projectPath": "C:\\Users\\matias\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj",
+        "projectPath": "C:\\Users\\matias\\Source\\Repos\\Sistema_Optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj",
         "packagesPath": "C:\\Users\\matias\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\matias\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaDatos\\obj\\",
         "projectStyle": "PackageReference",

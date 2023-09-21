@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matias\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaEntidad\\CapaEntidad.csproj": {}
+    "C:\\Users\\matias\\Source\\Repos\\Sistema_Optica\\Sistema_optica\\CapaEntidad\\CapaEntidad.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matias\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaEntidad\\CapaEntidad.csproj": {
+    "C:\\Users\\matias\\Source\\Repos\\Sistema_Optica\\Sistema_optica\\CapaEntidad\\CapaEntidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matias\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaEntidad\\CapaEntidad.csproj",
+        "projectUniqueName": "C:\\Users\\matias\\Source\\Repos\\Sistema_Optica\\Sistema_optica\\CapaEntidad\\CapaEntidad.csproj",
         "projectName": "CapaEntidad",
-        "projectPath": "C:\\Users\\matias\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaEntidad\\CapaEntidad.csproj",
+        "projectPath": "C:\\Users\\matias\\Source\\Repos\\Sistema_Optica\\Sistema_optica\\CapaEntidad\\CapaEntidad.csproj",
         "packagesPath": "C:\\Users\\matias\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\matias\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaEntidad\\obj\\",
         "projectStyle": "PackageReference",
