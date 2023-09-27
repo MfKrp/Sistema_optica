@@ -21,5 +21,34 @@ namespace CapaPresentacion.Sesion
         {
 
         }
+
+        private void TCodigo_empleado_sesion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TCodigo_empleado_sesion_KeyPressEventArgs(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TContraseña_sesion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TContraseña_sesion_KeyPressEventArgs (object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

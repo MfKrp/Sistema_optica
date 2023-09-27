@@ -206,6 +206,7 @@
             TColor.Name = "TColor";
             TColor.Size = new Size(135, 23);
             TColor.TabIndex = 14;
+            TColor.TextChanged += TColor_TextChanged;
             // 
             // TId_prod
             // 
@@ -213,6 +214,7 @@
             TId_prod.Name = "TId_prod";
             TId_prod.Size = new Size(164, 23);
             TId_prod.TabIndex = 15;
+            TId_prod.Text = "--";
             // 
             // TPrecio
             // 
@@ -220,6 +222,7 @@
             TPrecio.Name = "TPrecio";
             TPrecio.Size = new Size(105, 23);
             TPrecio.TabIndex = 16;
+            TPrecio.TextChanged += TPrecio_TextChanged;
             // 
             // BBorrar
             // 

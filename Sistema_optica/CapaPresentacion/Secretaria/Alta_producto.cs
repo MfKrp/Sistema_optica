@@ -26,5 +26,36 @@ namespace CapaPresentacion.Secretaria
         {
 
         }
+
+        private void TColor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TColor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void TPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+
     }
 }

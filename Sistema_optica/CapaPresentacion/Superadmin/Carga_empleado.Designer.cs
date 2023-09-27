@@ -42,7 +42,6 @@
             TApellido = new TextBox();
             TNombre = new TextBox();
             TDni = new TextBox();
-            TFecha_nac = new TextBox();
             TTelefono = new TextBox();
             TCorreo = new TextBox();
             TDireccion = new TextBox();
@@ -53,6 +52,7 @@
             BGuardar = new Button();
             label2 = new Label();
             BBorrar = new Button();
+            DTPNacimiento = new DateTimePicker();
             SuspendLayout();
             // 
             // LNombre
@@ -182,6 +182,7 @@
             TApellido.Name = "TApellido";
             TApellido.Size = new Size(233, 23);
             TApellido.TabIndex = 11;
+            TApellido.TextChanged += TApellido_TextChanged;
             // 
             // TNombre
             // 
@@ -189,6 +190,7 @@
             TNombre.Name = "TNombre";
             TNombre.Size = new Size(233, 23);
             TNombre.TabIndex = 12;
+            TNombre.TextChanged += TNombre_TextChanged;
             // 
             // TDni
             // 
@@ -196,13 +198,7 @@
             TDni.Name = "TDni";
             TDni.Size = new Size(139, 23);
             TDni.TabIndex = 13;
-            // 
-            // TFecha_nac
-            // 
-            TFecha_nac.Location = new Point(236, 262);
-            TFecha_nac.Name = "TFecha_nac";
-            TFecha_nac.Size = new Size(159, 23);
-            TFecha_nac.TabIndex = 14;
+            TDni.TextChanged += TDni_TextChanged;
             // 
             // TTelefono
             // 
@@ -210,6 +206,7 @@
             TTelefono.Name = "TTelefono";
             TTelefono.Size = new Size(186, 23);
             TTelefono.TabIndex = 15;
+            TTelefono.TextChanged += TTelefono_TextChanged;
             // 
             // TCorreo
             // 
@@ -217,6 +214,7 @@
             TCorreo.Name = "TCorreo";
             TCorreo.Size = new Size(209, 23);
             TCorreo.TabIndex = 16;
+            TCorreo.TextChanged += TCorreo_TextChanged;
             // 
             // TDireccion
             // 
@@ -224,6 +222,7 @@
             TDireccion.Name = "TDireccion";
             TDireccion.Size = new Size(273, 23);
             TDireccion.TabIndex = 17;
+            TDireccion.TextChanged += TDireccion_TextChanged;
             // 
             // ComboBox_Perfil
             // 
@@ -239,6 +238,7 @@
             TCodigo_emp.Name = "TCodigo_emp";
             TCodigo_emp.Size = new Size(100, 23);
             TCodigo_emp.TabIndex = 19;
+            TCodigo_emp.TextChanged += TCodigo_emp_TextChanged;
             // 
             // TContrasena
             // 
@@ -246,6 +246,7 @@
             TContrasena.Name = "TContrasena";
             TContrasena.Size = new Size(207, 23);
             TContrasena.TabIndex = 20;
+            TContrasena.TextChanged += TContrasena_TextChanged;
             // 
             // label1
             // 
@@ -293,11 +294,20 @@
             BBorrar.Text = "Borrar";
             BBorrar.UseVisualStyleBackColor = false;
             // 
+            // DTPNacimiento
+            // 
+            DTPNacimiento.Format = DateTimePickerFormat.Short;
+            DTPNacimiento.Location = new Point(236, 262);
+            DTPNacimiento.Name = "DTPNacimiento";
+            DTPNacimiento.Size = new Size(179, 23);
+            DTPNacimiento.TabIndex = 25;
+            // 
             // Carga_empleado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(768, 538);
+            Controls.Add(DTPNacimiento);
             Controls.Add(BBorrar);
             Controls.Add(label2);
             Controls.Add(BGuardar);
@@ -308,7 +318,6 @@
             Controls.Add(TDireccion);
             Controls.Add(TCorreo);
             Controls.Add(TTelefono);
-            Controls.Add(TFecha_nac);
             Controls.Add(TDni);
             Controls.Add(TNombre);
             Controls.Add(TApellido);
@@ -345,7 +354,6 @@
         private TextBox TApellido;
         private TextBox TNombre;
         private TextBox TDni;
-        private TextBox TFecha_nac;
         private TextBox TTelefono;
         private TextBox TCorreo;
         private TextBox TDireccion;
@@ -356,5 +364,6 @@
         private Button BGuardar;
         private Label label2;
         private Button BBorrar;
+        private DateTimePicker DTPNacimiento;
     }
 }

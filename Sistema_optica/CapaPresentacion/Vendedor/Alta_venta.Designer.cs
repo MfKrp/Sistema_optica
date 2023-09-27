@@ -141,6 +141,8 @@
             // 
             // DTGDatosCompra
             // 
+            DTGDatosCompra.AllowUserToAddRows = false;
+            DTGDatosCompra.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
             DTGDatosCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             DTGDatosCompra.BackgroundColor = Color.CadetBlue;

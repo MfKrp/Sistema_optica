@@ -86,6 +86,7 @@
             TDireccion.Name = "TDireccion";
             TDireccion.Size = new Size(421, 23);
             TDireccion.TabIndex = 86;
+            TDireccion.TextChanged += TDireccion_TextChanged;
             // 
             // TCorreo
             // 
@@ -93,6 +94,7 @@
             TCorreo.Name = "TCorreo";
             TCorreo.Size = new Size(284, 23);
             TCorreo.TabIndex = 85;
+            TCorreo.TextChanged += TCorreo_TextChanged;
             // 
             // TTelefono
             // 
@@ -100,6 +102,7 @@
             TTelefono.Name = "TTelefono";
             TTelefono.Size = new Size(159, 23);
             TTelefono.TabIndex = 84;
+            TTelefono.TextChanged += TTelefono_TextChanged;
             // 
             // TDni
             // 
@@ -107,6 +110,7 @@
             TDni.Name = "TDni";
             TDni.Size = new Size(139, 23);
             TDni.TabIndex = 83;
+            TDni.TextChanged += TDni_TextChanged;
             // 
             // TNombre
             // 
@@ -114,6 +118,7 @@
             TNombre.Name = "TNombre";
             TNombre.Size = new Size(233, 23);
             TNombre.TabIndex = 82;
+            TNombre.TextChanged += TNombre_TextChanged;
             // 
             // TApellido
             // 
@@ -121,6 +126,7 @@
             TApellido.Name = "TApellido";
             TApellido.Size = new Size(233, 23);
             TApellido.TabIndex = 81;
+            TApellido.TextChanged += TApellido_TextChanged;
             // 
             // LDireccion
             // 

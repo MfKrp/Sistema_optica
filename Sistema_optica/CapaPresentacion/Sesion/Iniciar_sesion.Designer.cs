@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Iniciar_sesion));
             LCodigoUsuario = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            TCodigo_empleado_sesion = new TextBox();
+            TContraseña_sesion = new TextBox();
             LContrasena = new Label();
             menuStrip1 = new MenuStrip();
             pictureBox1 = new PictureBox();
@@ -51,21 +51,23 @@
             LCodigoUsuario.TabIndex = 1;
             LCodigoUsuario.Text = "CODIGO DE EMPLEADO";
             // 
-            // textBox1
+            // TCodigo_empleado_sesion
             // 
-            textBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(19, 106);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(200, 25);
-            textBox1.TabIndex = 2;
+            TCodigo_empleado_sesion.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TCodigo_empleado_sesion.Location = new Point(19, 106);
+            TCodigo_empleado_sesion.Name = "TCodigo_empleado_sesion";
+            TCodigo_empleado_sesion.Size = new Size(200, 25);
+            TCodigo_empleado_sesion.TabIndex = 2;
+            TCodigo_empleado_sesion.TextChanged += TCodigo_empleado_sesion_TextChanged;
             // 
-            // textBox2
+            // TContraseña_sesion
             // 
-            textBox2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(19, 206);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 25);
-            textBox2.TabIndex = 3;
+            TContraseña_sesion.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TContraseña_sesion.Location = new Point(19, 206);
+            TContraseña_sesion.Name = "TContraseña_sesion";
+            TContraseña_sesion.Size = new Size(200, 25);
+            TContraseña_sesion.TabIndex = 3;
+            TContraseña_sesion.TextChanged += TContraseña_sesion_TextChanged;
             // 
             // LContrasena
             // 
@@ -104,9 +106,9 @@
             // 
             panel1.BackColor = Color.FromArgb(0, 64, 64);
             panel1.Controls.Add(LCodigoUsuario);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(TCodigo_empleado_sesion);
             panel1.Controls.Add(LContrasena);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(TContraseña_sesion);
             panel1.Location = new Point(246, 25);
             panel1.Name = "panel1";
             panel1.Size = new Size(242, 311);
@@ -132,8 +134,8 @@
 
         #endregion
         private Label LCodigoUsuario;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox TCodigo_empleado_sesion;
+        private TextBox TContraseña_sesion;
         private Label LContrasena;
         private MenuStrip menuStrip1;
         private PictureBox pictureBox1;

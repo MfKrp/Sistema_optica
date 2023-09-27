@@ -162,7 +162,7 @@
             LDatoNombre.AutoSize = true;
             LDatoNombre.FlatStyle = FlatStyle.System;
             LDatoNombre.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoNombre.Location = new Point(196, 120);
+            LDatoNombre.Location = new Point(196, 118);
             LDatoNombre.Name = "LDatoNombre";
             LDatoNombre.Size = new Size(61, 23);
             LDatoNombre.TabIndex = 9;
@@ -173,7 +173,7 @@
             LDatoApellido.AutoSize = true;
             LDatoApellido.FlatStyle = FlatStyle.System;
             LDatoApellido.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoApellido.Location = new Point(196, 175);
+            LDatoApellido.Location = new Point(196, 171);
             LDatoApellido.Name = "LDatoApellido";
             LDatoApellido.Size = new Size(61, 23);
             LDatoApellido.TabIndex = 10;
@@ -184,7 +184,7 @@
             LDatoTelefono.AutoSize = true;
             LDatoTelefono.FlatStyle = FlatStyle.System;
             LDatoTelefono.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoTelefono.Location = new Point(196, 229);
+            LDatoTelefono.Location = new Point(196, 225);
             LDatoTelefono.Name = "LDatoTelefono";
             LDatoTelefono.Size = new Size(63, 23);
             LDatoTelefono.TabIndex = 11;
@@ -195,7 +195,7 @@
             LDatoEmail.AutoSize = true;
             LDatoEmail.FlatStyle = FlatStyle.System;
             LDatoEmail.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoEmail.Location = new Point(196, 284);
+            LDatoEmail.Location = new Point(196, 280);
             LDatoEmail.Name = "LDatoEmail";
             LDatoEmail.Size = new Size(48, 23);
             LDatoEmail.TabIndex = 12;
@@ -206,7 +206,7 @@
             LDatoFecha.AutoSize = true;
             LDatoFecha.FlatStyle = FlatStyle.System;
             LDatoFecha.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoFecha.Location = new Point(196, 344);
+            LDatoFecha.Location = new Point(196, 340);
             LDatoFecha.Name = "LDatoFecha";
             LDatoFecha.Size = new Size(46, 23);
             LDatoFecha.TabIndex = 13;
@@ -217,7 +217,7 @@
             LDatoDni.AutoSize = true;
             LDatoDni.FlatStyle = FlatStyle.System;
             LDatoDni.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoDni.Location = new Point(196, 400);
+            LDatoDni.Location = new Point(196, 396);
             LDatoDni.Name = "LDatoDni";
             LDatoDni.Size = new Size(31, 23);
             LDatoDni.TabIndex = 14;
@@ -228,7 +228,7 @@
             LDatoDireccion.AutoSize = true;
             LDatoDireccion.FlatStyle = FlatStyle.System;
             LDatoDireccion.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoDireccion.Location = new Point(414, 122);
+            LDatoDireccion.Location = new Point(414, 118);
             LDatoDireccion.Name = "LDatoDireccion";
             LDatoDireccion.Size = new Size(70, 23);
             LDatoDireccion.TabIndex = 15;
@@ -239,7 +239,7 @@
             LDatoRol.AutoSize = true;
             LDatoRol.FlatStyle = FlatStyle.System;
             LDatoRol.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoRol.Location = new Point(414, 173);
+            LDatoRol.Location = new Point(414, 171);
             LDatoRol.Name = "LDatoRol";
             LDatoRol.Size = new Size(114, 23);
             LDatoRol.TabIndex = 16;

@@ -146,6 +146,7 @@
             TPrecio.Name = "TPrecio";
             TPrecio.Size = new Size(105, 23);
             TPrecio.TabIndex = 70;
+            TPrecio.TextChanged += TPrecio_TextChanged;
             // 
             // ComboBox_Genero
             // 
@@ -161,6 +162,7 @@
             TColor.Name = "TColor";
             TColor.Size = new Size(135, 23);
             TColor.TabIndex = 68;
+            TColor.TextChanged += TColor_TextChanged;
             // 
             // LTalle
             // 
