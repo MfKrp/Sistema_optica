@@ -16,5 +16,15 @@ namespace CapaPresentacion.Vendedor
         {
             InitializeComponent();
         }
+
+        private void DTGDatosCompra_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TVendedorCargo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

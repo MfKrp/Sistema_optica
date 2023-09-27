@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Secretaria\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Modif_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Menu_Secretaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Sesion\Iniciar_sesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -16,7 +25,10 @@
     <Compile Update="Superadmin\Carga_empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Superadmin\Modif_producto.cs">
+    <Compile Update="Superadmin\Modif_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Superadmin\Menu_SuperAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vendedor\Alta_venta.cs">
@@ -25,10 +37,7 @@
     <Compile Update="Vendedor\Alta_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vendedor\Modif_Cliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Vendedor\inicio_vendedor.cs">
+    <Compile Update="Vendedor\Menu_vendedor.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

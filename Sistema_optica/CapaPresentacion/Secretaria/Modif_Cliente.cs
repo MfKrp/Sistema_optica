@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Superadmin
+namespace CapaPresentacion.Secretaria
 {
-    public partial class Modif_producto : Form
+    public partial class Modif_Cliente : Form
     {
-        public Modif_producto()
+        public Modif_Cliente()
         {
             InitializeComponent();
         }

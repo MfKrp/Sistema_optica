@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Vendedor
+namespace CapaPresentacion.Secretaria
 {
-    public partial class Modif_Cliente : Form
+    public partial class Menu_Secretaria : Form
     {
-        public Modif_Cliente()
+        public Menu_Secretaria()
         {
             InitializeComponent();
+        }
+
+        private void TSMItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

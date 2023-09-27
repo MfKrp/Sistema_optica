@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
-            MSLRegistrarVenta = new ToolStripMenuItem();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             LVendedorActual = new Label();
             LCliente = new Label();
             LFechaVta = new Label();
@@ -37,29 +37,6 @@
             TClienteTitular = new TextBox();
             TFechaCompra = new TextBox();
             DTGDatosCompra = new DataGridView();
-            panel1 = new Panel();
-            BAgregarProd = new Button();
-            BReiniciarCarrito = new Button();
-            BRegistrarCompra = new Button();
-            LPrecioVenta = new Label();
-            TPrecioTotal = new TextBox();
-            LInfoProd = new Label();
-            LIDProdCompra = new Label();
-            textBox4 = new TextBox();
-            LNombreProdCompra = new Label();
-            textBox5 = new TextBox();
-            LCantidadCompra = new Label();
-            LPrecioCompra = new Label();
-            NCantidadCompra = new NumericUpDown();
-            TPrecioCompra = new TextBox();
-            LTipoCompra = new Label();
-            textBox6 = new TextBox();
-            LEstiloCompra = new Label();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            LGeneroCompra = new Label();
-            LMarcaCompra = new Label();
-            textBox9 = new TextBox();
             DGCId_Producto = new DataGridViewTextBoxColumn();
             DGCNombreProd = new DataGridViewTextBoxColumn();
             DTCVendedorCargo = new DataGridViewTextBoxColumn();
@@ -68,296 +45,121 @@
             DTGCCantidad = new DataGridViewTextBoxColumn();
             DTCPrecioUnitario = new DataGridViewTextBoxColumn();
             DTGCEliminar = new DataGridViewButtonColumn();
-            menuStrip1.SuspendLayout();
+            LMarcaCompra = new Label();
+            textBox9 = new TextBox();
+            LGeneroCompra = new Label();
+            LEstiloCompra = new Label();
+            LTipoCompra = new Label();
+            NCantidadCompra = new NumericUpDown();
+            LPrecioCompra = new Label();
+            LCantidadCompra = new Label();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            LIDProdCompra = new Label();
+            LInfoProd = new Label();
+            BAgregarProd = new Button();
+            BReiniciarCarrito = new Button();
+            BRegistrarCompra = new Button();
+            LPrecioVenta = new Label();
+            TPrecioTotal = new TextBox();
+            comboBox1 = new ComboBox();
+            LTalle = new Label();
+            LColor = new Label();
+            comboBox2 = new ComboBox();
+            comboBox3 = new ComboBox();
+            checkBox_masc = new CheckBox();
+            checkBox_fem = new CheckBox();
+            checkBox_unisex = new CheckBox();
+            checkBox_L = new CheckBox();
+            checkBox_s = new CheckBox();
+            checkBox_m = new CheckBox();
+            checkBox_xs = new CheckBox();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)DTGDatosCompra).BeginInit();
-            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)NCantidadCompra).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.AutoSize = false;
-            menuStrip1.BackColor = Color.DarkViolet;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { MSLRegistrarVenta });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 60);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // MSLRegistrarVenta
-            // 
-            MSLRegistrarVenta.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            MSLRegistrarVenta.ForeColor = Color.White;
-            MSLRegistrarVenta.Name = "MSLRegistrarVenta";
-            MSLRegistrarVenta.Size = new Size(207, 56);
-            MSLRegistrarVenta.Text = "Registrar Venta";
             // 
             // LVendedorActual
             // 
             LVendedorActual.AutoSize = true;
-            LVendedorActual.Location = new Point(12, 79);
+            LVendedorActual.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
+            LVendedorActual.ForeColor = Color.FromArgb(0, 64, 64);
+            LVendedorActual.Location = new Point(61, 46);
             LVendedorActual.Name = "LVendedorActual";
-            LVendedorActual.Size = new Size(99, 15);
+            LVendedorActual.Size = new Size(137, 21);
             LVendedorActual.TabIndex = 1;
             LVendedorActual.Text = "Vendedor a cargo";
             // 
             // LCliente
             // 
             LCliente.AutoSize = true;
-            LCliente.Location = new Point(294, 79);
+            LCliente.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
+            LCliente.ForeColor = Color.FromArgb(0, 64, 64);
+            LCliente.Location = new Point(313, 48);
             LCliente.Name = "LCliente";
-            LCliente.Size = new Size(78, 15);
+            LCliente.Size = new Size(62, 21);
             LCliente.TabIndex = 2;
-            LCliente.Text = "Cliente titular";
+            LCliente.Text = "Cliente";
             // 
             // LFechaVta
             // 
             LFechaVta.AutoSize = true;
-            LFechaVta.Location = new Point(540, 79);
+            LFechaVta.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LFechaVta.ForeColor = Color.FromArgb(0, 64, 64);
+            LFechaVta.Location = new Point(501, 72);
             LFechaVta.Name = "LFechaVta";
-            LFechaVta.Size = new Size(89, 15);
+            LFechaVta.Size = new Size(135, 23);
             LFechaVta.TabIndex = 3;
             LFechaVta.Text = "Fecha de venta:";
             // 
             // TVendedorCargo
             // 
-            TVendedorCargo.Location = new Point(117, 76);
+            TVendedorCargo.Location = new Point(594, 40);
             TVendedorCargo.Name = "TVendedorCargo";
-            TVendedorCargo.Size = new Size(100, 23);
+            TVendedorCargo.Size = new Size(136, 23);
             TVendedorCargo.TabIndex = 6;
+            TVendedorCargo.TextChanged += TVendedorCargo_TextChanged;
             // 
             // TClienteTitular
             // 
-            TClienteTitular.Location = new Point(378, 76);
+            TClienteTitular.Location = new Point(313, 72);
             TClienteTitular.Name = "TClienteTitular";
-            TClienteTitular.Size = new Size(100, 23);
+            TClienteTitular.Size = new Size(136, 23);
             TClienteTitular.TabIndex = 7;
             // 
             // TFechaCompra
             // 
-            TFechaCompra.Location = new Point(642, 76);
+            TFechaCompra.Location = new Point(642, 72);
             TFechaCompra.Name = "TFechaCompra";
-            TFechaCompra.Size = new Size(146, 23);
+            TFechaCompra.Size = new Size(135, 23);
             TFechaCompra.TabIndex = 8;
             // 
             // DTGDatosCompra
             // 
+            dataGridViewCellStyle1.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            DTGDatosCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            DTGDatosCompra.BackgroundColor = Color.CadetBlue;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            DTGDatosCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             DTGDatosCompra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DTGDatosCompra.Columns.AddRange(new DataGridViewColumn[] { DGCId_Producto, DGCNombreProd, DTCVendedorCargo, DGCCliente, DTCFecha, DTGCCantidad, DTCPrecioUnitario, DTGCEliminar });
-            DTGDatosCompra.Location = new Point(12, 231);
+            DTGDatosCompra.Location = new Point(6, 322);
             DTGDatosCompra.Name = "DTGDatosCompra";
             DTGDatosCompra.RowTemplate.Height = 25;
-            DTGDatosCompra.Size = new Size(624, 207);
+            DTGDatosCompra.Size = new Size(771, 227);
             DTGDatosCompra.TabIndex = 9;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(LMarcaCompra);
-            panel1.Controls.Add(textBox9);
-            panel1.Controls.Add(LGeneroCompra);
-            panel1.Controls.Add(textBox8);
-            panel1.Controls.Add(textBox7);
-            panel1.Controls.Add(LEstiloCompra);
-            panel1.Controls.Add(textBox6);
-            panel1.Controls.Add(LTipoCompra);
-            panel1.Controls.Add(TPrecioCompra);
-            panel1.Controls.Add(NCantidadCompra);
-            panel1.Controls.Add(LPrecioCompra);
-            panel1.Controls.Add(LCantidadCompra);
-            panel1.Controls.Add(textBox5);
-            panel1.Controls.Add(LNombreProdCompra);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(LIDProdCompra);
-            panel1.Controls.Add(LInfoProd);
-            panel1.Location = new Point(12, 105);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(624, 120);
-            panel1.TabIndex = 10;
-            // 
-            // BAgregarProd
-            // 
-            BAgregarProd.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            BAgregarProd.Location = new Point(642, 171);
-            BAgregarProd.Name = "BAgregarProd";
-            BAgregarProd.Size = new Size(146, 54);
-            BAgregarProd.TabIndex = 12;
-            BAgregarProd.Text = "Agregar";
-            BAgregarProd.UseVisualStyleBackColor = true;
-            // 
-            // BReiniciarCarrito
-            // 
-            BReiniciarCarrito.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            BReiniciarCarrito.Location = new Point(642, 105);
-            BReiniciarCarrito.Name = "BReiniciarCarrito";
-            BReiniciarCarrito.Size = new Size(146, 60);
-            BReiniciarCarrito.TabIndex = 13;
-            BReiniciarCarrito.Text = "Reiniciar Carrito";
-            BReiniciarCarrito.UseVisualStyleBackColor = true;
-            // 
-            // BRegistrarCompra
-            // 
-            BRegistrarCompra.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BRegistrarCompra.Location = new Point(642, 387);
-            BRegistrarCompra.Name = "BRegistrarCompra";
-            BRegistrarCompra.Size = new Size(146, 51);
-            BRegistrarCompra.TabIndex = 14;
-            BRegistrarCompra.Text = "Registrar";
-            BRegistrarCompra.UseVisualStyleBackColor = true;
-            // 
-            // LPrecioVenta
-            // 
-            LPrecioVenta.AutoSize = true;
-            LPrecioVenta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LPrecioVenta.Location = new Point(674, 334);
-            LPrecioVenta.Name = "LPrecioVenta";
-            LPrecioVenta.Size = new Size(92, 21);
-            LPrecioVenta.TabIndex = 15;
-            LPrecioVenta.Text = "Precio Total:";
-            // 
-            // TPrecioTotal
-            // 
-            TPrecioTotal.Location = new Point(642, 358);
-            TPrecioTotal.Name = "TPrecioTotal";
-            TPrecioTotal.Size = new Size(146, 23);
-            TPrecioTotal.TabIndex = 16;
-            // 
-            // LInfoProd
-            // 
-            LInfoProd.AutoSize = true;
-            LInfoProd.Location = new Point(228, 9);
-            LInfoProd.Name = "LInfoProd";
-            LInfoProd.Size = new Size(143, 15);
-            LInfoProd.TabIndex = 0;
-            LInfoProd.Text = "Informacion de producto:";
-            // 
-            // LIDProdCompra
-            // 
-            LIDProdCompra.AutoSize = true;
-            LIDProdCompra.Location = new Point(15, 35);
-            LIDProdCompra.Name = "LIDProdCompra";
-            LIDProdCompra.Size = new Size(101, 15);
-            LIDProdCompra.TabIndex = 1;
-            LIDProdCompra.Text = "Codigo Producto:";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(122, 32);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(93, 23);
-            textBox4.TabIndex = 2;
-            // 
-            // LNombreProdCompra
-            // 
-            LNombreProdCompra.AutoSize = true;
-            LNombreProdCompra.Location = new Point(15, 77);
-            LNombreProdCompra.Name = "LNombreProdCompra";
-            LNombreProdCompra.Size = new Size(59, 15);
-            LNombreProdCompra.TabIndex = 3;
-            LNombreProdCompra.Text = "Producto:";
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(80, 74);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(93, 23);
-            textBox5.TabIndex = 4;
-            // 
-            // LCantidadCompra
-            // 
-            LCantidadCompra.AutoSize = true;
-            LCantidadCompra.Location = new Point(228, 35);
-            LCantidadCompra.Name = "LCantidadCompra";
-            LCantidadCompra.Size = new Size(58, 15);
-            LCantidadCompra.TabIndex = 5;
-            LCantidadCompra.Text = "Cantidad:";
-            // 
-            // LPrecioCompra
-            // 
-            LPrecioCompra.AutoSize = true;
-            LPrecioCompra.Location = new Point(369, 35);
-            LPrecioCompra.Name = "LPrecioCompra";
-            LPrecioCompra.Size = new Size(43, 15);
-            LPrecioCompra.TabIndex = 6;
-            LPrecioCompra.Text = "Precio:";
-            // 
-            // NCantidadCompra
-            // 
-            NCantidadCompra.Location = new Point(292, 33);
-            NCantidadCompra.Name = "NCantidadCompra";
-            NCantidadCompra.Size = new Size(71, 23);
-            NCantidadCompra.TabIndex = 7;
-            // 
-            // TPrecioCompra
-            // 
-            TPrecioCompra.Location = new Point(413, 32);
-            TPrecioCompra.Name = "TPrecioCompra";
-            TPrecioCompra.Size = new Size(81, 23);
-            TPrecioCompra.TabIndex = 8;
-            // 
-            // LTipoCompra
-            // 
-            LTipoCompra.AutoSize = true;
-            LTipoCompra.Location = new Point(183, 77);
-            LTipoCompra.Name = "LTipoCompra";
-            LTipoCompra.Size = new Size(33, 15);
-            LTipoCompra.TabIndex = 9;
-            LTipoCompra.Text = "Tipo:";
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(215, 74);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(71, 23);
-            textBox6.TabIndex = 10;
-            // 
-            // LEstiloCompra
-            // 
-            LEstiloCompra.AutoSize = true;
-            LEstiloCompra.Location = new Point(292, 77);
-            LEstiloCompra.Name = "LEstiloCompra";
-            LEstiloCompra.Size = new Size(38, 15);
-            LEstiloCompra.TabIndex = 11;
-            LEstiloCompra.Text = "Estilo:";
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(336, 74);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(71, 23);
-            textBox7.TabIndex = 12;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(467, 74);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(71, 23);
-            textBox8.TabIndex = 13;
-            // 
-            // LGeneroCompra
-            // 
-            LGeneroCompra.AutoSize = true;
-            LGeneroCompra.Location = new Point(413, 77);
-            LGeneroCompra.Name = "LGeneroCompra";
-            LGeneroCompra.Size = new Size(48, 15);
-            LGeneroCompra.TabIndex = 14;
-            LGeneroCompra.Text = "Genero:";
-            // 
-            // LMarcaCompra
-            // 
-            LMarcaCompra.AutoSize = true;
-            LMarcaCompra.Location = new Point(502, 35);
-            LMarcaCompra.Name = "LMarcaCompra";
-            LMarcaCompra.Size = new Size(43, 15);
-            LMarcaCompra.TabIndex = 16;
-            LMarcaCompra.Text = "Marca:";
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new Point(546, 32);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(71, 23);
-            textBox9.TabIndex = 15;
+            DTGDatosCompra.CellContentClick += DTGDatosCompra_CellContentClick;
             // 
             // DGCId_Producto
             // 
@@ -399,42 +201,398 @@
             DTGCEliminar.HeaderText = "Acción";
             DTGCEliminar.Name = "DTGCEliminar";
             // 
+            // LMarcaCompra
+            // 
+            LMarcaCompra.AutoSize = true;
+            LMarcaCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LMarcaCompra.Location = new Point(254, 86);
+            LMarcaCompra.Name = "LMarcaCompra";
+            LMarcaCompra.Size = new Size(63, 23);
+            LMarcaCompra.TabIndex = 16;
+            LMarcaCompra.Text = "Marca:";
+            // 
+            // textBox9
+            // 
+            textBox9.Location = new Point(495, 137);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(81, 23);
+            textBox9.TabIndex = 15;
+            // 
+            // LGeneroCompra
+            // 
+            LGeneroCompra.AutoSize = true;
+            LGeneroCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LGeneroCompra.Location = new Point(11, 134);
+            LGeneroCompra.Name = "LGeneroCompra";
+            LGeneroCompra.Size = new Size(69, 23);
+            LGeneroCompra.TabIndex = 14;
+            LGeneroCompra.Text = "Genero:";
+            // 
+            // LEstiloCompra
+            // 
+            LEstiloCompra.AutoSize = true;
+            LEstiloCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LEstiloCompra.Location = new Point(11, 86);
+            LEstiloCompra.Name = "LEstiloCompra";
+            LEstiloCompra.Size = new Size(58, 23);
+            LEstiloCompra.TabIndex = 11;
+            LEstiloCompra.Text = "Estilo:";
+            // 
+            // LTipoCompra
+            // 
+            LTipoCompra.AutoSize = true;
+            LTipoCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LTipoCompra.ForeColor = Color.FromArgb(0, 64, 64);
+            LTipoCompra.Location = new Point(297, 168);
+            LTipoCompra.Name = "LTipoCompra";
+            LTipoCompra.Size = new Size(49, 23);
+            LTipoCompra.TabIndex = 9;
+            LTipoCompra.Text = "Tipo:";
+            // 
+            // NCantidadCompra
+            // 
+            NCantidadCompra.Location = new Point(672, 138);
+            NCantidadCompra.Name = "NCantidadCompra";
+            NCantidadCompra.Size = new Size(58, 23);
+            NCantidadCompra.TabIndex = 7;
+            // 
+            // LPrecioCompra
+            // 
+            LPrecioCompra.AutoSize = true;
+            LPrecioCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LPrecioCompra.Location = new Point(427, 138);
+            LPrecioCompra.Name = "LPrecioCompra";
+            LPrecioCompra.Size = new Size(62, 23);
+            LPrecioCompra.TabIndex = 6;
+            LPrecioCompra.Text = "Precio:";
+            // 
+            // LCantidadCompra
+            // 
+            LCantidadCompra.AutoSize = true;
+            LCantidadCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LCantidadCompra.Location = new Point(583, 138);
+            LCantidadCompra.Name = "LCantidadCompra";
+            LCantidadCompra.Size = new Size(83, 23);
+            LCantidadCompra.TabIndex = 5;
+            LCantidadCompra.Text = "Cantidad:";
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(155, 40);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(93, 23);
+            textBox5.TabIndex = 4;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(61, 72);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(136, 23);
+            textBox4.TabIndex = 2;
+            // 
+            // LIDProdCompra
+            // 
+            LIDProdCompra.AutoSize = true;
+            LIDProdCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LIDProdCompra.Location = new Point(10, 40);
+            LIDProdCompra.Name = "LIDProdCompra";
+            LIDProdCompra.Size = new Size(139, 23);
+            LIDProdCompra.TabIndex = 1;
+            LIDProdCompra.Text = "Codigo Producto:";
+            // 
+            // LInfoProd
+            // 
+            LInfoProd.AutoSize = true;
+            LInfoProd.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LInfoProd.Location = new Point(6, 0);
+            LInfoProd.Name = "LInfoProd";
+            LInfoProd.Size = new Size(81, 23);
+            LInfoProd.TabIndex = 0;
+            LInfoProd.Text = "Producto";
+            // 
+            // BAgregarProd
+            // 
+            BAgregarProd.BackColor = Color.Green;
+            BAgregarProd.Font = new Font("Sitka Text", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
+            BAgregarProd.ForeColor = Color.White;
+            BAgregarProd.Location = new Point(788, 214);
+            BAgregarProd.Name = "BAgregarProd";
+            BAgregarProd.Size = new Size(146, 54);
+            BAgregarProd.TabIndex = 12;
+            BAgregarProd.Text = "Agregar";
+            BAgregarProd.UseVisualStyleBackColor = false;
+            // 
+            // BReiniciarCarrito
+            // 
+            BReiniciarCarrito.BackColor = Color.Red;
+            BReiniciarCarrito.Font = new Font("Sitka Text", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
+            BReiniciarCarrito.ForeColor = Color.White;
+            BReiniciarCarrito.Location = new Point(788, 147);
+            BReiniciarCarrito.Name = "BReiniciarCarrito";
+            BReiniciarCarrito.Size = new Size(146, 60);
+            BReiniciarCarrito.TabIndex = 13;
+            BReiniciarCarrito.Text = "Reiniciar Carrito";
+            BReiniciarCarrito.UseVisualStyleBackColor = false;
+            // 
+            // BRegistrarCompra
+            // 
+            BRegistrarCompra.BackColor = Color.Green;
+            BRegistrarCompra.Font = new Font("Sitka Text", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
+            BRegistrarCompra.ForeColor = Color.White;
+            BRegistrarCompra.Location = new Point(793, 478);
+            BRegistrarCompra.Name = "BRegistrarCompra";
+            BRegistrarCompra.Size = new Size(145, 45);
+            BRegistrarCompra.TabIndex = 14;
+            BRegistrarCompra.Text = "Registrar";
+            BRegistrarCompra.UseVisualStyleBackColor = false;
+            // 
+            // LPrecioVenta
+            // 
+            LPrecioVenta.AutoSize = true;
+            LPrecioVenta.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LPrecioVenta.ForeColor = Color.FromArgb(0, 64, 64);
+            LPrecioVenta.Location = new Point(807, 392);
+            LPrecioVenta.Name = "LPrecioVenta";
+            LPrecioVenta.Size = new Size(112, 23);
+            LPrecioVenta.TabIndex = 15;
+            LPrecioVenta.Text = "Precio Total:";
+            // 
+            // TPrecioTotal
+            // 
+            TPrecioTotal.Location = new Point(803, 418);
+            TPrecioTotal.Name = "TPrecioTotal";
+            TPrecioTotal.Size = new Size(123, 23);
+            TPrecioTotal.TabIndex = 16;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(352, 168);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(153, 23);
+            comboBox1.TabIndex = 17;
+            // 
+            // LTalle
+            // 
+            LTalle.AutoSize = true;
+            LTalle.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LTalle.Location = new Point(495, 86);
+            LTalle.Name = "LTalle";
+            LTalle.Size = new Size(52, 23);
+            LTalle.TabIndex = 18;
+            LTalle.Text = "Talle:";
+            // 
+            // LColor
+            // 
+            LColor.AutoSize = true;
+            LColor.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LColor.ForeColor = Color.FromArgb(0, 64, 64);
+            LColor.Location = new Point(540, 168);
+            LColor.Name = "LColor";
+            LColor.Size = new Size(56, 23);
+            LColor.TabIndex = 19;
+            LColor.Text = "Color:";
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(323, 89);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(153, 23);
+            comboBox2.TabIndex = 20;
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(75, 86);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(153, 23);
+            comboBox3.TabIndex = 21;
+            // 
+            // checkBox_masc
+            // 
+            checkBox_masc.AutoSize = true;
+            checkBox_masc.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox_masc.Location = new Point(103, 137);
+            checkBox_masc.Name = "checkBox_masc";
+            checkBox_masc.Size = new Size(109, 22);
+            checkBox_masc.TabIndex = 22;
+            checkBox_masc.Text = "M (masculino)";
+            checkBox_masc.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_fem
+            // 
+            checkBox_fem.AutoSize = true;
+            checkBox_fem.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox_fem.Location = new Point(218, 137);
+            checkBox_fem.Name = "checkBox_fem";
+            checkBox_fem.Size = new Size(99, 22);
+            checkBox_fem.TabIndex = 23;
+            checkBox_fem.Text = "F (femenino)";
+            checkBox_fem.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_unisex
+            // 
+            checkBox_unisex.AutoSize = true;
+            checkBox_unisex.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox_unisex.Location = new Point(323, 137);
+            checkBox_unisex.Name = "checkBox_unisex";
+            checkBox_unisex.Size = new Size(86, 22);
+            checkBox_unisex.TabIndex = 24;
+            checkBox_unisex.Text = "U (unisex)";
+            checkBox_unisex.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_L
+            // 
+            checkBox_L.AutoSize = true;
+            checkBox_L.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox_L.Location = new Point(696, 91);
+            checkBox_L.Name = "checkBox_L";
+            checkBox_L.Size = new Size(34, 22);
+            checkBox_L.TabIndex = 25;
+            checkBox_L.Text = "L";
+            checkBox_L.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_s
+            // 
+            checkBox_s.AutoSize = true;
+            checkBox_s.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox_s.Location = new Point(612, 91);
+            checkBox_s.Name = "checkBox_s";
+            checkBox_s.Size = new Size(34, 22);
+            checkBox_s.TabIndex = 26;
+            checkBox_s.Text = "S";
+            checkBox_s.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_m
+            // 
+            checkBox_m.AutoSize = true;
+            checkBox_m.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox_m.Location = new Point(652, 91);
+            checkBox_m.Name = "checkBox_m";
+            checkBox_m.Size = new Size(38, 22);
+            checkBox_m.TabIndex = 27;
+            checkBox_m.Text = "M";
+            checkBox_m.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_xs
+            // 
+            checkBox_xs.AutoSize = true;
+            checkBox_xs.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox_xs.Location = new Point(564, 91);
+            checkBox_xs.Name = "checkBox_xs";
+            checkBox_xs.Size = new Size(42, 22);
+            checkBox_xs.TabIndex = 28;
+            checkBox_xs.Text = "XS";
+            checkBox_xs.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(checkBox_masc);
+            panel1.Controls.Add(checkBox_fem);
+            panel1.Controls.Add(checkBox_unisex);
+            panel1.Controls.Add(checkBox_xs);
+            panel1.Controls.Add(LInfoProd);
+            panel1.Controls.Add(checkBox_s);
+            panel1.Controls.Add(comboBox3);
+            panel1.Controls.Add(checkBox_m);
+            panel1.Controls.Add(comboBox2);
+            panel1.Controls.Add(TVendedorCargo);
+            panel1.Controls.Add(checkBox_L);
+            panel1.Controls.Add(LMarcaCompra);
+            panel1.Controls.Add(LTalle);
+            panel1.Controls.Add(LGeneroCompra);
+            panel1.Controls.Add(NCantidadCompra);
+            panel1.Controls.Add(LEstiloCompra);
+            panel1.Controls.Add(LCantidadCompra);
+            panel1.Controls.Add(textBox9);
+            panel1.Controls.Add(LPrecioCompra);
+            panel1.Controls.Add(textBox5);
+            panel1.Controls.Add(LIDProdCompra);
+            panel1.ForeColor = Color.FromArgb(0, 64, 64);
+            panel1.Location = new Point(19, 127);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(745, 172);
+            panel1.TabIndex = 29;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.CadetBlue;
+            panel2.Location = new Point(6, 111);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(771, 205);
+            panel2.TabIndex = 30;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(0, 64, 64);
+            label1.Location = new Point(274, 76);
+            label1.Name = "label1";
+            label1.Size = new Size(33, 19);
+            label1.TabIndex = 33;
+            label1.Text = "DNI";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(0, 64, 64);
+            label2.Location = new Point(22, 76);
+            label2.Name = "label2";
+            label2.Size = new Size(33, 19);
+            label2.TabIndex = 34;
+            label2.Text = "DNI";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(0, 64, 64);
+            label3.Location = new Point(663, 50);
+            label3.Name = "label3";
+            label3.Size = new Size(101, 19);
+            label3.TabIndex = 35;
+            label3.Text = "(dd/mm/aaaa)";
+            // 
             // Alta_venta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(946, 565);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(LColor);
+            Controls.Add(comboBox1);
             Controls.Add(TPrecioTotal);
             Controls.Add(LPrecioVenta);
             Controls.Add(BRegistrarCompra);
             Controls.Add(BReiniciarCarrito);
             Controls.Add(BAgregarProd);
-            Controls.Add(panel1);
             Controls.Add(DTGDatosCompra);
+            Controls.Add(LTipoCompra);
             Controls.Add(TFechaCompra);
             Controls.Add(TClienteTitular);
-            Controls.Add(TVendedorCargo);
             Controls.Add(LFechaVta);
             Controls.Add(LCliente);
+            Controls.Add(textBox4);
             Controls.Add(LVendedorActual);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
+            Controls.Add(panel1);
+            Controls.Add(panel2);
             Name = "Alta_venta";
             Text = "Form1";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DTGDatosCompra).EndInit();
+            ((System.ComponentModel.ISupportInitialize)NCantidadCompra).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)NCantidadCompra).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem MSLRegistrarVenta;
         private Label LVendedorActual;
         private Label LCliente;
         private Label LFechaVta;
@@ -442,26 +600,20 @@
         private TextBox TClienteTitular;
         private TextBox TFechaCompra;
         private DataGridView DTGDatosCompra;
-        private Panel panel1;
         private Button BAgregarProd;
         private Button BReiniciarCarrito;
         private Button BRegistrarCompra;
         private Label LPrecioVenta;
         private TextBox TPrecioTotal;
         private TextBox textBox5;
-        private Label LNombreProdCompra;
         private TextBox textBox4;
         private Label LIDProdCompra;
         private Label LInfoProd;
         private Label LMarcaCompra;
         private TextBox textBox9;
         private Label LGeneroCompra;
-        private TextBox textBox8;
-        private TextBox textBox7;
         private Label LEstiloCompra;
-        private TextBox textBox6;
         private Label LTipoCompra;
-        private TextBox TPrecioCompra;
         private NumericUpDown NCantidadCompra;
         private Label LPrecioCompra;
         private Label LCantidadCompra;
@@ -473,5 +625,22 @@
         private DataGridViewTextBoxColumn DTGCCantidad;
         private DataGridViewTextBoxColumn DTCPrecioUnitario;
         private DataGridViewButtonColumn DTGCEliminar;
+        private ComboBox comboBox1;
+        private Label LTalle;
+        private Label LColor;
+        private ComboBox comboBox2;
+        private ComboBox comboBox3;
+        private CheckBox checkBox_masc;
+        private CheckBox checkBox_fem;
+        private CheckBox checkBox_unisex;
+        private CheckBox checkBox_L;
+        private CheckBox checkBox_s;
+        private CheckBox checkBox_m;
+        private CheckBox checkBox_xs;
+        private Panel panel1;
+        private Panel panel2;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }

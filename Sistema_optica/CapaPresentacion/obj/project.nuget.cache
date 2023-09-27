@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "XeTzwTpxM8ZjzCSwh61vUcIXcQsgBVPULxc9OcYp/svrzzhY6w1uNZK2VfGuxOZxqdf+f2xXbWOZerIv9EPhxw==",
+  "dgSpecHash": "0KqXtn7+aP9qsixm4DwN0Yg4YJ1ZILK4U88sSvIownlVsf/njPrMw5LHdamyNZyHy7LaGoyWTgqWjYyrmdu/FQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\source\\repos\\Sistema_optica\\Sistema_optica\\CapaPresentacion\\CapaPresentacion.csproj",
+  "projectFilePath": "C:\\Users\\Familiar\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaPresentacion\\CapaPresentacion.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512"
+    "C:\\Users\\Familiar\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

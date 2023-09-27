@@ -16,5 +16,10 @@ namespace CapaPresentacion.Vendedor
         {
             InitializeComponent();
         }
+
+        private void TDniCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
