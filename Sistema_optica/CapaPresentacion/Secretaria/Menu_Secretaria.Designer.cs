@@ -31,10 +31,11 @@
             menuStrip1 = new MenuStrip();
             MSLMenu = new ToolStripMenuItem();
             menuStrip2 = new MenuStrip();
-            TSMItem = new ToolStripMenuItem();
-            toolStripMenuItem1 = new ToolStripMenuItem();
-            generarVentaToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem2 = new ToolStripMenuItem();
+            TSMBAgregarProducto = new ToolStripMenuItem();
+            TSMBVerClientes = new ToolStripMenuItem();
+            TSMBVerProductos = new ToolStripMenuItem();
+            TSMBVerPerfil = new ToolStripMenuItem();
+            TSMBCerrarSesion = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             menuStrip2.SuspendLayout();
             SuspendLayout();
@@ -63,48 +64,58 @@
             menuStrip2.AutoSize = false;
             menuStrip2.BackColor = Color.CadetBlue;
             menuStrip2.Dock = DockStyle.Left;
-            menuStrip2.Items.AddRange(new ToolStripItem[] { TSMItem, toolStripMenuItem1, generarVentaToolStripMenuItem, toolStripMenuItem2 });
+            menuStrip2.Items.AddRange(new ToolStripItem[] { TSMBAgregarProducto, TSMBVerClientes, TSMBVerProductos, TSMBVerPerfil, TSMBCerrarSesion });
             menuStrip2.Location = new Point(0, 95);
             menuStrip2.Name = "menuStrip2";
             menuStrip2.Size = new Size(180, 404);
             menuStrip2.TabIndex = 2;
             menuStrip2.Text = "menuStrip2";
             // 
-            // TSMItem
+            // TSMBAgregarProducto
             // 
-            TSMItem.BackColor = Color.FromArgb(0, 64, 64);
-            TSMItem.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TSMItem.ForeColor = Color.White;
-            TSMItem.Name = "TSMItem";
-            TSMItem.Size = new Size(173, 27);
-            TSMItem.Text = "Agregar Producto";
-            TSMItem.Click += TSMItem_Click;
+            TSMBAgregarProducto.BackColor = Color.FromArgb(0, 64, 64);
+            TSMBAgregarProducto.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMBAgregarProducto.ForeColor = Color.White;
+            TSMBAgregarProducto.Name = "TSMBAgregarProducto";
+            TSMBAgregarProducto.Size = new Size(173, 27);
+            TSMBAgregarProducto.Text = "Agregar Producto";
+            TSMBAgregarProducto.Click += TSMItem_Click;
             // 
-            // toolStripMenuItem1
+            // TSMBVerClientes
             // 
-            toolStripMenuItem1.BackColor = Color.FromArgb(0, 64, 64);
-            toolStripMenuItem1.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStripMenuItem1.ForeColor = Color.White;
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(173, 27);
-            toolStripMenuItem1.Text = "Cliente";
+            TSMBVerClientes.BackColor = Color.FromArgb(0, 64, 64);
+            TSMBVerClientes.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMBVerClientes.ForeColor = Color.White;
+            TSMBVerClientes.Name = "TSMBVerClientes";
+            TSMBVerClientes.Size = new Size(173, 27);
+            TSMBVerClientes.Text = "Cliente";
             // 
-            // generarVentaToolStripMenuItem
+            // TSMBVerProductos
             // 
-            generarVentaToolStripMenuItem.BackColor = Color.FromArgb(0, 64, 64);
-            generarVentaToolStripMenuItem.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            generarVentaToolStripMenuItem.ForeColor = Color.White;
-            generarVentaToolStripMenuItem.Name = "generarVentaToolStripMenuItem";
-            generarVentaToolStripMenuItem.Size = new Size(173, 27);
-            generarVentaToolStripMenuItem.Text = "Productos";
+            TSMBVerProductos.BackColor = Color.FromArgb(0, 64, 64);
+            TSMBVerProductos.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMBVerProductos.ForeColor = Color.White;
+            TSMBVerProductos.Name = "TSMBVerProductos";
+            TSMBVerProductos.Size = new Size(173, 27);
+            TSMBVerProductos.Text = "Productos";
             // 
-            // toolStripMenuItem2
+            // TSMBVerPerfil
             // 
-            toolStripMenuItem2.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStripMenuItem2.ForeColor = Color.White;
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(173, 23);
-            toolStripMenuItem2.Text = "VER PERFIL";
+            TSMBVerPerfil.BackColor = Color.FromArgb(0, 64, 64);
+            TSMBVerPerfil.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMBVerPerfil.ForeColor = Color.White;
+            TSMBVerPerfil.Name = "TSMBVerPerfil";
+            TSMBVerPerfil.Size = new Size(173, 27);
+            TSMBVerPerfil.Text = "Ver Perfil";
+            // 
+            // TSMBCerrarSesion
+            // 
+            TSMBCerrarSesion.BackColor = Color.FromArgb(0, 64, 64);
+            TSMBCerrarSesion.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMBCerrarSesion.ForeColor = Color.White;
+            TSMBCerrarSesion.Name = "TSMBCerrarSesion";
+            TSMBCerrarSesion.Size = new Size(173, 27);
+            TSMBCerrarSesion.Text = "Cerrar Sesión";
             // 
             // Menu_Secretaria
             // 
@@ -127,9 +138,10 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem MSLMenu;
         private MenuStrip menuStrip2;
-        private ToolStripMenuItem TSMItem;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem generarVentaToolStripMenuItem;
-        private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem TSMBAgregarProducto;
+        private ToolStripMenuItem TSMBVerClientes;
+        private ToolStripMenuItem TSMBVerProductos;
+        private ToolStripMenuItem TSMBVerPerfil;
+        private ToolStripMenuItem TSMBCerrarSesion;
     }
 }

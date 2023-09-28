@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaPresentacion.Secretaria;
+using CapaPresentacion.Superadmin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,18 +29,9 @@ namespace CapaPresentacion.Sesion
 
         }
 
-        private void TCodigo_empleado_sesion_KeyPressEventArgs(object sender, KeyPressEventArgs e)
+        private void TContraseña_sesion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
 
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
         }
 
         private void TContraseña_sesion_TextChanged(object sender, EventArgs e)
@@ -46,9 +39,34 @@ namespace CapaPresentacion.Sesion
 
         }
 
-        private void TContraseña_sesion_KeyPressEventArgs (object sender, KeyPressEventArgs e)
+        private void BSalir_Click(object sender, EventArgs e)
         {
+            //cuando se haga click en este boton, se cerrara el formulario
+            this.Close();
+        }
 
+        private void BIngresar_Click(object sender, EventArgs e)
+        {
+            /*Falta hacer las comprobaciones restantes para iniciar menus diferentes en base al perfil de
+             usuario*/
+
+            Menu_Secretaria form = new Menu_Secretaria();
+
+            form.Show();
+            this.Hide(); //se esconde el logueo
+
+            form.FormClosing += frm_closing; /*cuando se cierra el formulario, se activa el manejador frm_closing
+                                              que vuelve a mostrar inicio_sesion*/
+
+        }
+
+        private void frm_closing(object sender, FormClosingEventArgs e)
+        {
+            /*cuando el formulario se cierre, se reinician los campos*/
+            TCodigo_empleado_sesion.Text = "";
+            TContraseña_sesion.Text = "";
+
+            this.Show();
         }
     }
 }

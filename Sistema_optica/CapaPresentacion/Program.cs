@@ -1,3 +1,9 @@
+using CapaPresentacion.Sesion;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 namespace CapaPresentacion
 {
     internal static class Program
@@ -11,7 +17,7 @@ namespace CapaPresentacion
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new inicio_vendedor());
+            Application.Run(new Iniciar_sesion());
         }
     }
 }

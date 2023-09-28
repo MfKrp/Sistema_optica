@@ -36,6 +36,8 @@
             menuStrip1 = new MenuStrip();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
+            BSalir = new FontAwesome.Sharp.IconButton();
+            BIngresar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -68,6 +70,7 @@
             TContraseña_sesion.Size = new Size(200, 25);
             TContraseña_sesion.TabIndex = 3;
             TContraseña_sesion.TextChanged += TContraseña_sesion_TextChanged;
+            TContraseña_sesion.KeyPress += TContraseña_sesion_KeyPress;
             // 
             // LContrasena
             // 
@@ -105,6 +108,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 64, 64);
+            panel1.Controls.Add(BSalir);
+            panel1.Controls.Add(BIngresar);
             panel1.Controls.Add(LCodigoUsuario);
             panel1.Controls.Add(TCodigo_empleado_sesion);
             panel1.Controls.Add(LContrasena);
@@ -113,6 +118,37 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(242, 311);
             panel1.TabIndex = 6;
+            // 
+            // BSalir
+            // 
+            BSalir.BackColor = Color.Red;
+            BSalir.FlatStyle = FlatStyle.Popup;
+            BSalir.ForeColor = Color.White;
+            BSalir.IconChar = FontAwesome.Sharp.IconChar.None;
+            BSalir.IconColor = Color.Black;
+            BSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            BSalir.Location = new Point(19, 264);
+            BSalir.Name = "BSalir";
+            BSalir.Size = new Size(96, 29);
+            BSalir.TabIndex = 7;
+            BSalir.Text = "Salir";
+            BSalir.UseVisualStyleBackColor = false;
+            BSalir.Click += BSalir_Click;
+            // 
+            // BIngresar
+            // 
+            BIngresar.BackColor = Color.ForestGreen;
+            BIngresar.FlatStyle = FlatStyle.Popup;
+            BIngresar.IconChar = FontAwesome.Sharp.IconChar.None;
+            BIngresar.IconColor = Color.Black;
+            BIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            BIngresar.Location = new Point(131, 264);
+            BIngresar.Name = "BIngresar";
+            BIngresar.Size = new Size(88, 29);
+            BIngresar.TabIndex = 6;
+            BIngresar.Text = "Ingresar";
+            BIngresar.UseVisualStyleBackColor = false;
+            BIngresar.Click += BIngresar_Click;
             // 
             // Iniciar_sesion
             // 
@@ -123,8 +159,10 @@
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
             Name = "Iniciar_sesion";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Iniciar_sesion";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
@@ -140,5 +178,7 @@
         private MenuStrip menuStrip1;
         private PictureBox pictureBox1;
         private Panel panel1;
+        private FontAwesome.Sharp.IconButton BSalir;
+        private FontAwesome.Sharp.IconButton BIngresar;
     }
 }

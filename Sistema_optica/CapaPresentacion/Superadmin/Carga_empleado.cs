@@ -114,5 +114,10 @@ namespace CapaPresentacion.Superadmin
         {
             //limitar la cantidad de caracteres a 5
         }
+
+        private void Carga_empleado_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -334,6 +334,7 @@
             Controls.Add(LNombre);
             Name = "Carga_empleado";
             Text = "Carga_empleado";
+            Load += Carga_empleado_Load;
             ResumeLayout(false);
             PerformLayout();
         }
