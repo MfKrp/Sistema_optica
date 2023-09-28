@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Secretaria
+namespace CapaPresentacion.Superadmin
 {
-    public partial class Form1 : Form
+    public partial class Ver_productos : Form
     {
-        public Form1()
+        public Ver_productos()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

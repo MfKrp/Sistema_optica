@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion.Secretaria
 {
-    partial class Form1
+    partial class Ver_clientes
     {
         /// <summary>
         /// Required designer variable.
