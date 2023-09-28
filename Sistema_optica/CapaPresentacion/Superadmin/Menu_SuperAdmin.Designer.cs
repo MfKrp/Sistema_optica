@@ -47,7 +47,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { MSLMenu });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 95);
+            menuStrip1.Size = new Size(950, 95);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -67,7 +67,7 @@
             MSSuperAdmin.Items.AddRange(new ToolStripItem[] { TSMRegistrarEmpleado, TSMBVerEmpleados, TSMBVerProductos, TSMBVerPerfil, MSBCerrarSesion });
             MSSuperAdmin.Location = new Point(0, 95);
             MSSuperAdmin.Name = "MSSuperAdmin";
-            MSSuperAdmin.Size = new Size(180, 355);
+            MSSuperAdmin.Size = new Size(180, 353);
             MSSuperAdmin.TabIndex = 3;
             MSSuperAdmin.Text = "menuStrip2";
             // 
@@ -121,7 +121,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(950, 448);
             Controls.Add(MSSuperAdmin);
             Controls.Add(menuStrip1);
             Name = "Menu_SuperAdmin";
