@@ -88,7 +88,7 @@
             TSMBVerClientes.ForeColor = Color.White;
             TSMBVerClientes.Name = "TSMBVerClientes";
             TSMBVerClientes.Size = new Size(173, 27);
-            TSMBVerClientes.Text = "Cliente";
+            TSMBVerClientes.Text = "Clientes";
             // 
             // TSMBVerProductos
             // 

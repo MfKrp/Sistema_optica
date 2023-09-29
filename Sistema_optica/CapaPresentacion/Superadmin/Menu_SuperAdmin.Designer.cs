@@ -67,7 +67,7 @@
             MSSuperAdmin.Items.AddRange(new ToolStripItem[] { TSMRegistrarEmpleado, TSMBVerEmpleados, TSMBVerProductos, TSMBVerPerfil, MSBCerrarSesion });
             MSSuperAdmin.Location = new Point(0, 95);
             MSSuperAdmin.Name = "MSSuperAdmin";
-            MSSuperAdmin.Size = new Size(180, 353);
+            MSSuperAdmin.Size = new Size(174, 353);
             MSSuperAdmin.TabIndex = 3;
             MSSuperAdmin.Text = "menuStrip2";
             // 
@@ -77,7 +77,7 @@
             TSMRegistrarEmpleado.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             TSMRegistrarEmpleado.ForeColor = Color.White;
             TSMRegistrarEmpleado.Name = "TSMRegistrarEmpleado";
-            TSMRegistrarEmpleado.Size = new Size(173, 27);
+            TSMRegistrarEmpleado.Size = new Size(169, 349);
             TSMRegistrarEmpleado.Text = "Registrar Empleado";
             // 
             // TSMBVerEmpleados
@@ -86,7 +86,7 @@
             TSMBVerEmpleados.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             TSMBVerEmpleados.ForeColor = Color.White;
             TSMBVerEmpleados.Name = "TSMBVerEmpleados";
-            TSMBVerEmpleados.Size = new Size(173, 27);
+            TSMBVerEmpleados.Size = new Size(102, 349);
             TSMBVerEmpleados.Text = "Empleados";
             TSMBVerEmpleados.Click += toolStripMenuItem4_Click;
             // 
@@ -96,7 +96,7 @@
             TSMBVerProductos.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             TSMBVerProductos.ForeColor = Color.White;
             TSMBVerProductos.Name = "TSMBVerProductos";
-            TSMBVerProductos.Size = new Size(173, 27);
+            TSMBVerProductos.Size = new Size(96, 349);
             TSMBVerProductos.Text = "Productos";
             // 
             // TSMBVerPerfil
@@ -105,7 +105,7 @@
             TSMBVerPerfil.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             TSMBVerPerfil.ForeColor = Color.White;
             TSMBVerPerfil.Name = "TSMBVerPerfil";
-            TSMBVerPerfil.Size = new Size(173, 27);
+            TSMBVerPerfil.Size = new Size(91, 349);
             TSMBVerPerfil.Text = "Ver Perfil";
             // 
             // MSBCerrarSesion
@@ -114,7 +114,7 @@
             MSBCerrarSesion.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             MSBCerrarSesion.ForeColor = Color.White;
             MSBCerrarSesion.Name = "MSBCerrarSesion";
-            MSBCerrarSesion.Size = new Size(173, 27);
+            MSBCerrarSesion.Size = new Size(167, 27);
             MSBCerrarSesion.Text = "Cerrar Sesión";
             // 
             // Menu_SuperAdmin

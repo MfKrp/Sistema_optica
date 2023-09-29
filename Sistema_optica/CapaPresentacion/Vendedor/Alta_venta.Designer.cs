@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             LVendedorActual = new Label();
             LCliente = new Label();
             LFechaVta = new Label();
@@ -89,7 +89,7 @@
             LVendedorActual.AutoSize = true;
             LVendedorActual.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             LVendedorActual.ForeColor = Color.FromArgb(0, 64, 64);
-            LVendedorActual.Location = new Point(61, 46);
+            LVendedorActual.Location = new Point(79, 45);
             LVendedorActual.Name = "LVendedorActual";
             LVendedorActual.Size = new Size(137, 21);
             LVendedorActual.TabIndex = 1;
@@ -100,7 +100,7 @@
             LCliente.AutoSize = true;
             LCliente.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             LCliente.ForeColor = Color.FromArgb(0, 64, 64);
-            LCliente.Location = new Point(313, 48);
+            LCliente.Location = new Point(331, 47);
             LCliente.Name = "LCliente";
             LCliente.Size = new Size(62, 21);
             LCliente.TabIndex = 2;
@@ -111,7 +111,7 @@
             LFechaVta.AutoSize = true;
             LFechaVta.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LFechaVta.ForeColor = Color.FromArgb(0, 64, 64);
-            LFechaVta.Location = new Point(501, 72);
+            LFechaVta.Location = new Point(519, 71);
             LFechaVta.Name = "LFechaVta";
             LFechaVta.Size = new Size(135, 23);
             LFechaVta.TabIndex = 3;
@@ -119,7 +119,7 @@
             // 
             // TVendedorCargo
             // 
-            TVendedorCargo.Location = new Point(594, 40);
+            TVendedorCargo.Location = new Point(612, 40);
             TVendedorCargo.Name = "TVendedorCargo";
             TVendedorCargo.Size = new Size(136, 23);
             TVendedorCargo.TabIndex = 6;
@@ -127,14 +127,14 @@
             // 
             // TClienteTitular
             // 
-            TClienteTitular.Location = new Point(313, 72);
+            TClienteTitular.Location = new Point(331, 71);
             TClienteTitular.Name = "TClienteTitular";
             TClienteTitular.Size = new Size(136, 23);
             TClienteTitular.TabIndex = 7;
             // 
             // TFechaCompra
             // 
-            TFechaCompra.Location = new Point(642, 72);
+            TFechaCompra.Location = new Point(660, 71);
             TFechaCompra.Name = "TFechaCompra";
             TFechaCompra.Size = new Size(135, 23);
             TFechaCompra.TabIndex = 8;
@@ -143,23 +143,23 @@
             // 
             DTGDatosCompra.AllowUserToAddRows = false;
             DTGDatosCompra.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
-            DTGDatosCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            DTGDatosCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             DTGDatosCompra.BackgroundColor = Color.CadetBlue;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            DTGDatosCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            DTGDatosCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             DTGDatosCompra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DTGDatosCompra.Columns.AddRange(new DataGridViewColumn[] { DGCId_Producto, DGCNombreProd, DTCVendedorCargo, DGCCliente, DTCFecha, DTGCCantidad, DTCPrecioUnitario, DTGCEliminar });
             DTGDatosCompra.Location = new Point(6, 322);
             DTGDatosCompra.Name = "DTGDatosCompra";
             DTGDatosCompra.RowTemplate.Height = 25;
-            DTGDatosCompra.Size = new Size(771, 227);
+            DTGDatosCompra.Size = new Size(824, 232);
             DTGDatosCompra.TabIndex = 9;
             DTGDatosCompra.CellContentClick += DTGDatosCompra_CellContentClick;
             // 
@@ -207,7 +207,7 @@
             // 
             LMarcaCompra.AutoSize = true;
             LMarcaCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LMarcaCompra.Location = new Point(254, 86);
+            LMarcaCompra.Location = new Point(267, 86);
             LMarcaCompra.Name = "LMarcaCompra";
             LMarcaCompra.Size = new Size(63, 23);
             LMarcaCompra.TabIndex = 16;
@@ -245,7 +245,7 @@
             LTipoCompra.AutoSize = true;
             LTipoCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LTipoCompra.ForeColor = Color.FromArgb(0, 64, 64);
-            LTipoCompra.Location = new Point(297, 168);
+            LTipoCompra.Location = new Point(292, 40);
             LTipoCompra.Name = "LTipoCompra";
             LTipoCompra.Size = new Size(49, 23);
             LTipoCompra.TabIndex = 9;
@@ -253,7 +253,7 @@
             // 
             // NCantidadCompra
             // 
-            NCantidadCompra.Location = new Point(672, 138);
+            NCantidadCompra.Location = new Point(690, 138);
             NCantidadCompra.Name = "NCantidadCompra";
             NCantidadCompra.Size = new Size(58, 23);
             NCantidadCompra.TabIndex = 7;
@@ -272,7 +272,7 @@
             // 
             LCantidadCompra.AutoSize = true;
             LCantidadCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LCantidadCompra.Location = new Point(583, 138);
+            LCantidadCompra.Location = new Point(601, 138);
             LCantidadCompra.Name = "LCantidadCompra";
             LCantidadCompra.Size = new Size(83, 23);
             LCantidadCompra.TabIndex = 5;
@@ -287,7 +287,7 @@
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(61, 72);
+            textBox4.Location = new Point(79, 71);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(136, 23);
             textBox4.TabIndex = 2;
@@ -317,7 +317,7 @@
             BAgregarProd.BackColor = Color.Green;
             BAgregarProd.Font = new Font("Sitka Text", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
             BAgregarProd.ForeColor = Color.White;
-            BAgregarProd.Location = new Point(788, 214);
+            BAgregarProd.Location = new Point(836, 214);
             BAgregarProd.Name = "BAgregarProd";
             BAgregarProd.Size = new Size(146, 54);
             BAgregarProd.TabIndex = 12;
@@ -329,7 +329,7 @@
             BReiniciarCarrito.BackColor = Color.Red;
             BReiniciarCarrito.Font = new Font("Sitka Text", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
             BReiniciarCarrito.ForeColor = Color.White;
-            BReiniciarCarrito.Location = new Point(788, 147);
+            BReiniciarCarrito.Location = new Point(836, 147);
             BReiniciarCarrito.Name = "BReiniciarCarrito";
             BReiniciarCarrito.Size = new Size(146, 60);
             BReiniciarCarrito.TabIndex = 13;
@@ -341,7 +341,7 @@
             BRegistrarCompra.BackColor = Color.Green;
             BRegistrarCompra.Font = new Font("Sitka Text", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
             BRegistrarCompra.ForeColor = Color.White;
-            BRegistrarCompra.Location = new Point(793, 478);
+            BRegistrarCompra.Location = new Point(841, 478);
             BRegistrarCompra.Name = "BRegistrarCompra";
             BRegistrarCompra.Size = new Size(145, 45);
             BRegistrarCompra.TabIndex = 14;
@@ -353,7 +353,7 @@
             LPrecioVenta.AutoSize = true;
             LPrecioVenta.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LPrecioVenta.ForeColor = Color.FromArgb(0, 64, 64);
-            LPrecioVenta.Location = new Point(807, 392);
+            LPrecioVenta.Location = new Point(855, 392);
             LPrecioVenta.Name = "LPrecioVenta";
             LPrecioVenta.Size = new Size(112, 23);
             LPrecioVenta.TabIndex = 15;
@@ -361,7 +361,7 @@
             // 
             // TPrecioTotal
             // 
-            TPrecioTotal.Location = new Point(803, 418);
+            TPrecioTotal.Location = new Point(851, 418);
             TPrecioTotal.Name = "TPrecioTotal";
             TPrecioTotal.Size = new Size(123, 23);
             TPrecioTotal.TabIndex = 16;
@@ -369,7 +369,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(352, 168);
+            comboBox1.Location = new Point(347, 40);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(153, 23);
             comboBox1.TabIndex = 17;
@@ -378,7 +378,7 @@
             // 
             LTalle.AutoSize = true;
             LTalle.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LTalle.Location = new Point(495, 86);
+            LTalle.Location = new Point(524, 86);
             LTalle.Name = "LTalle";
             LTalle.Size = new Size(52, 23);
             LTalle.TabIndex = 18;
@@ -389,7 +389,7 @@
             LColor.AutoSize = true;
             LColor.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LColor.ForeColor = Color.FromArgb(0, 64, 64);
-            LColor.Location = new Point(540, 168);
+            LColor.Location = new Point(550, 40);
             LColor.Name = "LColor";
             LColor.Size = new Size(56, 23);
             LColor.TabIndex = 19;
@@ -398,7 +398,7 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(323, 89);
+            comboBox2.Location = new Point(336, 89);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(153, 23);
             comboBox2.TabIndex = 20;
@@ -448,7 +448,7 @@
             // 
             checkBox_L.AutoSize = true;
             checkBox_L.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_L.Location = new Point(696, 91);
+            checkBox_L.Location = new Point(714, 91);
             checkBox_L.Name = "checkBox_L";
             checkBox_L.Size = new Size(34, 22);
             checkBox_L.TabIndex = 25;
@@ -459,7 +459,7 @@
             // 
             checkBox_s.AutoSize = true;
             checkBox_s.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_s.Location = new Point(612, 91);
+            checkBox_s.Location = new Point(630, 91);
             checkBox_s.Name = "checkBox_s";
             checkBox_s.Size = new Size(34, 22);
             checkBox_s.TabIndex = 26;
@@ -470,7 +470,7 @@
             // 
             checkBox_m.AutoSize = true;
             checkBox_m.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_m.Location = new Point(652, 91);
+            checkBox_m.Location = new Point(670, 91);
             checkBox_m.Name = "checkBox_m";
             checkBox_m.Size = new Size(38, 22);
             checkBox_m.TabIndex = 27;
@@ -481,7 +481,7 @@
             // 
             checkBox_xs.AutoSize = true;
             checkBox_xs.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_xs.Location = new Point(564, 91);
+            checkBox_xs.Location = new Point(586, 91);
             checkBox_xs.Name = "checkBox_xs";
             checkBox_xs.Size = new Size(42, 22);
             checkBox_xs.TabIndex = 28;
@@ -494,10 +494,13 @@
             panel1.Controls.Add(checkBox_masc);
             panel1.Controls.Add(checkBox_fem);
             panel1.Controls.Add(checkBox_unisex);
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(LColor);
             panel1.Controls.Add(checkBox_xs);
             panel1.Controls.Add(LInfoProd);
             panel1.Controls.Add(checkBox_s);
             panel1.Controls.Add(comboBox3);
+            panel1.Controls.Add(LTipoCompra);
             panel1.Controls.Add(checkBox_m);
             panel1.Controls.Add(comboBox2);
             panel1.Controls.Add(TVendedorCargo);
@@ -513,9 +516,9 @@
             panel1.Controls.Add(textBox5);
             panel1.Controls.Add(LIDProdCompra);
             panel1.ForeColor = Color.FromArgb(0, 64, 64);
-            panel1.Location = new Point(19, 127);
+            panel1.Location = new Point(25, 127);
             panel1.Name = "panel1";
-            panel1.Size = new Size(745, 172);
+            panel1.Size = new Size(784, 175);
             panel1.TabIndex = 29;
             // 
             // panel2
@@ -523,7 +526,7 @@
             panel2.BackColor = Color.CadetBlue;
             panel2.Location = new Point(6, 111);
             panel2.Name = "panel2";
-            panel2.Size = new Size(771, 205);
+            panel2.Size = new Size(824, 205);
             panel2.TabIndex = 30;
             // 
             // label1
@@ -531,7 +534,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(0, 64, 64);
-            label1.Location = new Point(274, 76);
+            label1.Location = new Point(292, 75);
             label1.Name = "label1";
             label1.Size = new Size(33, 19);
             label1.TabIndex = 33;
@@ -542,7 +545,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 64, 64);
-            label2.Location = new Point(22, 76);
+            label2.Location = new Point(40, 75);
             label2.Name = "label2";
             label2.Size = new Size(33, 19);
             label2.TabIndex = 34;
@@ -553,7 +556,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(0, 64, 64);
-            label3.Location = new Point(663, 50);
+            label3.Location = new Point(681, 49);
             label3.Name = "label3";
             label3.Size = new Size(101, 19);
             label3.TabIndex = 35;
@@ -563,19 +566,16 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(946, 565);
+            ClientSize = new Size(989, 566);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(LColor);
-            Controls.Add(comboBox1);
             Controls.Add(TPrecioTotal);
             Controls.Add(LPrecioVenta);
             Controls.Add(BRegistrarCompra);
             Controls.Add(BReiniciarCarrito);
             Controls.Add(BAgregarProd);
             Controls.Add(DTGDatosCompra);
-            Controls.Add(LTipoCompra);
             Controls.Add(TFechaCompra);
             Controls.Add(TClienteTitular);
             Controls.Add(LFechaVta);
