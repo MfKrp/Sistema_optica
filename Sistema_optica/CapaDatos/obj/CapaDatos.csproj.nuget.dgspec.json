@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Familiar\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj": {}
+    "C:\\Users\\matias\\Source\\Repos\\Sistema_Optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Familiar\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj": {
+    "C:\\Users\\matias\\Source\\Repos\\Sistema_Optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Familiar\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj",
+        "projectUniqueName": "C:\\Users\\matias\\Source\\Repos\\Sistema_Optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj",
         "projectName": "CapaDatos",
-        "projectPath": "C:\\Users\\Familiar\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj",
-        "packagesPath": "C:\\Users\\Familiar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Familiar\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaDatos\\obj\\",
+        "projectPath": "C:\\Users\\matias\\Source\\Repos\\Sistema_Optica\\Sistema_optica\\CapaDatos\\CapaDatos.csproj",
+        "packagesPath": "C:\\Users\\matias\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matias\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaDatos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Familiar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\matias\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

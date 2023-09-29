@@ -7,7 +7,6 @@ C:\Users\matias\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\bin\
 C:\Users\matias\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.csproj.AssemblyReference.cache
 C:\Users\matias\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Properties.Resources.resources
 C:\Users\matias\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Secretaria.Alta_producto.resources
-C:\Users\matias\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Secretaria.Form1.resources
 C:\Users\matias\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Secretaria.Menu_Secretaria.resources
 C:\Users\matias\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Secretaria.Modif_Cliente.resources
 C:\Users\matias\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Secretaria.Modif_producto.resources
@@ -30,3 +29,9 @@ C:\Users\matias\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\
 C:\Users\matias\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.pdb
 C:\Users\matias\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.genruntimeconfig.cache
 C:\Users\matias\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\ref\CapaPresentacion.dll
+C:\Users\matias\Source\Repos\Sistema_Optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Secretaria.Ver_clientes.resources
+C:\Users\matias\Source\Repos\Sistema_Optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Secretaria.Ver_productos.resources
+C:\Users\matias\Source\Repos\Sistema_Optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Superadmin.Ver_empleados.resources
+C:\Users\matias\Source\Repos\Sistema_Optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Superadmin.Ver_productos.resources
+C:\Users\matias\Source\Repos\Sistema_Optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Vendedor.Ver_productos.resources
+C:\Users\matias\Source\Repos\Sistema_Optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Vendedor.Ver_ventas.resources

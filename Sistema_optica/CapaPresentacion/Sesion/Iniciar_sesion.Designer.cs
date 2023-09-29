@@ -77,6 +77,7 @@
             BSalir.TabIndex = 13;
             BSalir.Text = "Salir";
             BSalir.UseVisualStyleBackColor = false;
+            BSalir.Click += BSalir_Click_1;
             // 
             // BIngresar
             // 
@@ -93,6 +94,7 @@
             BIngresar.TabIndex = 12;
             BIngresar.Text = "Ingresar";
             BIngresar.UseVisualStyleBackColor = false;
+            BIngresar.Click += BIngresar_Click_1;
             // 
             // LCodigoUsuario
             // 

@@ -39,13 +39,16 @@ namespace CapaPresentacion.Sesion
 
         }
 
-        private void BSalir_Click(object sender, EventArgs e)
+        private void frm_closing(object sender, FormClosingEventArgs e)
         {
-            //cuando se haga click en este boton, se cerrara el formulario
-            this.Close();
+            /*cuando el formulario se cierre, se reinician los campos*/
+            TCodigo_empleado_sesion.Text = "";
+            TContraseña_sesion.Text = "";
+
+            this.Show();
         }
 
-        private void BIngresar_Click(object sender, EventArgs e)
+        private void BIngresar_Click_1(object sender, EventArgs e)
         {
             /*Falta hacer las comprobaciones restantes para iniciar menus diferentes en base al perfil de
              usuario*/
@@ -57,16 +60,12 @@ namespace CapaPresentacion.Sesion
 
             form.FormClosing += frm_closing; /*cuando se cierra el formulario, se activa el manejador frm_closing
                                               que vuelve a mostrar inicio_sesion*/
-
         }
 
-        private void frm_closing(object sender, FormClosingEventArgs e)
+        private void BSalir_Click_1(object sender, EventArgs e)
         {
-            /*cuando el formulario se cierre, se reinician los campos*/
-            TCodigo_empleado_sesion.Text = "";
-            TContraseña_sesion.Text = "";
-
-            this.Show();
+            //cuando se haga click en este boton, se cerrara el formulario
+            this.Close();
         }
     }
 }
