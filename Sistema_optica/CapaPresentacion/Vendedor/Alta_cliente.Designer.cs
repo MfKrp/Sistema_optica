@@ -79,6 +79,7 @@
             BGuardar.TabIndex = 72;
             BGuardar.Text = "Guardar";
             BGuardar.UseVisualStyleBackColor = false;
+            BGuardar.Click += BGuardar_Click;
             // 
             // TDireccion
             // 
@@ -107,6 +108,8 @@
             TDni.Name = "TDni";
             TDni.Size = new Size(139, 23);
             TDni.TabIndex = 63;
+            TDni.TextChanged += TDni_TextChanged;
+            TDni.KeyPress += TDni_KeyPress;
             // 
             // TNombre
             // 
@@ -114,6 +117,7 @@
             TNombre.Name = "TNombre";
             TNombre.Size = new Size(233, 23);
             TNombre.TabIndex = 62;
+            TNombre.TextChanged += TNombre_TextChanged;
             // 
             // TApellido
             // 
