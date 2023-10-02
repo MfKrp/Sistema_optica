@@ -57,6 +57,7 @@
             // 
             // LNombre
             // 
+            LNombre.Anchor = AnchorStyles.None;
             LNombre.AutoSize = true;
             LNombre.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LNombre.ForeColor = Color.FromArgb(0, 64, 64);
@@ -68,6 +69,7 @@
             // 
             // LApellido
             // 
+            LApellido.Anchor = AnchorStyles.None;
             LApellido.AutoSize = true;
             LApellido.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LApellido.ForeColor = Color.FromArgb(0, 64, 64);
@@ -79,6 +81,7 @@
             // 
             // LDni
             // 
+            LDni.Anchor = AnchorStyles.None;
             LDni.AutoSize = true;
             LDni.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LDni.ForeColor = Color.FromArgb(0, 64, 64);
@@ -90,6 +93,7 @@
             // 
             // LCodigo_tipo_empleado
             // 
+            LCodigo_tipo_empleado.Anchor = AnchorStyles.None;
             LCodigo_tipo_empleado.AutoSize = true;
             LCodigo_tipo_empleado.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LCodigo_tipo_empleado.ForeColor = Color.FromArgb(0, 64, 64);
@@ -101,6 +105,7 @@
             // 
             // LContraseña
             // 
+            LContraseña.Anchor = AnchorStyles.None;
             LContraseña.AutoSize = true;
             LContraseña.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LContraseña.ForeColor = Color.FromArgb(0, 64, 64);
@@ -112,6 +117,7 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.FromArgb(0, 64, 64);
@@ -123,6 +129,7 @@
             // 
             // label7
             // 
+            label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.FromArgb(0, 64, 64);
@@ -134,6 +141,7 @@
             // 
             // LPerfil
             // 
+            LPerfil.Anchor = AnchorStyles.None;
             LPerfil.AutoSize = true;
             LPerfil.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LPerfil.ForeColor = Color.FromArgb(0, 64, 64);
@@ -145,6 +153,7 @@
             // 
             // LDireccion
             // 
+            LDireccion.Anchor = AnchorStyles.None;
             LDireccion.AutoSize = true;
             LDireccion.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LDireccion.ForeColor = Color.FromArgb(0, 64, 64);
@@ -156,6 +165,7 @@
             // 
             // LCorreo
             // 
+            LCorreo.Anchor = AnchorStyles.None;
             LCorreo.AutoSize = true;
             LCorreo.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LCorreo.ForeColor = Color.FromArgb(0, 64, 64);
@@ -167,6 +177,7 @@
             // 
             // LTelefono
             // 
+            LTelefono.Anchor = AnchorStyles.None;
             LTelefono.AutoSize = true;
             LTelefono.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LTelefono.ForeColor = Color.FromArgb(0, 64, 64);
@@ -178,6 +189,7 @@
             // 
             // TApellido
             // 
+            TApellido.Anchor = AnchorStyles.None;
             TApellido.Location = new Point(488, 194);
             TApellido.Name = "TApellido";
             TApellido.Size = new Size(233, 23);
@@ -186,6 +198,7 @@
             // 
             // TNombre
             // 
+            TNombre.Anchor = AnchorStyles.None;
             TNombre.Location = new Point(140, 194);
             TNombre.Name = "TNombre";
             TNombre.Size = new Size(233, 23);
@@ -194,6 +207,7 @@
             // 
             // TDni
             // 
+            TDni.Anchor = AnchorStyles.None;
             TDni.Location = new Point(74, 69);
             TDni.Name = "TDni";
             TDni.Size = new Size(139, 23);
@@ -202,6 +216,7 @@
             // 
             // TTelefono
             // 
+            TTelefono.Anchor = AnchorStyles.None;
             TTelefono.Location = new Point(535, 262);
             TTelefono.Name = "TTelefono";
             TTelefono.Size = new Size(186, 23);
@@ -210,6 +225,7 @@
             // 
             // TCorreo
             // 
+            TCorreo.Anchor = AnchorStyles.None;
             TCorreo.Location = new Point(512, 331);
             TCorreo.Name = "TCorreo";
             TCorreo.Size = new Size(209, 23);
@@ -218,6 +234,7 @@
             // 
             // TDireccion
             // 
+            TDireccion.Anchor = AnchorStyles.None;
             TDireccion.Location = new Point(152, 331);
             TDireccion.Name = "TDireccion";
             TDireccion.Size = new Size(273, 23);
@@ -226,6 +243,7 @@
             // 
             // ComboBox_Perfil
             // 
+            ComboBox_Perfil.Anchor = AnchorStyles.None;
             ComboBox_Perfil.FormattingEnabled = true;
             ComboBox_Perfil.Location = new Point(219, 128);
             ComboBox_Perfil.Name = "ComboBox_Perfil";
@@ -234,6 +252,7 @@
             // 
             // TCodigo_emp
             // 
+            TCodigo_emp.Anchor = AnchorStyles.None;
             TCodigo_emp.Location = new Point(621, 125);
             TCodigo_emp.Name = "TCodigo_emp";
             TCodigo_emp.Size = new Size(100, 23);
@@ -242,6 +261,7 @@
             // 
             // TContrasena
             // 
+            TContrasena.Anchor = AnchorStyles.None;
             TContrasena.Location = new Point(172, 404);
             TContrasena.Name = "TContrasena";
             TContrasena.Size = new Size(207, 23);
@@ -250,6 +270,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(0, 64, 64);
@@ -261,6 +282,7 @@
             // 
             // BGuardar
             // 
+            BGuardar.Anchor = AnchorStyles.None;
             BGuardar.BackColor = Color.Green;
             BGuardar.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             BGuardar.ForeColor = Color.White;
@@ -273,6 +295,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 64, 64);
@@ -284,6 +307,7 @@
             // 
             // BBorrar
             // 
+            BBorrar.Anchor = AnchorStyles.None;
             BBorrar.BackColor = Color.Red;
             BBorrar.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             BBorrar.ForeColor = Color.White;
@@ -296,6 +320,7 @@
             // 
             // DTPNacimiento
             // 
+            DTPNacimiento.Anchor = AnchorStyles.None;
             DTPNacimiento.Format = DateTimePickerFormat.Short;
             DTPNacimiento.Location = new Point(236, 262);
             DTPNacimiento.Name = "DTPNacimiento";

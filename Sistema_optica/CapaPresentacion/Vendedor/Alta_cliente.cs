@@ -88,7 +88,7 @@ namespace CapaPresentacion.Vendedor
 
         private void TNombre_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BBorrar_Click(object sender, EventArgs e)

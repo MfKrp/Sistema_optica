@@ -75,7 +75,7 @@ namespace CapaPresentacion.Superadmin
             form.Show();
             this.Hide(); //se esconde el logueo
 
-           // form.FormClosing += frm_closing;
+            // form.FormClosing += frm_closing;
         }
     }
 }

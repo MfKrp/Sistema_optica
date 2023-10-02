@@ -49,7 +49,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { MSLMenu });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1006, 95);
+            menuStrip1.Size = new Size(1194, 95);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -69,7 +69,7 @@
             menuStrip2.Items.AddRange(new ToolStripItem[] { TSMBRegistrarCliente, TSMBGenerarVenta, TSMBVerProductos, TSMBVerVentas, TSMBVerPerfil, TSMBCerrarSesion });
             menuStrip2.Location = new Point(0, 95);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(180, 573);
+            menuStrip2.Size = new Size(180, 578);
             menuStrip2.TabIndex = 3;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -136,17 +136,18 @@
             // 
             contenedor.Location = new Point(183, 98);
             contenedor.Name = "contenedor";
-            contenedor.Size = new Size(823, 570);
+            contenedor.Size = new Size(1005, 571);
             contenedor.TabIndex = 5;
             // 
             // Menu_vendedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1006, 668);
+            ClientSize = new Size(1194, 673);
             Controls.Add(contenedor);
             Controls.Add(menuStrip2);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "Menu_vendedor";
             Text = "Form1";
             menuStrip1.ResumeLayout(false);

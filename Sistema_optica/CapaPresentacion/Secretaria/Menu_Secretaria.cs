@@ -63,7 +63,7 @@ namespace CapaPresentacion.Secretaria
 
             this.Show();*/
         }
-      
+
 
         private void TSMBCerrarSesion_Click(object sender, EventArgs e)
         {

@@ -47,6 +47,7 @@
             // 
             // BBorrar
             // 
+            BBorrar.Anchor = AnchorStyles.None;
             BBorrar.BackColor = Color.Red;
             BBorrar.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             BBorrar.ForeColor = Color.White;
@@ -59,6 +60,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 64, 64);
@@ -70,6 +72,7 @@
             // 
             // BGuardar
             // 
+            BGuardar.Anchor = AnchorStyles.None;
             BGuardar.BackColor = Color.Green;
             BGuardar.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             BGuardar.ForeColor = Color.White;
@@ -82,6 +85,7 @@
             // 
             // TDireccion
             // 
+            TDireccion.Anchor = AnchorStyles.None;
             TDireccion.Location = new Point(117, 297);
             TDireccion.Name = "TDireccion";
             TDireccion.Size = new Size(421, 23);
@@ -90,6 +94,7 @@
             // 
             // TCorreo
             // 
+            TCorreo.Anchor = AnchorStyles.None;
             TCorreo.Location = new Point(254, 236);
             TCorreo.Name = "TCorreo";
             TCorreo.Size = new Size(284, 23);
@@ -98,6 +103,7 @@
             // 
             // TTelefono
             // 
+            TTelefono.Anchor = AnchorStyles.None;
             TTelefono.Location = new Point(33, 236);
             TTelefono.Name = "TTelefono";
             TTelefono.Size = new Size(159, 23);
@@ -106,6 +112,7 @@
             // 
             // TDni
             // 
+            TDni.Anchor = AnchorStyles.None;
             TDni.Location = new Point(83, 96);
             TDni.Name = "TDni";
             TDni.Size = new Size(139, 23);
@@ -114,6 +121,7 @@
             // 
             // TNombre
             // 
+            TNombre.Anchor = AnchorStyles.None;
             TNombre.Location = new Point(33, 169);
             TNombre.Name = "TNombre";
             TNombre.Size = new Size(233, 23);
@@ -122,6 +130,7 @@
             // 
             // TApellido
             // 
+            TApellido.Anchor = AnchorStyles.None;
             TApellido.Location = new Point(305, 169);
             TApellido.Name = "TApellido";
             TApellido.Size = new Size(233, 23);
@@ -130,6 +139,7 @@
             // 
             // LDireccion
             // 
+            LDireccion.Anchor = AnchorStyles.None;
             LDireccion.AutoSize = true;
             LDireccion.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LDireccion.ForeColor = Color.FromArgb(0, 64, 64);
@@ -141,6 +151,7 @@
             // 
             // LCorreo
             // 
+            LCorreo.Anchor = AnchorStyles.None;
             LCorreo.AutoSize = true;
             LCorreo.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LCorreo.ForeColor = Color.FromArgb(0, 64, 64);
@@ -152,6 +163,7 @@
             // 
             // LTelefono
             // 
+            LTelefono.Anchor = AnchorStyles.None;
             LTelefono.AutoSize = true;
             LTelefono.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LTelefono.ForeColor = Color.FromArgb(0, 64, 64);
@@ -163,6 +175,7 @@
             // 
             // LDni
             // 
+            LDni.Anchor = AnchorStyles.None;
             LDni.AutoSize = true;
             LDni.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LDni.ForeColor = Color.FromArgb(0, 64, 64);
@@ -174,6 +187,7 @@
             // 
             // LApellido
             // 
+            LApellido.Anchor = AnchorStyles.None;
             LApellido.AutoSize = true;
             LApellido.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LApellido.ForeColor = Color.FromArgb(0, 64, 64);
@@ -185,6 +199,7 @@
             // 
             // LNombre
             // 
+            LNombre.Anchor = AnchorStyles.None;
             LNombre.AutoSize = true;
             LNombre.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LNombre.ForeColor = Color.FromArgb(0, 64, 64);

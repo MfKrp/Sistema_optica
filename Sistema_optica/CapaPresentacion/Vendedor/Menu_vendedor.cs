@@ -23,8 +23,11 @@ namespace CapaPresentacion.Vendedor
 
         private void abrirForm(ToolStripMenuItem menu, Form formulario)
         {
-
-            menu.BackColor = Color.Teal;
+            if (menuActivo != null)
+            {
+                menuActivo.BackColor = Color.Teal;
+            }
+            menu.BackColor = Color.Red;
 
             menuActivo = menu;
 
@@ -38,7 +41,7 @@ namespace CapaPresentacion.Vendedor
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;
-            //formulario.StartPosition = FormStartPosition.CenterScreen;
+
             contenedor.Controls.Add(formulario);
             formulario.Show();
         }
@@ -69,7 +72,7 @@ namespace CapaPresentacion.Vendedor
 
             this.Show();*/
         }
-       
+
         private void TSMBCerrarSesion_Click(object sender, EventArgs e)
         {
             Iniciar_sesion form = new Iniciar_sesion();

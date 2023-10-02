@@ -54,6 +54,7 @@
             // 
             // LId_prod
             // 
+            LId_prod.Anchor = AnchorStyles.None;
             LId_prod.AutoSize = true;
             LId_prod.BackColor = SystemColors.ButtonFace;
             LId_prod.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -66,6 +67,7 @@
             // 
             // LAnteojo
             // 
+            LAnteojo.Anchor = AnchorStyles.None;
             LAnteojo.AutoSize = true;
             LAnteojo.BackColor = SystemColors.ButtonFace;
             LAnteojo.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -78,6 +80,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Tw Cen MT", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(0, 64, 64);
@@ -88,6 +91,7 @@
             // 
             // LGenero
             // 
+            LGenero.Anchor = AnchorStyles.None;
             LGenero.AutoSize = true;
             LGenero.BackColor = SystemColors.ButtonFace;
             LGenero.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -101,6 +105,7 @@
             // 
             // LColor
             // 
+            LColor.Anchor = AnchorStyles.None;
             LColor.AutoSize = true;
             LColor.BackColor = SystemColors.ButtonFace;
             LColor.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -113,6 +118,7 @@
             // 
             // LMarca
             // 
+            LMarca.Anchor = AnchorStyles.None;
             LMarca.AutoSize = true;
             LMarca.BackColor = SystemColors.ButtonFace;
             LMarca.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -125,6 +131,7 @@
             // 
             // LTalle
             // 
+            LTalle.Anchor = AnchorStyles.None;
             LTalle.AutoSize = true;
             LTalle.BackColor = SystemColors.ButtonFace;
             LTalle.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -137,6 +144,7 @@
             // 
             // LEstilo
             // 
+            LEstilo.Anchor = AnchorStyles.None;
             LEstilo.AutoSize = true;
             LEstilo.BackColor = SystemColors.ButtonFace;
             LEstilo.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -150,6 +158,7 @@
             // 
             // LPrecio
             // 
+            LPrecio.Anchor = AnchorStyles.None;
             LPrecio.AutoSize = true;
             LPrecio.BackColor = SystemColors.ButtonFace;
             LPrecio.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -162,6 +171,7 @@
             // 
             // ComboBox_Genero
             // 
+            ComboBox_Genero.Anchor = AnchorStyles.None;
             ComboBox_Genero.FormattingEnabled = true;
             ComboBox_Genero.Location = new Point(113, 193);
             ComboBox_Genero.Name = "ComboBox_Genero";
@@ -170,6 +180,7 @@
             // 
             // ComboBox_Talle
             // 
+            ComboBox_Talle.Anchor = AnchorStyles.None;
             ComboBox_Talle.FormattingEnabled = true;
             ComboBox_Talle.Location = new Point(307, 193);
             ComboBox_Talle.Name = "ComboBox_Talle";
@@ -178,6 +189,7 @@
             // 
             // ComboBox_Marca
             // 
+            ComboBox_Marca.Anchor = AnchorStyles.None;
             ComboBox_Marca.FormattingEnabled = true;
             ComboBox_Marca.Location = new Point(113, 263);
             ComboBox_Marca.Name = "ComboBox_Marca";
@@ -186,6 +198,7 @@
             // 
             // ComboBox_Estilo
             // 
+            ComboBox_Estilo.Anchor = AnchorStyles.None;
             ComboBox_Estilo.FormattingEnabled = true;
             ComboBox_Estilo.Location = new Point(113, 319);
             ComboBox_Estilo.Name = "ComboBox_Estilo";
@@ -194,6 +207,7 @@
             // 
             // ComnboBox_Anteojo
             // 
+            ComnboBox_Anteojo.Anchor = AnchorStyles.None;
             ComnboBox_Anteojo.FormattingEnabled = true;
             ComnboBox_Anteojo.Location = new Point(423, 108);
             ComnboBox_Anteojo.Name = "ComnboBox_Anteojo";
@@ -202,6 +216,7 @@
             // 
             // TColor
             // 
+            TColor.Anchor = AnchorStyles.None;
             TColor.Location = new Point(466, 193);
             TColor.Name = "TColor";
             TColor.Size = new Size(135, 23);
@@ -210,6 +225,7 @@
             // 
             // TId_prod
             // 
+            TId_prod.Anchor = AnchorStyles.None;
             TId_prod.Location = new Point(107, 111);
             TId_prod.Name = "TId_prod";
             TId_prod.Size = new Size(164, 23);
@@ -218,6 +234,7 @@
             // 
             // TPrecio
             // 
+            TPrecio.Anchor = AnchorStyles.None;
             TPrecio.Location = new Point(118, 378);
             TPrecio.Name = "TPrecio";
             TPrecio.Size = new Size(105, 23);
@@ -226,6 +243,7 @@
             // 
             // BBorrar
             // 
+            BBorrar.Anchor = AnchorStyles.None;
             BBorrar.BackColor = Color.Red;
             BBorrar.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             BBorrar.ForeColor = Color.White;
@@ -238,6 +256,7 @@
             // 
             // BGuardar
             // 
+            BGuardar.Anchor = AnchorStyles.None;
             BGuardar.BackColor = Color.Green;
             BGuardar.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             BGuardar.ForeColor = Color.White;
@@ -250,6 +269,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 64, 64);
@@ -261,6 +281,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Location = new Point(407, 263);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(194, 138);

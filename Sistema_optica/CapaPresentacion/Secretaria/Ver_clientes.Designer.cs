@@ -35,17 +35,20 @@
             C_tel = new DataGridViewTextBoxColumn();
             C_direccion = new DataGridViewTextBoxColumn();
             C_correo = new DataGridViewTextBoxColumn();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.BackgroundColor = Color.CadetBlue;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { C_id, C_nombre, C_apellido, C_tel, C_direccion, C_correo });
-            dataGridView1.Location = new Point(12, 30);
+            dataGridView1.Location = new Point(28, 83);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(888, 390);
+            dataGridView1.Size = new Size(882, 337);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -83,16 +86,30 @@
             C_correo.Name = "C_correo";
             C_correo.Width = 165;
             // 
-            // Form1
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(0, 64, 64);
+            label2.Location = new Point(414, 29);
+            label2.Name = "label2";
+            label2.Size = new Size(109, 28);
+            label2.TabIndex = 75;
+            label2.Text = "CLIENTES";
+            // 
+            // Ver_clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(912, 450);
+            ClientSize = new Size(939, 441);
+            Controls.Add(label2);
             Controls.Add(dataGridView1);
-            Name = "Form1";
+            Name = "Ver_clientes";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -104,5 +121,6 @@
         private DataGridViewTextBoxColumn C_tel;
         private DataGridViewTextBoxColumn C_direccion;
         private DataGridViewTextBoxColumn C_correo;
+        private Label label2;
     }
 }
