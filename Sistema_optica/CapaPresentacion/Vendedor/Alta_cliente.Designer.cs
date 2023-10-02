@@ -56,6 +56,7 @@
             BBorrar.TabIndex = 74;
             BBorrar.Text = "Borrar";
             BBorrar.UseVisualStyleBackColor = false;
+            BBorrar.Click += BBorrar_Click;
             // 
             // label2
             // 
