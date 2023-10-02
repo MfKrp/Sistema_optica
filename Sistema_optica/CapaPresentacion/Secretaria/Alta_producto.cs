@@ -45,6 +45,7 @@ namespace CapaPresentacion.Secretaria
 
         private void TPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //se aceptan solo numeros decimales, con un solo punto
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
@@ -56,6 +57,18 @@ namespace CapaPresentacion.Secretaria
             }
         }
 
+        private void TId_prod_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void TId_prod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Textbox que solo acepta numeros
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

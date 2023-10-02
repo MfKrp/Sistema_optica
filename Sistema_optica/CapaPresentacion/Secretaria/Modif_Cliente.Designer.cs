@@ -109,6 +109,7 @@
             TTelefono.Size = new Size(159, 23);
             TTelefono.TabIndex = 84;
             TTelefono.TextChanged += TTelefono_TextChanged;
+            TTelefono.KeyPress += TTelefono_KeyPressEventArgs;
             // 
             // TDni
             // 
@@ -118,6 +119,7 @@
             TDni.Size = new Size(139, 23);
             TDni.TabIndex = 83;
             TDni.TextChanged += TDni_TextChanged;
+            TDni.KeyPress += TDni_KeyPressEventArgs;
             // 
             // TNombre
             // 
@@ -127,6 +129,7 @@
             TNombre.Size = new Size(233, 23);
             TNombre.TabIndex = 82;
             TNombre.TextChanged += TNombre_TextChanged;
+            TNombre.KeyPress += TNombre_KeyPressEventArgs;
             // 
             // TApellido
             // 
@@ -136,6 +139,7 @@
             TApellido.Size = new Size(233, 23);
             TApellido.TabIndex = 81;
             TApellido.TextChanged += TApellido_TextChanged;
+            TApellido.KeyPress += TApellido_KeyPressEventArgs;
             // 
             // LDireccion
             // 

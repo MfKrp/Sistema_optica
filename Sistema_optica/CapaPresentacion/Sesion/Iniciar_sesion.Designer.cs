@@ -114,6 +114,7 @@
             TCodigo_empleado_sesion.Name = "TCodigo_empleado_sesion";
             TCodigo_empleado_sesion.Size = new Size(200, 25);
             TCodigo_empleado_sesion.TabIndex = 9;
+            TCodigo_empleado_sesion.KeyPress += TCodigo_empleado_sesion_KeyPress;
             // 
             // LContrasena
             // 

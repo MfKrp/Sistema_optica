@@ -125,11 +125,11 @@
             // 
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
-            label3.Font = new Font("Tw Cen MT", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(0, 64, 64);
             label3.Location = new Point(103, 347);
             label3.Name = "label3";
-            label3.Size = new Size(0, 17);
+            label3.Size = new Size(0, 18);
             label3.TabIndex = 56;
             // 
             // ComnboBox_Anteojo
@@ -148,6 +148,8 @@
             TId_prod.Name = "TId_prod";
             TId_prod.Size = new Size(164, 23);
             TId_prod.TabIndex = 69;
+            TId_prod.TextChanged += TId_prod_TextChanged;
+            TId_prod.KeyPress += TId_prod_KeyPress;
             // 
             // TPrecio
             // 
@@ -157,6 +159,7 @@
             TPrecio.Size = new Size(105, 23);
             TPrecio.TabIndex = 70;
             TPrecio.TextChanged += TPrecio_TextChanged;
+            TPrecio.KeyPress += TPrecio_KeyPressEventArgs;
             // 
             // ComboBox_Genero
             // 
@@ -175,6 +178,7 @@
             TColor.Size = new Size(135, 23);
             TColor.TabIndex = 68;
             TColor.TextChanged += TColor_TextChanged;
+            TColor.KeyPress += TColor_KeyPressEventArgs;
             // 
             // LTalle
             // 

@@ -82,11 +82,11 @@
             // 
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
-            label3.Font = new Font("Tw Cen MT", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(0, 64, 64);
             label3.Location = new Point(107, 344);
             label3.Name = "label3";
-            label3.Size = new Size(0, 17);
+            label3.Size = new Size(0, 18);
             label3.TabIndex = 2;
             // 
             // LGenero
@@ -222,6 +222,7 @@
             TColor.Size = new Size(135, 23);
             TColor.TabIndex = 14;
             TColor.TextChanged += TColor_TextChanged;
+            TColor.KeyPress += TColor_KeyPress;
             // 
             // TId_prod
             // 
@@ -231,6 +232,7 @@
             TId_prod.Size = new Size(164, 23);
             TId_prod.TabIndex = 15;
             TId_prod.Text = "--";
+            TId_prod.TextChanged += TId_prod_TextChanged;
             // 
             // TPrecio
             // 
@@ -240,6 +242,7 @@
             TPrecio.Size = new Size(105, 23);
             TPrecio.TabIndex = 16;
             TPrecio.TextChanged += TPrecio_TextChanged;
+            TPrecio.KeyPress += TPrecio_KeyPress;
             // 
             // BBorrar
             // 
@@ -319,6 +322,7 @@
             Name = "Alta_producto";
             Text = "Alta_producto";
             Load += Alta_producto_Load;
+            KeyPress += TId_prod_KeyPress;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -1,5 +1,6 @@
 ﻿using CapaPresentacion.Secretaria;
 using CapaPresentacion.Superadmin;
+using CapaPresentacion.Vendedor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,14 @@ namespace CapaPresentacion.Sesion
 
         }
 
+        private void TCodigo_empleado_sesion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void TContraseña_sesion_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -50,9 +59,93 @@ namespace CapaPresentacion.Sesion
 
         private void BIngresar_Click_1(object sender, EventArgs e)
         {
-            /*Falta hacer las comprobaciones restantes para iniciar menus diferentes en base al perfil de
-             usuario*/
+            /*Condicional que filtra los usuarios y en base al codigo de perfil que tengan los empleados, lo que determina que pantallas se mostraran
+            Codigos de empleado:
+            1: Secretaria
+            2: SuperAdmin
+            3: Vendedor
+            */
 
+            /*
+            switch (codigoEmpleado)
+            {
+                case 1:
+                    Menu_Secretaria menuSecre = new Menu_Secretaria();
+                    menuSecre.Show();
+                    this.Hide(); //se esconde el logueo
+                    menuSecre.FormClosing += frm_closing;
+                    break;
+                case 2:
+                    Menu_SuperAdmin menuAdmin = new Menu_SuperAdmin();
+                    menuAdmin.Show();
+                    this.Hide(); //se esconde el 
+                    menuAdmin.FormClosing += frm_closing;
+                    break;
+                case 3:
+                    Menu_vendedor menuVend = new Menu_vendedor();
+                    menuVend.Show();
+                    this.Hide(); //se esconde el 
+                    menuVend.FormClosing += frm_closing;
+                    break;
+            }
+            */
+
+            /*Prueba para recuperar los datos de la base, de la tabla tipo_perfil*/
+
+            //Conexion a la base
+            /*
+            string connectionString = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+            SqlConnection con = new SqlConnection(connectionString);
+            con.Open();
+
+            //Consulta
+            string querySelect = "SELECT * FROM Tipo_Perfil";
+            SqlCommand comandoLectura = new SqlCommand(querySelect, con);
+            SqlDataReader lectorDatos;
+            lectorDatos = comandoLectura.ExecuteReader();
+
+            if (lectorDatos.Read())
+            {
+                string Id_perfil = lectorDatos.GetValue(0).ToString();
+                string descPerfil = lectorDatos.GetValue(1).ToString();
+                MessageBox.Show("Datos rescatados: \nId de perfil: " + Id_perfil + "\nDescripcion: " + descPerfil); 
+            }
+            */
+            if (TCodigo_empleado_sesion.Text == "")
+            {
+                MessageBox.Show("Complete todos los campos", "Error");
+            }
+            else if (int.Parse(TCodigo_empleado_sesion.Text) > 3 || int.Parse(TCodigo_empleado_sesion.Text) < 1)
+            {
+                MessageBox.Show("Ingrese un numero entre 1 y 3", "Error, codigo invalido");
+            }
+            else
+            {
+                switch (int.Parse(TCodigo_empleado_sesion.Text))
+                {
+                    case 1:
+                        Menu_Secretaria menuSecre = new Menu_Secretaria();
+                        menuSecre.Show();
+                        this.Hide(); //se esconde el logueo
+                        menuSecre.FormClosing += frm_closing;
+                        break;
+                    case 2:
+                        Menu_SuperAdmin menuAdmin = new Menu_SuperAdmin();
+                        menuAdmin.Show();
+                        this.Hide(); //se esconde el 
+                        menuAdmin.FormClosing += frm_closing;
+                        break;
+                    case 3:
+                        Menu_vendedor menuVend = new Menu_vendedor();
+                        menuVend.Show();
+                        this.Hide(); //se esconde el 
+                        menuVend.FormClosing += frm_closing;
+                        break;
+                }
+            }
+
+
+            /*
             Menu_Secretaria form = new Menu_Secretaria();
 
             form.Show();

@@ -50,5 +50,19 @@ namespace CapaPresentacion.Secretaria
                 e.Handled = true;
             }
         }
+
+        private void TId_prod_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TId_prod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Solo se aceptan numeros
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

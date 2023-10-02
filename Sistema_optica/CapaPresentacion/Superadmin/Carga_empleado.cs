@@ -36,6 +36,14 @@ namespace CapaPresentacion.Superadmin
             //Se creara un numero aleatorio de 4 digitos, que se concatenara con el codigo de perfil
         }
 
+        private void TCodigo_emp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void TNombre_TextChanged(object sender, EventArgs e)
         {
 
