@@ -37,6 +37,7 @@
             TSMBVerVentas = new ToolStripMenuItem();
             TSMBVerPerfil = new ToolStripMenuItem();
             TSMBCerrarSesion = new ToolStripMenuItem();
+            contenedor = new Panel();
             menuStrip1.SuspendLayout();
             menuStrip2.SuspendLayout();
             SuspendLayout();
@@ -48,7 +49,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { MSLMenu });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 95);
+            menuStrip1.Size = new Size(1006, 95);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -68,7 +69,7 @@
             menuStrip2.Items.AddRange(new ToolStripItem[] { TSMBRegistrarCliente, TSMBGenerarVenta, TSMBVerProductos, TSMBVerVentas, TSMBVerPerfil, TSMBCerrarSesion });
             menuStrip2.Location = new Point(0, 95);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(180, 355);
+            menuStrip2.Size = new Size(180, 573);
             menuStrip2.TabIndex = 3;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -80,6 +81,7 @@
             TSMBRegistrarCliente.Name = "TSMBRegistrarCliente";
             TSMBRegistrarCliente.Size = new Size(173, 27);
             TSMBRegistrarCliente.Text = "Registrar Cliente";
+            TSMBRegistrarCliente.Click += TSMBRegistrarCliente_Click;
             // 
             // TSMBGenerarVenta
             // 
@@ -99,6 +101,7 @@
             TSMBVerProductos.Name = "TSMBVerProductos";
             TSMBVerProductos.Size = new Size(173, 27);
             TSMBVerProductos.Text = "Productos";
+            TSMBVerProductos.Click += TSMBVerProductos_Click;
             // 
             // TSMBVerVentas
             // 
@@ -108,6 +111,7 @@
             TSMBVerVentas.Name = "TSMBVerVentas";
             TSMBVerVentas.Size = new Size(173, 27);
             TSMBVerVentas.Text = "Ventas";
+            TSMBVerVentas.Click += TSMBVerVentas_Click;
             // 
             // TSMBVerPerfil
             // 
@@ -126,12 +130,21 @@
             TSMBCerrarSesion.Name = "TSMBCerrarSesion";
             TSMBCerrarSesion.Size = new Size(173, 27);
             TSMBCerrarSesion.Text = "Cerrar Sesión";
+            TSMBCerrarSesion.Click += TSMBCerrarSesion_Click;
+            // 
+            // contenedor
+            // 
+            contenedor.Location = new Point(183, 98);
+            contenedor.Name = "contenedor";
+            contenedor.Size = new Size(823, 570);
+            contenedor.TabIndex = 5;
             // 
             // Menu_vendedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1006, 668);
+            Controls.Add(contenedor);
             Controls.Add(menuStrip2);
             Controls.Add(menuStrip1);
             Name = "Menu_vendedor";
@@ -154,5 +167,6 @@
         private ToolStripMenuItem TSMBVerPerfil;
         private ToolStripMenuItem TSMBVerVentas;
         private ToolStripMenuItem TSMBCerrarSesion;
+        private Panel contenedor;
     }
 }

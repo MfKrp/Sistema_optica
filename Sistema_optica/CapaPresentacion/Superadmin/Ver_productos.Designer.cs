@@ -34,6 +34,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(62, 41);
             dataGridView1.Name = "dataGridView1";

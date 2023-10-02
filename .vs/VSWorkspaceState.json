@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Sistema_optica",
-    "\\Sistema_optica\\CapaEntidad",
-    "\\Sistema_optica\\CapaPresentacion",
-    "\\Sistema_optica\\CapaPresentacion\\Superadmin"
+    ""
   ],
-  "SelectedNode": "\\Sistema_optica\\Sistema_optica.sln",
+  "SelectedNode": "\\Sistema_optica.sln",
   "PreviewInSolutionExplorer": false
 }

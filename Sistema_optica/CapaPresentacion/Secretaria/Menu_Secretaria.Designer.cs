@@ -36,6 +36,7 @@
             TSMBVerProductos = new ToolStripMenuItem();
             TSMBVerPerfil = new ToolStripMenuItem();
             TSMBCerrarSesion = new ToolStripMenuItem();
+            contenedor = new Panel();
             menuStrip1.SuspendLayout();
             menuStrip2.SuspendLayout();
             SuspendLayout();
@@ -67,7 +68,7 @@
             menuStrip2.Items.AddRange(new ToolStripItem[] { TSMBAgregarProducto, TSMBVerClientes, TSMBVerProductos, TSMBVerPerfil, TSMBCerrarSesion });
             menuStrip2.Location = new Point(0, 95);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(180, 404);
+            menuStrip2.Size = new Size(180, 530);
             menuStrip2.TabIndex = 2;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -89,6 +90,7 @@
             TSMBVerClientes.Name = "TSMBVerClientes";
             TSMBVerClientes.Size = new Size(173, 27);
             TSMBVerClientes.Text = "Clientes";
+            TSMBVerClientes.Click += TSMBVerClientes_Click;
             // 
             // TSMBVerProductos
             // 
@@ -98,6 +100,7 @@
             TSMBVerProductos.Name = "TSMBVerProductos";
             TSMBVerProductos.Size = new Size(173, 27);
             TSMBVerProductos.Text = "Productos";
+            TSMBVerProductos.Click += TSMBVerProductos_Click;
             // 
             // TSMBVerPerfil
             // 
@@ -116,12 +119,21 @@
             TSMBCerrarSesion.Name = "TSMBCerrarSesion";
             TSMBCerrarSesion.Size = new Size(173, 27);
             TSMBCerrarSesion.Text = "Cerrar Sesión";
+            TSMBCerrarSesion.Click += TSMBCerrarSesion_Click;
+            // 
+            // contenedor
+            // 
+            contenedor.Location = new Point(183, 98);
+            contenedor.Name = "contenedor";
+            contenedor.Size = new Size(785, 523);
+            contenedor.TabIndex = 5;
             // 
             // Menu_Secretaria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(980, 499);
+            ClientSize = new Size(980, 625);
+            Controls.Add(contenedor);
             Controls.Add(menuStrip2);
             Controls.Add(menuStrip1);
             Name = "Menu_Secretaria";
@@ -143,5 +155,6 @@
         private ToolStripMenuItem TSMBVerProductos;
         private ToolStripMenuItem TSMBVerPerfil;
         private ToolStripMenuItem TSMBCerrarSesion;
+        private Panel contenedor;
     }
 }
