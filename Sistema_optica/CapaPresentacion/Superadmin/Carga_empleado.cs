@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace CapaPresentacion.Superadmin
 {
     public partial class Carga_empleado : Form
     {
+        string connectionString = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+
         public Carga_empleado()
         {
             InitializeComponent();
@@ -128,18 +131,6 @@ namespace CapaPresentacion.Superadmin
 
         }
 
-        private void BGuardar_Click(object sender, EventArgs e)
-        {
-            if (TDni.Text == "" || ComboBox_Perfil.Text == "" || TCodigo_emp.Text == "" || TNombre.Text == "" || TApellido.Text == "" || TTelefono.Text == "" || TDireccion.Text == "" || TCorreo.Text == "" || TContrasena.Text == "")
-            {
-                MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
         private void BBorrar_Click(object sender, EventArgs e)
         {
             TDni.Text = "";
@@ -151,6 +142,68 @@ namespace CapaPresentacion.Superadmin
             TDireccion.Text = "";
             TCorreo.Text = "";
             TContrasena.Text = "";
+        }
+
+        private void DTPNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonGuardar_Click(object sender, EventArgs e)
+        {
+            //Se comprueba que ningun campo este vacio
+            if (TDni.Text == "" || ComboBox_Perfil.Text == "" || TCodigo_emp.Text == "" || TNombre.Text == "" || TApellido.Text == "" || TTelefono.Text == "" || TDireccion.Text == "" || TCorreo.Text == "" || TContrasena.Text == "")
+            {
+                MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //Desarrollo de la funcion para cargar empleado
+                //Se capturan los valores
+                string dni = TDni.Text;
+                int codigoPerfEmp = int.Parse(ComboBox_Perfil.Text);
+                int id_empleado = int.Parse(TCodigo_emp.Text);
+                string nombreEmp = TNombre.Text;
+                string apellidoEmp = TApellido.Text;
+                string telefonoEmp = TTelefono.Text;
+                string direccionEmp = TDireccion.Text;
+                string correoEmp = TCorreo.Text;
+                string fecha_Nacimiento = DTPNacimiento.Value.ToShortDateString();
+                string contrasena = TContrasena.Text;
+
+                SqlConnection con = new SqlConnection(connectionString);
+
+                string consulta = "INSERT INTO UsuarioEmpleado (ID_empleado, Nombre, Apellido, Telefono, Email, Fecha_Nacimiento, DNI, Direccion, ID_perfil, Estado_empleado, Contrasena) VALUES (@ID_empleado, @Nombre, @Apellido, @Telefono, @Email, @Fecha_nacimiento, @DNI, @Direccion, @ID_perfil, @Estado_empleado, @Contrasena)";
+                SqlCommand comandoInsercion = new SqlCommand(consulta, con);
+
+                comandoInsercion.Parameters.AddWithValue("@ID_empleado", id_empleado);
+                comandoInsercion.Parameters.AddWithValue("@Nombre", nombreEmp);
+                comandoInsercion.Parameters.AddWithValue("@Apellido", apellidoEmp);
+                comandoInsercion.Parameters.AddWithValue("@Telefono", telefonoEmp);
+                comandoInsercion.Parameters.AddWithValue("@Email", correoEmp);
+                comandoInsercion.Parameters.AddWithValue("@Fecha_nacimiento", fecha_Nacimiento);
+                comandoInsercion.Parameters.AddWithValue("@DNI", dni);
+                comandoInsercion.Parameters.AddWithValue("@Direccion", direccionEmp);
+                comandoInsercion.Parameters.AddWithValue("@ID_perfil", codigoPerfEmp);
+                //El empleado siempre que se da de alta es con un estado activo
+                comandoInsercion.Parameters.AddWithValue("@Estado_empleado", 1);
+                comandoInsercion.Parameters.AddWithValue("@Contrasena", contrasena);
+
+                try
+                {
+                    con.Open();
+                    comandoInsercion.ExecuteNonQuery();
+                    MessageBox.Show("Registros insertados exitosamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (SqlException j)
+                {
+                    MessageBox.Show("Error Generado.\nDetalles: " + j.ToString(), "Error generado en insercion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    con.Close(); //una vez insertados los registros se cierra la conexion
+                }
+            }
         }
     }
 }

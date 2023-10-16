@@ -30,9 +30,12 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
+            DTGVButtonborrar = new DataGridViewButtonColumn();
+            DGVButtonModificar = new DataGridViewTextBoxColumn();
             label2 = new Label();
             ViewDataButton = new Button();
-            DTGVButtonborrar = new DataGridViewButtonColumn();
+            TBuscar = new TextBox();
+            LBuscar = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -43,7 +46,7 @@
             dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.BackgroundColor = Color.CadetBlue;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { DTGVButtonborrar });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { DTGVButtonborrar, DGVButtonModificar });
             dataGridView1.Location = new Point(28, 83);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
@@ -51,9 +54,26 @@
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // DTGVButtonborrar
+            // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.Red;
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Red;
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            DTGVButtonborrar.DefaultCellStyle = dataGridViewCellStyle1;
+            DTGVButtonborrar.HeaderText = "Eliminar";
+            DTGVButtonborrar.Name = "DTGVButtonborrar";
+            DTGVButtonborrar.Text = "Eliminar";
+            DTGVButtonborrar.ToolTipText = "Eliminar";
+            // 
+            // DGVButtonModificar
+            // 
+            DGVButtonModificar.HeaderText = "Modificar";
+            DGVButtonModificar.Name = "DGVButtonModificar";
+            // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 64, 64);
@@ -73,24 +93,29 @@
             ViewDataButton.UseVisualStyleBackColor = true;
             ViewDataButton.Click += ViewDataButton_Click;
             // 
-            // DTGVButtonborrar
+            // TBuscar
             // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.Red;
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Red;
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            DTGVButtonborrar.DefaultCellStyle = dataGridViewCellStyle1;
-            DTGVButtonborrar.HeaderText = "Eliminar";
-            DTGVButtonborrar.Name = "DTGVButtonborrar";
-            DTGVButtonborrar.Text = "Eliminar";
-            DTGVButtonborrar.ToolTipText = "Eliminar";
+            TBuscar.Location = new Point(184, 40);
+            TBuscar.Name = "TBuscar";
+            TBuscar.Size = new Size(100, 23);
+            TBuscar.TabIndex = 77;
+            // 
+            // LBuscar
+            // 
+            LBuscar.AutoSize = true;
+            LBuscar.Location = new Point(124, 43);
+            LBuscar.Name = "LBuscar";
+            LBuscar.Size = new Size(42, 15);
+            LBuscar.TabIndex = 78;
+            LBuscar.Text = "Buscar";
             // 
             // Ver_clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(939, 441);
+            Controls.Add(LBuscar);
+            Controls.Add(TBuscar);
             Controls.Add(ViewDataButton);
             Controls.Add(label2);
             Controls.Add(dataGridView1);
@@ -108,5 +133,8 @@
         private Label label2;
         private Button ViewDataButton;
         private DataGridViewButtonColumn DTGVButtonborrar;
+        private TextBox TBuscar;
+        private Label LBuscar;
+        private DataGridViewTextBoxColumn DGVButtonModificar;
     }
 }

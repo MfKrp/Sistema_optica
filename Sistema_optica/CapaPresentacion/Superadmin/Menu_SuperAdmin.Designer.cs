@@ -37,6 +37,8 @@
             TSMBVerPerfil = new ToolStripMenuItem();
             MSBCerrarSesion = new ToolStripMenuItem();
             contenedor = new Panel();
+            TSMButtonRestoreBD = new ToolStripMenuItem();
+            TSMBBackupBD = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             MSSuperAdmin.SuspendLayout();
             SuspendLayout();
@@ -65,7 +67,7 @@
             MSSuperAdmin.AutoSize = false;
             MSSuperAdmin.BackColor = Color.CadetBlue;
             MSSuperAdmin.Dock = DockStyle.Left;
-            MSSuperAdmin.Items.AddRange(new ToolStripItem[] { TSMRegistrarEmpleado, TSMBVerEmpleados, TSMBVerProductos, TSMBVerPerfil, MSBCerrarSesion });
+            MSSuperAdmin.Items.AddRange(new ToolStripItem[] { TSMRegistrarEmpleado, TSMBVerEmpleados, TSMBVerProductos, TSMBVerPerfil, MSBCerrarSesion, TSMBBackupBD, TSMButtonRestoreBD });
             MSSuperAdmin.Location = new Point(0, 95);
             MSSuperAdmin.Name = "MSSuperAdmin";
             MSSuperAdmin.Size = new Size(174, 578);
@@ -129,6 +131,24 @@
             contenedor.Size = new Size(1005, 563);
             contenedor.TabIndex = 4;
             // 
+            // TSMButtonRestoreBD
+            // 
+            TSMButtonRestoreBD.BackColor = Color.FromArgb(0, 64, 64);
+            TSMButtonRestoreBD.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMButtonRestoreBD.ForeColor = Color.White;
+            TSMButtonRestoreBD.Name = "TSMButtonRestoreBD";
+            TSMButtonRestoreBD.Size = new Size(167, 27);
+            TSMButtonRestoreBD.Text = "Restore BD";
+            // 
+            // TSMBBackupBD
+            // 
+            TSMBBackupBD.BackColor = Color.FromArgb(0, 64, 64);
+            TSMBBackupBD.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMBBackupBD.ForeColor = Color.White;
+            TSMBBackupBD.Name = "TSMBBackupBD";
+            TSMBBackupBD.Size = new Size(167, 27);
+            TSMBBackupBD.Text = "Backup BD";
+            // 
             // Menu_SuperAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -160,5 +180,7 @@
         private ToolStripMenuItem TSMBVerPerfil;
         private ToolStripMenuItem MSBCerrarSesion;
         private Panel contenedor;
+        private ToolStripMenuItem TSMBBackupBD;
+        private ToolStripMenuItem TSMButtonRestoreBD;
     }
 }

@@ -30,7 +30,11 @@
         {
             label2 = new Label();
             dataGridView1 = new DataGridView();
+            LBuscar = new Label();
+            TBuscar = new TextBox();
             C_id = new DataGridViewTextBoxColumn();
+            DTGVButtonModificar = new DataGridViewTextBoxColumn();
+            DTGVButton = new DataGridViewTextBoxColumn();
             C_nombre = new DataGridViewTextBoxColumn();
             C_apellido = new DataGridViewTextBoxColumn();
             C_tel = new DataGridViewTextBoxColumn();
@@ -56,17 +60,43 @@
             dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.BackgroundColor = Color.CadetBlue;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { C_id, C_nombre, C_apellido, C_tel, C_direccion, C_correo });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { C_id, DTGVButtonModificar, DTGVButton, C_nombre, C_apellido, C_tel, C_direccion, C_correo });
             dataGridView1.Location = new Point(29, 75);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(882, 337);
             dataGridView1.TabIndex = 78;
             // 
+            // LBuscar
+            // 
+            LBuscar.AutoSize = true;
+            LBuscar.Location = new Point(28, 39);
+            LBuscar.Name = "LBuscar";
+            LBuscar.Size = new Size(42, 15);
+            LBuscar.TabIndex = 80;
+            LBuscar.Text = "Buscar";
+            // 
+            // TBuscar
+            // 
+            TBuscar.Location = new Point(88, 36);
+            TBuscar.Name = "TBuscar";
+            TBuscar.Size = new Size(100, 23);
+            TBuscar.TabIndex = 79;
+            // 
             // C_id
             // 
             C_id.HeaderText = "DNI";
             C_id.Name = "C_id";
+            // 
+            // DTGVButtonModificar
+            // 
+            DTGVButtonModificar.HeaderText = "Modificar";
+            DTGVButtonModificar.Name = "DTGVButtonModificar";
+            // 
+            // DTGVButton
+            // 
+            DTGVButton.HeaderText = "Eliminar";
+            DTGVButton.Name = "DTGVButton";
             // 
             // C_nombre
             // 
@@ -102,6 +132,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(939, 441);
+            Controls.Add(LBuscar);
+            Controls.Add(TBuscar);
             Controls.Add(dataGridView1);
             Controls.Add(label2);
             Name = "Ver_empleados";
@@ -115,7 +147,11 @@
 
         private Label label2;
         private DataGridView dataGridView1;
+        private Label LBuscar;
+        private TextBox TBuscar;
         private DataGridViewTextBoxColumn C_id;
+        private DataGridViewTextBoxColumn DTGVButtonModificar;
+        private DataGridViewTextBoxColumn DTGVButton;
         private DataGridViewTextBoxColumn C_nombre;
         private DataGridViewTextBoxColumn C_apellido;
         private DataGridViewTextBoxColumn C_tel;

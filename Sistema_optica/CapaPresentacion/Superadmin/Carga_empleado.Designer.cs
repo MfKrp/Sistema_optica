@@ -49,10 +49,10 @@
             TCodigo_emp = new TextBox();
             TContrasena = new TextBox();
             label1 = new Label();
-            BGuardar = new Button();
             label2 = new Label();
             BBorrar = new Button();
             DTPNacimiento = new DateTimePicker();
+            BotonGuardar = new Button();
             SuspendLayout();
             // 
             // LNombre
@@ -285,20 +285,6 @@
             label1.TabIndex = 21;
             label1.Text = "minimo 5 caracteres";
             // 
-            // BGuardar
-            // 
-            BGuardar.Anchor = AnchorStyles.None;
-            BGuardar.BackColor = Color.Green;
-            BGuardar.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            BGuardar.ForeColor = Color.White;
-            BGuardar.Location = new Point(633, 473);
-            BGuardar.Name = "BGuardar";
-            BGuardar.Size = new Size(88, 36);
-            BGuardar.TabIndex = 22;
-            BGuardar.Text = "Guardar";
-            BGuardar.UseVisualStyleBackColor = false;
-            BGuardar.Click += BGuardar_Click;
-            // 
             // label2
             // 
             label2.Anchor = AnchorStyles.None;
@@ -333,16 +319,30 @@
             DTPNacimiento.Name = "DTPNacimiento";
             DTPNacimiento.Size = new Size(179, 23);
             DTPNacimiento.TabIndex = 25;
+            DTPNacimiento.ValueChanged += DTPNacimiento_ValueChanged;
+            // 
+            // BotonGuardar
+            // 
+            BotonGuardar.Anchor = AnchorStyles.None;
+            BotonGuardar.BackColor = Color.LimeGreen;
+            BotonGuardar.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            BotonGuardar.Location = new Point(633, 473);
+            BotonGuardar.Name = "BotonGuardar";
+            BotonGuardar.Size = new Size(88, 36);
+            BotonGuardar.TabIndex = 26;
+            BotonGuardar.Text = "Guardar";
+            BotonGuardar.UseVisualStyleBackColor = false;
+            BotonGuardar.Click += BotonGuardar_Click;
             // 
             // Carga_empleado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(768, 538);
+            Controls.Add(BotonGuardar);
             Controls.Add(DTPNacimiento);
             Controls.Add(BBorrar);
             Controls.Add(label2);
-            Controls.Add(BGuardar);
             Controls.Add(label1);
             Controls.Add(TContrasena);
             Controls.Add(TCodigo_emp);
@@ -394,9 +394,9 @@
         private TextBox TCodigo_emp;
         private TextBox TContrasena;
         private Label label1;
-        private Button BGuardar;
         private Label label2;
         private Button BBorrar;
         private DateTimePicker DTPNacimiento;
+        private Button BotonGuardar;
     }
 }

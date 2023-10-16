@@ -38,6 +38,10 @@
             CGenero = new DataGridViewTextBoxColumn();
             CTalle = new DataGridViewTextBoxColumn();
             CPrecio = new DataGridViewTextBoxColumn();
+            LBuscar = new Label();
+            TBuscar = new TextBox();
+            DGVButtonEliminar = new DataGridViewTextBoxColumn();
+            DGVButtonModificar = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)DGV_ListaProd).BeginInit();
             SuspendLayout();
             // 
@@ -58,7 +62,7 @@
             DGV_ListaProd.Anchor = AnchorStyles.None;
             DGV_ListaProd.BackgroundColor = Color.CadetBlue;
             DGV_ListaProd.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DGV_ListaProd.Columns.AddRange(new DataGridViewColumn[] { CId, CTipo, CMarca, CEstilo, CColor, CGenero, CTalle, CPrecio });
+            DGV_ListaProd.Columns.AddRange(new DataGridViewColumn[] { CId, CTipo, CMarca, CEstilo, CColor, CGenero, CTalle, CPrecio, DGVButtonEliminar, DGVButtonModificar });
             DGV_ListaProd.Location = new Point(31, 79);
             DGV_ListaProd.Name = "DGV_ListaProd";
             DGV_ListaProd.RowTemplate.Height = 25;
@@ -105,11 +109,39 @@
             CPrecio.HeaderText = "Precio";
             CPrecio.Name = "CPrecio";
             // 
+            // LBuscar
+            // 
+            LBuscar.AutoSize = true;
+            LBuscar.Location = new Point(35, 41);
+            LBuscar.Name = "LBuscar";
+            LBuscar.Size = new Size(42, 15);
+            LBuscar.TabIndex = 80;
+            LBuscar.Text = "Buscar";
+            // 
+            // TBuscar
+            // 
+            TBuscar.Location = new Point(95, 38);
+            TBuscar.Name = "TBuscar";
+            TBuscar.Size = new Size(100, 23);
+            TBuscar.TabIndex = 79;
+            // 
+            // DGVButtonEliminar
+            // 
+            DGVButtonEliminar.HeaderText = "Eliminar";
+            DGVButtonEliminar.Name = "DGVButtonEliminar";
+            // 
+            // DGVButtonModificar
+            // 
+            DGVButtonModificar.HeaderText = "Modificar";
+            DGVButtonModificar.Name = "DGVButtonModificar";
+            // 
             // Ver_productos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(939, 441);
+            Controls.Add(LBuscar);
+            Controls.Add(TBuscar);
             Controls.Add(DGV_ListaProd);
             Controls.Add(label2);
             Name = "Ver_productos";
@@ -132,5 +164,9 @@
         private DataGridViewTextBoxColumn CGenero;
         private DataGridViewTextBoxColumn CTalle;
         private DataGridViewTextBoxColumn CPrecio;
+        private Label LBuscar;
+        private TextBox TBuscar;
+        private DataGridViewTextBoxColumn DGVButtonEliminar;
+        private DataGridViewTextBoxColumn DGVButtonModificar;
     }
 }
