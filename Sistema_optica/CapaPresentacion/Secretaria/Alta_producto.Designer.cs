@@ -34,11 +34,9 @@
             LGenero = new Label();
             LColor = new Label();
             LMarca = new Label();
-            LTalle = new Label();
             LEstilo = new Label();
             LPrecio = new Label();
             ComboBox_Genero = new ComboBox();
-            ComboBox_Talle = new ComboBox();
             ComboBox_Marca = new ComboBox();
             ComboBox_Estilo = new ComboBox();
             ComnboBox_Anteojo = new ComboBox();
@@ -49,6 +47,8 @@
             BGuardar = new Button();
             label2 = new Label();
             pictureBox1 = new PictureBox();
+            label1 = new Label();
+            TStock = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -110,7 +110,7 @@
             LColor.BackColor = SystemColors.ButtonFace;
             LColor.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LColor.ForeColor = Color.Black;
-            LColor.Location = new Point(410, 190);
+            LColor.Location = new Point(243, 190);
             LColor.Name = "LColor";
             LColor.Size = new Size(50, 23);
             LColor.TabIndex = 4;
@@ -128,19 +128,6 @@
             LMarca.Size = new Size(57, 23);
             LMarca.TabIndex = 5;
             LMarca.Text = "Marca";
-            // 
-            // LTalle
-            // 
-            LTalle.Anchor = AnchorStyles.None;
-            LTalle.AutoSize = true;
-            LTalle.BackColor = SystemColors.ButtonFace;
-            LTalle.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LTalle.ForeColor = Color.Black;
-            LTalle.Location = new Point(255, 190);
-            LTalle.Name = "LTalle";
-            LTalle.Size = new Size(46, 23);
-            LTalle.TabIndex = 6;
-            LTalle.Text = "Talle";
             // 
             // LEstilo
             // 
@@ -178,15 +165,6 @@
             ComboBox_Genero.Size = new Size(116, 23);
             ComboBox_Genero.TabIndex = 9;
             // 
-            // ComboBox_Talle
-            // 
-            ComboBox_Talle.Anchor = AnchorStyles.None;
-            ComboBox_Talle.FormattingEnabled = true;
-            ComboBox_Talle.Location = new Point(307, 193);
-            ComboBox_Talle.Name = "ComboBox_Talle";
-            ComboBox_Talle.Size = new Size(75, 23);
-            ComboBox_Talle.TabIndex = 10;
-            // 
             // ComboBox_Marca
             // 
             ComboBox_Marca.Anchor = AnchorStyles.None;
@@ -218,7 +196,7 @@
             // TColor
             // 
             TColor.Anchor = AnchorStyles.None;
-            TColor.Location = new Point(466, 193);
+            TColor.Location = new Point(299, 193);
             TColor.Name = "TColor";
             TColor.Size = new Size(135, 23);
             TColor.TabIndex = 14;
@@ -295,12 +273,33 @@
             pictureBox1.TabIndex = 53;
             pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(444, 190);
+            label1.Name = "label1";
+            label1.Size = new Size(51, 23);
+            label1.TabIndex = 54;
+            label1.Text = "Stock";
+            // 
+            // TStock
+            // 
+            TStock.Anchor = AnchorStyles.None;
+            TStock.Location = new Point(501, 193);
+            TStock.Name = "TStock";
+            TStock.Size = new Size(100, 23);
+            TStock.TabIndex = 55;
+            // 
             // Alta_producto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(642, 503);
+            Controls.Add(TStock);
+            Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(BBorrar);
@@ -313,14 +312,12 @@
             Controls.Add(TPrecio);
             Controls.Add(ComboBox_Genero);
             Controls.Add(TColor);
-            Controls.Add(LTalle);
             Controls.Add(LPrecio);
             Controls.Add(LColor);
             Controls.Add(LId_prod);
             Controls.Add(LGenero);
             Controls.Add(LAnteojo);
             Controls.Add(LEstilo);
-            Controls.Add(ComboBox_Talle);
             Controls.Add(ComboBox_Marca);
             ForeColor = Color.Black;
             Name = "Alta_producto";
@@ -340,11 +337,9 @@
         private Label LGenero;
         private Label LColor;
         private Label LMarca;
-        private Label LTalle;
         private Label LEstilo;
         private Label LPrecio;
         private ComboBox ComboBox_Genero;
-        private ComboBox ComboBox_Talle;
         private ComboBox ComboBox_Marca;
         private ComboBox ComboBox_Estilo;
         private ComboBox ComnboBox_Anteojo;
@@ -355,5 +350,7 @@
         private Button BGuardar;
         private Label label2;
         private PictureBox pictureBox1;
+        private Label label1;
+        private TextBox TStock;
     }
 }

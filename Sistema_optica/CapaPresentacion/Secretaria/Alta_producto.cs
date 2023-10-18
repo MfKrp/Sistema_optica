@@ -1,9 +1,13 @@
-﻿using System;
+﻿using CapaPresentacion.Capa_datos;
+using CapaPresentacion.Entidades_Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +16,9 @@ namespace CapaPresentacion.Secretaria
 {
     public partial class Alta_producto : Form
     {
+
+        //string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        //String para conectarse a la base de datos
         public Alta_producto()
         {
             InitializeComponent();
@@ -19,6 +26,10 @@ namespace CapaPresentacion.Secretaria
 
         private void Alta_producto_Load(object sender, EventArgs e)
         {
+
+            EMarca OcomboBox = new EMarca();
+
+            OcomboBox.cargarComboBox(ComboBox_Marca);
 
         }
 
@@ -80,13 +91,16 @@ namespace CapaPresentacion.Secretaria
 
         private void BGuardar_Click(object sender, EventArgs e)
         {
-            if (TId_prod.Text == "" || ComnboBox_Anteojo.Text == "" || ComboBox_Genero.Text == "" || ComboBox_Talle.Text == "" || TColor.Text == "" || ComboBox_Marca.Text == "" || ComboBox_Estilo.Text == "" || TPrecio.Text == "")
+            if (TId_prod.Text == "" || ComnboBox_Anteojo.Text == "" || ComboBox_Genero.Text == "" || TColor.Text == "" || ComboBox_Marca.Text == "" || ComboBox_Estilo.Text == "" || TPrecio.Text == "" || TStock.Text == "")
             {
                 MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CProducto datos = new CProducto();
+                datos.altaProducto(TId_prod.Text, ComnboBox_Anteojo.Text, TPrecio.Text, ComboBox_Genero.Text, TColor.Text, TStock.Text, ComboBox_Estilo.Text, ComboBox_Marca.SelectedValue.ToString());
+                //MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Desarrollo de la funcion para dar de alta un producto
             }
         }
 
@@ -95,7 +109,6 @@ namespace CapaPresentacion.Secretaria
             TId_prod.Text = "";
             ComnboBox_Anteojo.Text = "";
             ComboBox_Genero.Text = "";
-            ComboBox_Talle.Text = "";
             TColor.Text = "";
             ComboBox_Marca.Text = "";
             ComboBox_Estilo.Text = "";
