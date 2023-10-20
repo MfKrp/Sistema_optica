@@ -30,8 +30,6 @@
         {
             label2 = new Label();
             DGV_ListaProd = new DataGridView();
-            LBuscar = new Label();
-            TBuscar = new TextBox();
             CId = new DataGridViewTextBoxColumn();
             DGVButtonEliminar = new DataGridViewTextBoxColumn();
             DGVButton = new DataGridViewTextBoxColumn();
@@ -42,6 +40,9 @@
             CGenero = new DataGridViewTextBoxColumn();
             CTalle = new DataGridViewTextBoxColumn();
             CPrecio = new DataGridViewTextBoxColumn();
+            LBuscar = new Label();
+            TBuscar = new TextBox();
+            BVerRegistros = new Button();
             ((System.ComponentModel.ISupportInitialize)DGV_ListaProd).BeginInit();
             SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 64, 64);
-            label2.Location = new Point(360, 31);
+            label2.Location = new Point(350, 34);
             label2.Name = "label2";
             label2.Size = new Size(222, 28);
             label2.TabIndex = 76;
@@ -68,22 +69,7 @@
             DGV_ListaProd.RowTemplate.Height = 25;
             DGV_ListaProd.Size = new Size(882, 337);
             DGV_ListaProd.TabIndex = 77;
-            // 
-            // LBuscar
-            // 
-            LBuscar.AutoSize = true;
-            LBuscar.Location = new Point(25, 41);
-            LBuscar.Name = "LBuscar";
-            LBuscar.Size = new Size(42, 15);
-            LBuscar.TabIndex = 80;
-            LBuscar.Text = "Buscar";
-            // 
-            // TBuscar
-            // 
-            TBuscar.Location = new Point(85, 38);
-            TBuscar.Name = "TBuscar";
-            TBuscar.Size = new Size(100, 23);
-            TBuscar.TabIndex = 79;
+            DGV_ListaProd.CellContentClick += DGV_ListaProd_CellContentClick;
             // 
             // CId
             // 
@@ -135,11 +121,41 @@
             CPrecio.HeaderText = "Precio";
             CPrecio.Name = "CPrecio";
             // 
+            // LBuscar
+            // 
+            LBuscar.Anchor = AnchorStyles.None;
+            LBuscar.AutoSize = true;
+            LBuscar.Location = new Point(25, 41);
+            LBuscar.Name = "LBuscar";
+            LBuscar.Size = new Size(42, 15);
+            LBuscar.TabIndex = 80;
+            LBuscar.Text = "Buscar";
+            // 
+            // TBuscar
+            // 
+            TBuscar.Anchor = AnchorStyles.None;
+            TBuscar.Location = new Point(85, 38);
+            TBuscar.Name = "TBuscar";
+            TBuscar.Size = new Size(100, 23);
+            TBuscar.TabIndex = 79;
+            // 
+            // BVerRegistros
+            // 
+            BVerRegistros.Anchor = AnchorStyles.None;
+            BVerRegistros.Location = new Point(799, 40);
+            BVerRegistros.Name = "BVerRegistros";
+            BVerRegistros.Size = new Size(97, 23);
+            BVerRegistros.TabIndex = 82;
+            BVerRegistros.Text = "Ver Productos";
+            BVerRegistros.UseVisualStyleBackColor = true;
+            BVerRegistros.Click += BVerRegistros_Click;
+            // 
             // Ver_productos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(939, 441);
+            Controls.Add(BVerRegistros);
             Controls.Add(LBuscar);
             Controls.Add(TBuscar);
             Controls.Add(DGV_ListaProd);
@@ -168,5 +184,6 @@
         private DataGridViewTextBoxColumn CGenero;
         private DataGridViewTextBoxColumn CTalle;
         private DataGridViewTextBoxColumn CPrecio;
+        private Button BVerRegistros;
     }
 }

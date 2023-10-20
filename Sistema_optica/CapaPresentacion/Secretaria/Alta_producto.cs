@@ -26,9 +26,13 @@ namespace CapaPresentacion.Secretaria
 
         private void Alta_producto_Load(object sender, EventArgs e)
         {
-
+            //Se instancian los combobox cuando se van a cargar
+            ETipo OcomboBoxTipo = new ETipo();
+            EEstilo OcomboBoxEstilo = new EEstilo();
             EMarca OcomboBox = new EMarca();
 
+            OcomboBoxTipo.cargarComboBox(ComnboBox_Anteojo);
+            OcomboBoxEstilo.cargarComboBoxEstilos(ComboBox_Estilo);
             OcomboBox.cargarComboBox(ComboBox_Marca);
 
         }
@@ -98,9 +102,24 @@ namespace CapaPresentacion.Secretaria
             else
             {
                 CProducto datos = new CProducto();
-                datos.altaProducto(TId_prod.Text, ComnboBox_Anteojo.Text, TPrecio.Text, ComboBox_Genero.Text, TColor.Text, TStock.Text, ComboBox_Estilo.Text, ComboBox_Marca.SelectedValue.ToString());
+                datos.altaProducto(TId_prod.Text, ComnboBox_Anteojo.SelectedValue.ToString(), TPrecio.Text, ComboBox_Genero.Text, TColor.Text, TStock.Text, ComboBox_Marca.SelectedValue.ToString(), ComboBox_Estilo.SelectedValue.ToString());
+
+                //orden de los parametros
+                /*
+                 string TId_prod, string ComnboBox_Anteojo, string TPrecio, string ComboBox_Genero, string TColor, string TStock, string ComboBox_Marca, string ComboBox_Estilo
+                 */
+
                 //MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //Desarrollo de la funcion para dar de alta un producto
+
+                //Se resetean todos los campos una vez insertados los registros
+                TId_prod.Text = "";
+                ComnboBox_Anteojo.Text = "";
+                ComboBox_Genero.Text = "";
+                TColor.Text = "";
+                ComboBox_Marca.Text = "";
+                ComboBox_Estilo.Text = "";
+                TPrecio.Text = "";
             }
         }
 

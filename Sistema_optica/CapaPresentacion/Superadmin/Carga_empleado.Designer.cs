@@ -248,6 +248,7 @@
             // ComboBox_Perfil
             // 
             ComboBox_Perfil.Anchor = AnchorStyles.None;
+            ComboBox_Perfil.DropDownStyle = ComboBoxStyle.DropDownList;
             ComboBox_Perfil.FormattingEnabled = true;
             ComboBox_Perfil.Location = new Point(219, 128);
             ComboBox_Perfil.Name = "ComboBox_Perfil";

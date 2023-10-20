@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaPresentacion.Capa_datos;
+using CapaPresentacion.Entidades_Clases;
 
 namespace CapaPresentacion.Vendedor
 {
@@ -15,6 +17,17 @@ namespace CapaPresentacion.Vendedor
         public Ver_productos()
         {
             InitializeComponent();
+        }
+
+        private void BVerProductos_Click(object sender, EventArgs e)
+        {
+            CProducto verProducto = new CProducto();
+            verProducto.verProductos(DGV_ListaProd);
+        }
+
+        private void DGV_ListaProd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

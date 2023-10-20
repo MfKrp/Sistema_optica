@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CapaPresentacion.Capa_datos
 {
@@ -13,7 +15,7 @@ namespace CapaPresentacion.Capa_datos
         string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
         //Metodo que da de alta un producto
-        public void altaProducto(string TId_prod, string ComnboBox_Anteojo, string TPrecio, string ComboBox_Genero, string TColor, string TStock, string ComboBox_Marca, string ComboBox_Estilo)
+        public void altaProducto(string TId_prod, string ComboBox_Anteojo, string TPrecio, string ComboBox_Genero, string TColor, string TStock, string ComboBox_Marca, string ComboBox_Estilo)
         {
             //MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //Desarrollo de la funcion para dar de alta un producto
@@ -21,14 +23,14 @@ namespace CapaPresentacion.Capa_datos
 
 
             int idProd = int.Parse(TId_prod);
-            string nombre = ComnboBox_Anteojo;
+            string nombre = ComboBox_Anteojo;
             float precioUnit = float.Parse(TPrecio);
             string generoProd = ComboBox_Genero/*.ValueMember.ToString()*/;
             string colorProd = TColor;
             int stockProd = int.Parse(TStock);
             int estiloProd = int.Parse(ComboBox_Estilo);
             int marcaProd = int.Parse(ComboBox_Marca);
-            int tipoProd = int.Parse(ComboBox_Estilo);
+            int tipoProd = int.Parse(ComboBox_Anteojo);
 
             SqlConnection con = new SqlConnection(connectionString);
 
@@ -64,5 +66,17 @@ namespace CapaPresentacion.Capa_datos
             }
         }
 
+        public void verProductos(DataGridView dataGridProductos)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Producto", sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                dataGridProductos.DataSource = dtbl;
+            }
+        }
     }
 }

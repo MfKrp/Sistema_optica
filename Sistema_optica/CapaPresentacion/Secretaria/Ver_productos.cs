@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaPresentacion.Capa_datos;
+using CapaPresentacion.Entidades_Clases;
 
 namespace CapaPresentacion.Secretaria
 {
@@ -15,6 +17,18 @@ namespace CapaPresentacion.Secretaria
         public Ver_productos()
         {
             InitializeComponent();
+        }
+
+        private void BVerProductos_Click(object sender, EventArgs e)
+        {
+            //Se listan los productos disponibles
+            CProducto verProductos = new CProducto();
+            verProductos.verProductos(DGV_ListaProd);
+        }
+
+        private void DGV_ListaProd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

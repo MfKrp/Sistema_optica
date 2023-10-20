@@ -1,31 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 
 namespace CapaPresentacion.Entidades_Clases
 {
-    internal class EMarca
+    internal class ETipo
     {
         string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
-        //Se carga el combobox de marca con los datos guardados en los registros de esa tabla
-        public void cargarComboBox(ComboBox ComboBox)
+
+        public void cargarComboBox(ComboBox comboBoxTipo)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 try
                 {
-                    string consulta = "SELECT Id_marca, Descripcion FROM Marca";
+                    string consulta = "SELECT ID_Tipo, Nombre FROM Tipo_producto";
                     SqlDataAdapter da = new SqlDataAdapter(consulta, con);
                     con.Open();
                     DataSet ds = new DataSet();
-                    da.Fill(ds, "Marca");
-                    ComboBox.DataSource = ds.Tables["Marca"];
-                    ComboBox.DisplayMember = "Descripcion";
-                    ComboBox.ValueMember = "Id_marca";
+                    da.Fill(ds, "Tipo_producto");
+                    comboBoxTipo.DataSource = ds.Tables["Tipo_producto"];
+                    comboBoxTipo.DisplayMember = "Nombre";
+                    comboBoxTipo.ValueMember = "ID_Tipo";
                 }
                 catch (Exception e)
                 {

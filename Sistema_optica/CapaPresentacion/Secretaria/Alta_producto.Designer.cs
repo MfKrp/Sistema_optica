@@ -40,7 +40,6 @@
             ComboBox_Marca = new ComboBox();
             ComboBox_Estilo = new ComboBox();
             ComnboBox_Anteojo = new ComboBox();
-            TColor = new TextBox();
             TId_prod = new TextBox();
             TPrecio = new TextBox();
             BBorrar = new Button();
@@ -49,6 +48,7 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             TStock = new TextBox();
+            TColor = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -159,7 +159,9 @@
             // ComboBox_Genero
             // 
             ComboBox_Genero.Anchor = AnchorStyles.None;
+            ComboBox_Genero.DropDownStyle = ComboBoxStyle.DropDownList;
             ComboBox_Genero.FormattingEnabled = true;
+            ComboBox_Genero.Items.AddRange(new object[] { "M", "F" });
             ComboBox_Genero.Location = new Point(113, 193);
             ComboBox_Genero.Name = "ComboBox_Genero";
             ComboBox_Genero.Size = new Size(116, 23);
@@ -168,6 +170,7 @@
             // ComboBox_Marca
             // 
             ComboBox_Marca.Anchor = AnchorStyles.None;
+            ComboBox_Marca.DropDownStyle = ComboBoxStyle.DropDownList;
             ComboBox_Marca.FormattingEnabled = true;
             ComboBox_Marca.Location = new Point(113, 263);
             ComboBox_Marca.Name = "ComboBox_Marca";
@@ -177,6 +180,7 @@
             // ComboBox_Estilo
             // 
             ComboBox_Estilo.Anchor = AnchorStyles.None;
+            ComboBox_Estilo.DropDownStyle = ComboBoxStyle.DropDownList;
             ComboBox_Estilo.FormattingEnabled = true;
             ComboBox_Estilo.Location = new Point(113, 319);
             ComboBox_Estilo.Name = "ComboBox_Estilo";
@@ -186,22 +190,13 @@
             // ComnboBox_Anteojo
             // 
             ComnboBox_Anteojo.Anchor = AnchorStyles.None;
+            ComnboBox_Anteojo.DropDownStyle = ComboBoxStyle.DropDownList;
             ComnboBox_Anteojo.FormattingEnabled = true;
             ComnboBox_Anteojo.Location = new Point(423, 108);
             ComnboBox_Anteojo.Name = "ComnboBox_Anteojo";
             ComnboBox_Anteojo.Size = new Size(178, 23);
             ComnboBox_Anteojo.TabIndex = 13;
             ComnboBox_Anteojo.SelectedIndexChanged += ComnboBox_Anteojo_SelectedIndexChanged;
-            // 
-            // TColor
-            // 
-            TColor.Anchor = AnchorStyles.None;
-            TColor.Location = new Point(299, 193);
-            TColor.Name = "TColor";
-            TColor.Size = new Size(135, 23);
-            TColor.TabIndex = 14;
-            TColor.TextChanged += TColor_TextChanged;
-            TColor.KeyPress += TColor_KeyPress;
             // 
             // TId_prod
             // 
@@ -210,7 +205,6 @@
             TId_prod.Name = "TId_prod";
             TId_prod.Size = new Size(164, 23);
             TId_prod.TabIndex = 15;
-            TId_prod.Text = "--";
             TId_prod.TextChanged += TId_prod_TextChanged;
             TId_prod.KeyPress += TId_prod_KeyPress;
             // 
@@ -292,12 +286,24 @@
             TStock.Size = new Size(100, 23);
             TStock.TabIndex = 55;
             // 
+            // TColor
+            // 
+            TColor.Anchor = AnchorStyles.None;
+            TColor.DropDownStyle = ComboBoxStyle.DropDownList;
+            TColor.FormattingEnabled = true;
+            TColor.Items.AddRange(new object[] { "Azul", "Verde", "Blanco", "Negro", "Rojo", "Amarillo" });
+            TColor.Location = new Point(299, 190);
+            TColor.Name = "TColor";
+            TColor.Size = new Size(121, 23);
+            TColor.TabIndex = 56;
+            // 
             // Alta_producto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(642, 503);
+            Controls.Add(TColor);
             Controls.Add(TStock);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -311,7 +317,6 @@
             Controls.Add(TId_prod);
             Controls.Add(TPrecio);
             Controls.Add(ComboBox_Genero);
-            Controls.Add(TColor);
             Controls.Add(LPrecio);
             Controls.Add(LColor);
             Controls.Add(LId_prod);
@@ -343,7 +348,6 @@
         private ComboBox ComboBox_Marca;
         private ComboBox ComboBox_Estilo;
         private ComboBox ComnboBox_Anteojo;
-        private TextBox TColor;
         private TextBox TId_prod;
         private TextBox TPrecio;
         private Button BBorrar;
@@ -352,5 +356,6 @@
         private PictureBox pictureBox1;
         private Label label1;
         private TextBox TStock;
+        private ComboBox TColor;
     }
 }

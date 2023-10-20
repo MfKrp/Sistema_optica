@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Runtime.CompilerServices;
+using CapaPresentacion.Entidades_Clases;
 
 namespace CapaPresentacion.Vendedor
 {
@@ -47,6 +48,14 @@ namespace CapaPresentacion.Vendedor
             }
             else
             {
+                CCliente clienteNuevo = new CCliente();
+                clienteNuevo.altaCliente(TDni.Text,
+                    TNombre.Text,
+                    TApellido.Text,
+                    TTelefono.Text,
+                    TDireccion.Text,
+                    TCorreo.Text);
+                /*
                 //Se capturan los valores
                 int dni = Int32.Parse(TDni.Text);
                 string nombre = TNombre.Text;
@@ -84,6 +93,7 @@ namespace CapaPresentacion.Vendedor
                 {
                     con.Close();
                 }
+                */
             }
         }
 

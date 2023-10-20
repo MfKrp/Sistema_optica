@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaPresentacion.Entidades_Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -128,7 +129,8 @@ namespace CapaPresentacion.Superadmin
 
         private void Carga_empleado_Load(object sender, EventArgs e)
         {
-
+            EPerfilEmpleado textBoxPerfil = new EPerfilEmpleado();
+            textBoxPerfil.cargarTextBoxPerfil(ComboBox_Perfil);
         }
 
         private void BBorrar_Click(object sender, EventArgs e)
@@ -158,6 +160,18 @@ namespace CapaPresentacion.Superadmin
             }
             else
             {
+                CEmpleado nuevoEmpleado = new CEmpleado();
+                nuevoEmpleado.altaEmpleado(TDni.Text,
+                ComboBox_Perfil.SelectedValue.ToString(),
+                int.Parse(TCodigo_emp.Text),
+                TNombre.Text,
+                TApellido.Text,
+                TTelefono.Text,
+                TDireccion.Text,
+                TCorreo.Text,
+                DTPNacimiento.Value.ToShortDateString(),
+                TContrasena.Text);
+                /*
                 //Desarrollo de la funcion para cargar empleado
                 //Se capturan los valores
                 string dni = TDni.Text;
@@ -203,6 +217,7 @@ namespace CapaPresentacion.Superadmin
                 {
                     con.Close(); //una vez insertados los registros se cierra la conexion
                 }
+                */
             }
         }
     }

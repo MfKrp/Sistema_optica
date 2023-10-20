@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CapaPresentacion.Entidades_Clases;
 
 namespace CapaPresentacion.Secretaria
 {
     public partial class Ver_clientes : Form
     {
         //String que tiene la conexion al server
-        string connectionString = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
         public Ver_clientes()
         {
@@ -33,6 +34,11 @@ namespace CapaPresentacion.Secretaria
 
         private void ViewDataButton_Click(object sender, EventArgs e)
         {
+            //Cuando se presione este boton se mostraran los datos de la base de datos en la tabla
+            CCliente verClientes = new CCliente();
+            verClientes.verClientes(dataGridView1);
+            
+            /*
             using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
@@ -42,6 +48,7 @@ namespace CapaPresentacion.Secretaria
 
                 dataGridView1.DataSource = dtbl;
             }
+            */
         }
     }
 }

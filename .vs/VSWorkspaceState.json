@@ -3,8 +3,8 @@
     "",
     "\\Sistema_optica",
     "\\Sistema_optica\\CapaPresentacion",
-    "\\Sistema_optica\\CapaPresentacion\\Superadmin"
+    "\\Sistema_optica\\CapaPresentacion\\Entidades_Clases"
   ],
-  "SelectedNode": "\\Sistema_optica\\CapaPresentacion\\Superadmin\\Menu_SuperAdmin.cs",
+  "SelectedNode": "\\Sistema_optica\\CapaPresentacion\\Entidades_Clases\\CProducto.cs",
   "PreviewInSolutionExplorer": false
 }
