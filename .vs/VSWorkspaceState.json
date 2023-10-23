@@ -3,8 +3,9 @@
     "",
     "\\Sistema_optica",
     "\\Sistema_optica\\CapaPresentacion",
-    "\\Sistema_optica\\CapaPresentacion\\Entidades_Clases"
+    "\\Sistema_optica\\CapaPresentacion\\Entidades_Clases",
+    "\\Sistema_optica\\CapaPresentacion\\Vendedor"
   ],
-  "SelectedNode": "\\Sistema_optica\\CapaPresentacion\\Entidades_Clases\\CProducto.cs",
+  "SelectedNode": "\\Sistema_optica\\CapaPresentacion\\Vendedor\\Ver_productos.cs",
   "PreviewInSolutionExplorer": false
 }

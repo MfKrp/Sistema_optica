@@ -60,17 +60,9 @@
             LPrecioVenta = new Label();
             TPrecioTotal = new TextBox();
             CBTipo = new ComboBox();
-            LTalle = new Label();
             LColor = new Label();
             CBMarca = new ComboBox();
             CBEstilo = new ComboBox();
-            checkBox_masc = new CheckBox();
-            checkBox_fem = new CheckBox();
-            checkBox_unisex = new CheckBox();
-            checkBox_L = new CheckBox();
-            checkBox_s = new CheckBox();
-            checkBox_m = new CheckBox();
-            checkBox_xs = new CheckBox();
             panel1 = new Panel();
             TColor = new TextBox();
             panel2 = new Panel();
@@ -80,6 +72,7 @@
             label4 = new Label();
             FechaVenta = new DateTimePicker();
             TDni_Vendedor = new TextBox();
+            CBGVenta = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)DTGDatosCompra).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NCantidadCompra).BeginInit();
             panel1.SuspendLayout();
@@ -201,7 +194,7 @@
             // 
             LMarcaCompra.AutoSize = true;
             LMarcaCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LMarcaCompra.Location = new Point(263, 87);
+            LMarcaCompra.Location = new Point(263, 79);
             LMarcaCompra.Name = "LMarcaCompra";
             LMarcaCompra.Size = new Size(63, 23);
             LMarcaCompra.TabIndex = 16;
@@ -209,9 +202,10 @@
             // 
             // TPrecio
             // 
-            TPrecio.Location = new Point(491, 138);
+            TPrecio.Location = new Point(476, 130);
             TPrecio.Name = "TPrecio";
-            TPrecio.Size = new Size(81, 23);
+            TPrecio.ReadOnly = true;
+            TPrecio.Size = new Size(154, 23);
             TPrecio.TabIndex = 15;
             TPrecio.TextChanged += TPrecio_TextChanged;
             TPrecio.KeyPress += TPrecio_KeyPress;
@@ -220,7 +214,7 @@
             // 
             LGeneroCompra.AutoSize = true;
             LGeneroCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LGeneroCompra.Location = new Point(7, 135);
+            LGeneroCompra.Location = new Point(175, 130);
             LGeneroCompra.Name = "LGeneroCompra";
             LGeneroCompra.Size = new Size(69, 23);
             LGeneroCompra.TabIndex = 14;
@@ -230,7 +224,7 @@
             // 
             LEstiloCompra.AutoSize = true;
             LEstiloCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LEstiloCompra.Location = new Point(7, 87);
+            LEstiloCompra.Location = new Point(36, 79);
             LEstiloCompra.Name = "LEstiloCompra";
             LEstiloCompra.Size = new Size(58, 23);
             LEstiloCompra.TabIndex = 11;
@@ -241,7 +235,7 @@
             LTipoCompra.AutoSize = true;
             LTipoCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LTipoCompra.ForeColor = Color.FromArgb(0, 64, 64);
-            LTipoCompra.Location = new Point(288, 41);
+            LTipoCompra.Location = new Point(263, 33);
             LTipoCompra.Name = "LTipoCompra";
             LTipoCompra.Size = new Size(49, 23);
             LTipoCompra.TabIndex = 9;
@@ -249,7 +243,7 @@
             // 
             // NCantidadCompra
             // 
-            NCantidadCompra.Location = new Point(686, 138);
+            NCantidadCompra.Location = new Point(617, 83);
             NCantidadCompra.Name = "NCantidadCompra";
             NCantidadCompra.Size = new Size(58, 23);
             NCantidadCompra.TabIndex = 7;
@@ -258,7 +252,7 @@
             // 
             LPrecioCompra.AutoSize = true;
             LPrecioCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LPrecioCompra.Location = new Point(423, 139);
+            LPrecioCompra.Location = new Point(405, 130);
             LPrecioCompra.Name = "LPrecioCompra";
             LPrecioCompra.Size = new Size(62, 23);
             LPrecioCompra.TabIndex = 6;
@@ -268,7 +262,7 @@
             // 
             LCantidadCompra.AutoSize = true;
             LCantidadCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LCantidadCompra.Location = new Point(597, 139);
+            LCantidadCompra.Location = new Point(528, 82);
             LCantidadCompra.Name = "LCantidadCompra";
             LCantidadCompra.Size = new Size(83, 23);
             LCantidadCompra.TabIndex = 5;
@@ -276,7 +270,7 @@
             // 
             // TCodigoProducto
             // 
-            TCodigoProducto.Location = new Point(151, 41);
+            TCodigoProducto.Location = new Point(151, 33);
             TCodigoProducto.Name = "TCodigoProducto";
             TCodigoProducto.Size = new Size(93, 23);
             TCodigoProducto.TabIndex = 4;
@@ -287,7 +281,7 @@
             // 
             LIDProdCompra.AutoSize = true;
             LIDProdCompra.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LIDProdCompra.Location = new Point(6, 41);
+            LIDProdCompra.Location = new Point(6, 33);
             LIDProdCompra.Name = "LIDProdCompra";
             LIDProdCompra.Size = new Size(139, 23);
             LIDProdCompra.TabIndex = 1;
@@ -367,28 +361,19 @@
             // 
             // CBTipo
             // 
+            CBTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             CBTipo.FormattingEnabled = true;
-            CBTipo.Location = new Point(343, 41);
+            CBTipo.Location = new Point(332, 33);
             CBTipo.Name = "CBTipo";
             CBTipo.Size = new Size(153, 23);
             CBTipo.TabIndex = 17;
-            // 
-            // LTalle
-            // 
-            LTalle.AutoSize = true;
-            LTalle.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LTalle.Location = new Point(520, 87);
-            LTalle.Name = "LTalle";
-            LTalle.Size = new Size(52, 23);
-            LTalle.TabIndex = 18;
-            LTalle.Text = "Talle:";
             // 
             // LColor
             // 
             LColor.AutoSize = true;
             LColor.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LColor.ForeColor = Color.FromArgb(0, 64, 64);
-            LColor.Location = new Point(546, 41);
+            LColor.Location = new Point(532, 33);
             LColor.Name = "LColor";
             LColor.Size = new Size(56, 23);
             LColor.TabIndex = 19;
@@ -396,118 +381,36 @@
             // 
             // CBMarca
             // 
+            CBMarca.DropDownStyle = ComboBoxStyle.DropDownList;
             CBMarca.FormattingEnabled = true;
-            CBMarca.Location = new Point(332, 90);
+            CBMarca.Location = new Point(332, 82);
             CBMarca.Name = "CBMarca";
             CBMarca.Size = new Size(153, 23);
             CBMarca.TabIndex = 20;
             // 
             // CBEstilo
             // 
+            CBEstilo.DropDownStyle = ComboBoxStyle.DropDownList;
             CBEstilo.FormattingEnabled = true;
-            CBEstilo.Location = new Point(71, 87);
+            CBEstilo.Location = new Point(151, 79);
             CBEstilo.Name = "CBEstilo";
-            CBEstilo.Size = new Size(153, 23);
+            CBEstilo.Size = new Size(93, 23);
             CBEstilo.TabIndex = 21;
-            // 
-            // checkBox_masc
-            // 
-            checkBox_masc.AutoSize = true;
-            checkBox_masc.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_masc.Location = new Point(99, 138);
-            checkBox_masc.Name = "checkBox_masc";
-            checkBox_masc.Size = new Size(109, 22);
-            checkBox_masc.TabIndex = 22;
-            checkBox_masc.Text = "M (masculino)";
-            checkBox_masc.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_fem
-            // 
-            checkBox_fem.AutoSize = true;
-            checkBox_fem.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_fem.Location = new Point(214, 138);
-            checkBox_fem.Name = "checkBox_fem";
-            checkBox_fem.Size = new Size(99, 22);
-            checkBox_fem.TabIndex = 23;
-            checkBox_fem.Text = "F (femenino)";
-            checkBox_fem.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_unisex
-            // 
-            checkBox_unisex.AutoSize = true;
-            checkBox_unisex.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_unisex.Location = new Point(319, 138);
-            checkBox_unisex.Name = "checkBox_unisex";
-            checkBox_unisex.Size = new Size(86, 22);
-            checkBox_unisex.TabIndex = 24;
-            checkBox_unisex.Text = "U (unisex)";
-            checkBox_unisex.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_L
-            // 
-            checkBox_L.AutoSize = true;
-            checkBox_L.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_L.Location = new Point(710, 92);
-            checkBox_L.Name = "checkBox_L";
-            checkBox_L.Size = new Size(34, 22);
-            checkBox_L.TabIndex = 25;
-            checkBox_L.Text = "L";
-            checkBox_L.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_s
-            // 
-            checkBox_s.AutoSize = true;
-            checkBox_s.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_s.Location = new Point(626, 92);
-            checkBox_s.Name = "checkBox_s";
-            checkBox_s.Size = new Size(34, 22);
-            checkBox_s.TabIndex = 26;
-            checkBox_s.Text = "S";
-            checkBox_s.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_m
-            // 
-            checkBox_m.AutoSize = true;
-            checkBox_m.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_m.Location = new Point(666, 92);
-            checkBox_m.Name = "checkBox_m";
-            checkBox_m.Size = new Size(38, 22);
-            checkBox_m.TabIndex = 27;
-            checkBox_m.Text = "M";
-            checkBox_m.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_xs
-            // 
-            checkBox_xs.AutoSize = true;
-            checkBox_xs.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_xs.Location = new Point(582, 92);
-            checkBox_xs.Name = "checkBox_xs";
-            checkBox_xs.Size = new Size(42, 22);
-            checkBox_xs.TabIndex = 28;
-            checkBox_xs.Text = "XS";
-            checkBox_xs.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = SystemColors.Control;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(CBGVenta);
             panel1.Controls.Add(TColor);
-            panel1.Controls.Add(checkBox_masc);
-            panel1.Controls.Add(checkBox_fem);
-            panel1.Controls.Add(checkBox_unisex);
             panel1.Controls.Add(CBTipo);
             panel1.Controls.Add(LColor);
-            panel1.Controls.Add(checkBox_xs);
             panel1.Controls.Add(LInfoProd);
-            panel1.Controls.Add(checkBox_s);
             panel1.Controls.Add(CBEstilo);
             panel1.Controls.Add(LTipoCompra);
-            panel1.Controls.Add(checkBox_m);
             panel1.Controls.Add(CBMarca);
-            panel1.Controls.Add(checkBox_L);
             panel1.Controls.Add(LMarcaCompra);
-            panel1.Controls.Add(LTalle);
             panel1.Controls.Add(LGeneroCompra);
             panel1.Controls.Add(NCantidadCompra);
             panel1.Controls.Add(LEstiloCompra);
@@ -521,11 +424,15 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(767, 179);
             panel1.TabIndex = 29;
+            panel1.Paint += panel1_Paint;
             // 
             // TColor
             // 
-            TColor.Location = new Point(608, 44);
+            TColor.Enabled = false;
+            TColor.HideSelection = false;
+            TColor.Location = new Point(597, 33);
             TColor.Name = "TColor";
+            TColor.ReadOnly = true;
             TColor.Size = new Size(131, 23);
             TColor.TabIndex = 29;
             TColor.TextChanged += TColor_TextChanged;
@@ -609,6 +516,17 @@
             TDni_Vendedor.TextChanged += TDni_Vendedor_TextChanged;
             TDni_Vendedor.KeyPress += TDni_Vendedor_KeyPress;
             // 
+            // CBGVenta
+            // 
+            CBGVenta.Anchor = AnchorStyles.None;
+            CBGVenta.DropDownStyle = ComboBoxStyle.DropDownList;
+            CBGVenta.FormattingEnabled = true;
+            CBGVenta.Items.AddRange(new object[] { "M", "F" });
+            CBGVenta.Location = new Point(266, 130);
+            CBGVenta.Name = "CBGVenta";
+            CBGVenta.Size = new Size(93, 23);
+            CBGVenta.TabIndex = 30;
+            // 
             // Alta_venta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -634,6 +552,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Alta_venta";
             Text = "Form1";
+            Load += Alta_venta_Load;
             ((System.ComponentModel.ISupportInitialize)DTGDatosCompra).EndInit();
             ((System.ComponentModel.ISupportInitialize)NCantidadCompra).EndInit();
             panel1.ResumeLayout(false);
@@ -674,17 +593,9 @@
         private DataGridViewTextBoxColumn DTCPrecioUnitario;
         private DataGridViewButtonColumn DTGCEliminar;
         private ComboBox CBTipo;
-        private Label LTalle;
         private Label LColor;
         private ComboBox CBMarca;
         private ComboBox CBEstilo;
-        private CheckBox checkBox_masc;
-        private CheckBox checkBox_fem;
-        private CheckBox checkBox_unisex;
-        private CheckBox checkBox_L;
-        private CheckBox checkBox_s;
-        private CheckBox checkBox_m;
-        private CheckBox checkBox_xs;
         private Panel panel1;
         private Panel panel2;
         private Label label1;
@@ -694,5 +605,6 @@
         private DateTimePicker FechaVenta;
         private TextBox TDni_Vendedor;
         private TextBox TColor;
+        private ComboBox CBGVenta;
     }
 }

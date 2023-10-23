@@ -123,5 +123,15 @@ namespace CapaPresentacion.Vendedor
                 e.Handled = true;
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Alta_venta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
