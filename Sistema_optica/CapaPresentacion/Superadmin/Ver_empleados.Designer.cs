@@ -32,14 +32,7 @@
             dataGridView1 = new DataGridView();
             LBuscar = new Label();
             TBuscar = new TextBox();
-            C_id = new DataGridViewTextBoxColumn();
-            DTGVButtonModificar = new DataGridViewTextBoxColumn();
-            DTGVButton = new DataGridViewTextBoxColumn();
-            C_nombre = new DataGridViewTextBoxColumn();
-            C_apellido = new DataGridViewTextBoxColumn();
-            C_tel = new DataGridViewTextBoxColumn();
-            C_direccion = new DataGridViewTextBoxColumn();
-            C_correo = new DataGridViewTextBoxColumn();
+            BVerEmpleados = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -60,15 +53,16 @@
             dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.BackgroundColor = Color.CadetBlue;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { C_id, DTGVButtonModificar, DTGVButton, C_nombre, C_apellido, C_tel, C_direccion, C_correo });
             dataGridView1.Location = new Point(29, 75);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(882, 337);
             dataGridView1.TabIndex = 78;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // LBuscar
             // 
+            LBuscar.Anchor = AnchorStyles.None;
             LBuscar.AutoSize = true;
             LBuscar.Location = new Point(28, 39);
             LBuscar.Name = "LBuscar";
@@ -78,66 +72,36 @@
             // 
             // TBuscar
             // 
+            TBuscar.Anchor = AnchorStyles.None;
             TBuscar.Location = new Point(88, 36);
             TBuscar.Name = "TBuscar";
             TBuscar.Size = new Size(100, 23);
             TBuscar.TabIndex = 79;
             // 
-            // C_id
+            // BVerEmpleados
             // 
-            C_id.HeaderText = "DNI";
-            C_id.Name = "C_id";
-            // 
-            // DTGVButtonModificar
-            // 
-            DTGVButtonModificar.HeaderText = "Modificar";
-            DTGVButtonModificar.Name = "DTGVButtonModificar";
-            // 
-            // DTGVButton
-            // 
-            DTGVButton.HeaderText = "Eliminar";
-            DTGVButton.Name = "DTGVButton";
-            // 
-            // C_nombre
-            // 
-            C_nombre.HeaderText = "NOMBRE";
-            C_nombre.Name = "C_nombre";
-            C_nombre.Width = 150;
-            // 
-            // C_apellido
-            // 
-            C_apellido.HeaderText = "APELLIDO";
-            C_apellido.Name = "C_apellido";
-            C_apellido.Width = 150;
-            // 
-            // C_tel
-            // 
-            C_tel.HeaderText = "TELEFONO";
-            C_tel.Name = "C_tel";
-            // 
-            // C_direccion
-            // 
-            C_direccion.HeaderText = "DIRECCION";
-            C_direccion.Name = "C_direccion";
-            C_direccion.Width = 180;
-            // 
-            // C_correo
-            // 
-            C_correo.HeaderText = "CORREO";
-            C_correo.Name = "C_correo";
-            C_correo.Width = 165;
+            BVerEmpleados.Anchor = AnchorStyles.None;
+            BVerEmpleados.Location = new Point(816, 36);
+            BVerEmpleados.Name = "BVerEmpleados";
+            BVerEmpleados.Size = new Size(95, 23);
+            BVerEmpleados.TabIndex = 81;
+            BVerEmpleados.Text = "Ver Empleados";
+            BVerEmpleados.UseVisualStyleBackColor = true;
+            BVerEmpleados.Click += BVerEmpleados_Click;
             // 
             // Ver_empleados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(939, 441);
+            Controls.Add(BVerEmpleados);
             Controls.Add(LBuscar);
             Controls.Add(TBuscar);
             Controls.Add(dataGridView1);
             Controls.Add(label2);
             Name = "Ver_empleados";
             Text = "Form1";
+            Load += Ver_empleados_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -149,13 +113,6 @@
         private DataGridView dataGridView1;
         private Label LBuscar;
         private TextBox TBuscar;
-        private DataGridViewTextBoxColumn C_id;
-        private DataGridViewTextBoxColumn DTGVButtonModificar;
-        private DataGridViewTextBoxColumn DTGVButton;
-        private DataGridViewTextBoxColumn C_nombre;
-        private DataGridViewTextBoxColumn C_apellido;
-        private DataGridViewTextBoxColumn C_tel;
-        private DataGridViewTextBoxColumn C_direccion;
-        private DataGridViewTextBoxColumn C_correo;
+        private Button BVerEmpleados;
     }
 }

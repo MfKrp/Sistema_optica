@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,8 @@ namespace CapaPresentacion.Entidades_Clases
 {
     internal class CEmpleado
     {
-        string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        //string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
         public void altaEmpleado(string dniEmp,
         string codigoPerfilEmp,
@@ -35,7 +37,7 @@ namespace CapaPresentacion.Entidades_Clases
             string fecha_Nacimiento = fecha_NacimientoEmple;
             string contrasena = contrasenaEmp;
 
-            SqlConnection con = new SqlConnection(connectionString);
+            SqlConnection con = new SqlConnection(connectionStringEscritorio);
 
             string consulta = "INSERT INTO UsuarioEmpleado (ID_empleado, Nombre, Apellido, Telefono, Email, Fecha_Nacimiento, DNI, Direccion, ID_perfil, Estado_empleado, Contrasena) VALUES (@ID_empleado, @Nombre, @Apellido, @Telefono, @Email, @Fecha_nacimiento, @DNI, @Direccion, @ID_perfil, @Estado_empleado, @Contrasena)";
             SqlCommand comandoInsercion = new SqlCommand(consulta, con);
@@ -66,6 +68,19 @@ namespace CapaPresentacion.Entidades_Clases
             finally
             {
                 con.Close(); //una vez insertados los registros se cierra la conexion
+            }
+        }
+
+        public void verEmpleados(DataGridView dataGridEmpleados)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionStringEscritorio))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Usuarioempleado", sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                dataGridEmpleados.DataSource = dtbl;
             }
         }
     }
