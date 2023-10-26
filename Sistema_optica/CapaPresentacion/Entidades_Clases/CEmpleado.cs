@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Animation;
 
 namespace CapaPresentacion.Entidades_Clases
 {
@@ -82,6 +83,12 @@ namespace CapaPresentacion.Entidades_Clases
 
                 dataGridEmpleados.DataSource = dtbl;
             }
+        }
+
+        public void darDeBajaEmpleado(DataGridView dataGridEmpleado)
+        {
+            
+            
         }
     }
 }

@@ -33,6 +33,8 @@
             LBuscar = new Label();
             TBuscar = new TextBox();
             BVerEmpleados = new Button();
+            BEliminarReg = new Button();
+            BModificarReg = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -42,7 +44,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 64, 64);
-            label2.Location = new Point(393, 29);
+            label2.Location = new Point(364, 30);
             label2.Name = "label2";
             label2.Size = new Size(132, 28);
             label2.TabIndex = 77;
@@ -54,7 +56,9 @@
             dataGridView1.BackgroundColor = Color.CadetBlue;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(29, 75);
+            dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(882, 337);
             dataGridView1.TabIndex = 78;
@@ -81,19 +85,49 @@
             // BVerEmpleados
             // 
             BVerEmpleados.Anchor = AnchorStyles.None;
+            BVerEmpleados.BackColor = Color.ForestGreen;
+            BVerEmpleados.FlatStyle = FlatStyle.Flat;
             BVerEmpleados.Location = new Point(816, 36);
             BVerEmpleados.Name = "BVerEmpleados";
             BVerEmpleados.Size = new Size(95, 23);
             BVerEmpleados.TabIndex = 81;
             BVerEmpleados.Text = "Ver Empleados";
-            BVerEmpleados.UseVisualStyleBackColor = true;
+            BVerEmpleados.UseVisualStyleBackColor = false;
             BVerEmpleados.Click += BVerEmpleados_Click;
+            // 
+            // BEliminarReg
+            // 
+            BEliminarReg.Anchor = AnchorStyles.None;
+            BEliminarReg.BackColor = Color.Red;
+            BEliminarReg.FlatStyle = FlatStyle.Flat;
+            BEliminarReg.ForeColor = Color.Black;
+            BEliminarReg.Location = new Point(654, 36);
+            BEliminarReg.Name = "BEliminarReg";
+            BEliminarReg.Size = new Size(75, 23);
+            BEliminarReg.TabIndex = 82;
+            BEliminarReg.Text = "Eliminar";
+            BEliminarReg.UseVisualStyleBackColor = false;
+            BEliminarReg.Click += BEliminarReg_Click;
+            // 
+            // BModificarReg
+            // 
+            BModificarReg.Anchor = AnchorStyles.None;
+            BModificarReg.BackColor = Color.DodgerBlue;
+            BModificarReg.FlatStyle = FlatStyle.Flat;
+            BModificarReg.Location = new Point(735, 36);
+            BModificarReg.Name = "BModificarReg";
+            BModificarReg.Size = new Size(75, 23);
+            BModificarReg.TabIndex = 83;
+            BModificarReg.Text = "Modificar";
+            BModificarReg.UseVisualStyleBackColor = false;
             // 
             // Ver_empleados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(939, 441);
+            Controls.Add(BModificarReg);
+            Controls.Add(BEliminarReg);
             Controls.Add(BVerEmpleados);
             Controls.Add(LBuscar);
             Controls.Add(TBuscar);
@@ -114,5 +148,7 @@
         private Label LBuscar;
         private TextBox TBuscar;
         private Button BVerEmpleados;
+        private Button BEliminarReg;
+        private Button BModificarReg;
     }
 }
