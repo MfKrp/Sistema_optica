@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaPresentacion.Capa_datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,13 +68,13 @@ namespace CapaPresentacion.Secretaria
 
         private void BGuardar_Click(object sender, EventArgs e)
         {
-            if (TId_prod.Text == "" || ComnboBox_Anteojo.Text == "" || ComboBox_Genero.Text == "" || ComboBox_Talle.Text == "" || TColor.Text == "" || ComboBox_Marca.Text == "" || ComboBox_Estilo.Text == "" || TPrecio.Text == "")
+            if (TId_prod.Text == "" || /*Combobox de tipo*/ComnboBox_Anteojo.Text == "" || ComboBox_Marca.Text == "" || ComboBox_Estilo.Text == "" || TPrecio.Text == "")
             {
                 MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
         }
 
@@ -81,12 +82,20 @@ namespace CapaPresentacion.Secretaria
         {
             TId_prod.Text = "";
             ComnboBox_Anteojo.Text = "";
-            ComboBox_Genero.Text = "";
-            ComboBox_Talle.Text = "";
-            TColor.Text = "";
             ComboBox_Marca.Text = "";
             ComboBox_Estilo.Text = "";
             TPrecio.Text = "";
+        }
+
+        private void DGVProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Modif_producto_Load(object sender, EventArgs e)
+        {
+            CProducto verProductos = new CProducto();
+            verProductos.verProductos(DGVProductos);
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaPresentacion.Capa_datos;
 using CapaPresentacion.Entidades_Clases;
+using CapaPresentacion.Secretaria;
 
 namespace CapaPresentacion.Superadmin
 {
@@ -28,6 +29,39 @@ namespace CapaPresentacion.Superadmin
         private void DGV_ListaProd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void BModificar_Click(object sender, EventArgs e)
+        {
+            Modif_producto modificacionProd = new Modif_producto();
+            modificacionProd.Show();
+            this.Hide();
+        }
+
+        private void BEliminar_Click(object sender, EventArgs e)
+        {
+            if (DGV_ListaProd.SelectedRows.Count == 1)
+            {
+                CProducto bajaProducto = new CProducto();
+                bajaProducto.bajaProducto(DGV_ListaProd);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione almenos una fila", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void BHabilitar_Click(object sender, EventArgs e)
+        {
+            if (DGV_ListaProd.SelectedRows.Count == 1)
+            {
+                CProducto rehabilitarProducto = new CProducto();
+                rehabilitarProducto.restaurarProd(DGV_ListaProd);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione almenos una fila", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -169,14 +169,17 @@ namespace CapaPresentacion.Entidades_Clases
                 comandoBaja.ExecuteNonQuery();
 
                 MessageBox.Show("Se ha dado de baja al empleado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //Despues de dar baja el empleado se refresca la tabla
+                CEmpleado actualizarEmpleados = new CEmpleado();
+                actualizarEmpleados.verEmpleados(dataGridEmpleado);
             }
             catch (SqlException j)
             {
                 MessageBox.Show("Error en: " + j.ToString(), "Error al dar de baja", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            CEmpleado actualizarEmpleados = new CEmpleado();
-            actualizarEmpleados.verEmpleados(dataGridEmpleado);
+            
         }
 
         public void restaurarEmpleado (DataGridView dataGridEmpleado)

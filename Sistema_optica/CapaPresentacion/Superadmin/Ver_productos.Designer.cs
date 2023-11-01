@@ -57,7 +57,9 @@
             DGV_ListaProd.BackgroundColor = Color.CadetBlue;
             DGV_ListaProd.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DGV_ListaProd.Location = new Point(26, 77);
+            DGV_ListaProd.MultiSelect = false;
             DGV_ListaProd.Name = "DGV_ListaProd";
+            DGV_ListaProd.ReadOnly = true;
             DGV_ListaProd.RowTemplate.Height = 25;
             DGV_ListaProd.Size = new Size(882, 337);
             DGV_ListaProd.TabIndex = 77;
@@ -104,6 +106,7 @@
             BModificar.TabIndex = 83;
             BModificar.Text = "Modificar";
             BModificar.UseVisualStyleBackColor = false;
+            BModificar.Click += BModificar_Click;
             // 
             // BEliminar
             // 
@@ -115,6 +118,7 @@
             BEliminar.TabIndex = 84;
             BEliminar.Text = "Eliminar";
             BEliminar.UseVisualStyleBackColor = false;
+            BEliminar.Click += BEliminar_Click;
             // 
             // BHabilitar
             // 
@@ -126,6 +130,7 @@
             BHabilitar.TabIndex = 85;
             BHabilitar.Text = "Habilitar";
             BHabilitar.UseVisualStyleBackColor = false;
+            BHabilitar.Click += BHabilitar_Click;
             // 
             // Ver_productos
             // 

@@ -13,7 +13,10 @@ namespace CapaPresentacion.Capa_datos
 {
     internal class CProducto
     {
-        string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        CProducto refrescarProductos = new CProducto();
+
+        //string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
         //Metodo que da de alta un producto
         public void altaProducto(string TId_prod, string ComboBox_Anteojo, string TPrecio, string ComboBox_Genero, string TColor, string TStock, string ComboBox_Marca, string ComboBox_Estilo)
@@ -33,7 +36,7 @@ namespace CapaPresentacion.Capa_datos
             int marcaProd = int.Parse(ComboBox_Marca);
             int tipoProd = int.Parse(ComboBox_Anteojo);
 
-            SqlConnection con = new SqlConnection(connectionString);
+            SqlConnection con = new SqlConnection(connectionStringEscritorio);
 
             string consulta = "INSERT INTO Producto (Id_producto, Nombre, Precio_unitario, Stock, Estilo, Marca, Tipo, Estado_producto) VALUES (@Id_Producto, @Nombre, @Precio_unitario, @Stock, @Estilo, @Marca, @Tipo, @Estado_producto)";
 
@@ -69,7 +72,7 @@ namespace CapaPresentacion.Capa_datos
 
         public void verProductos(DataGridView dataGridProductos)
         {
-            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            using (SqlConnection sqlcon = new SqlConnection(connectionStringEscritorio))
             {
                 sqlcon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Producto", sqlcon);
@@ -81,7 +84,6 @@ namespace CapaPresentacion.Capa_datos
         }
 
         public void modificacionProducto(int id_prod,
-            string nombreProd,
             float precProd,
             int stockProd,
             int estiloProd,
@@ -92,13 +94,12 @@ namespace CapaPresentacion.Capa_datos
             DataGridViewRow fila = dataGridProductos.SelectedRows[0];
             //El ID del empleado no sera modificable ya que sera su numero de identificacion
             int id_producto = (int)fila.Cells["Id_producto"].Value;
-            string nombreProducto = nombreProd;//TNombre.Text;
             float precioProducto = precProd;//TApellido.Text;
             int stockProducto = stockProd;//TTelefono.Text;
             int estiloProducto = estiloProd;//TCorreo.Text;
             int marcaProducto = marcaProd;//DTPFechaNac.Value.ToShortDateString();
             int tipoProducto = tipoProd;//TDni.Text;
-            string query = "UPDATE Producto SET Id_producto = @Id_producto, Nombre = @Nombre, Precio_unitario = @Precio_unitario, Stock = @Stock, Estilo = @Estilo, Marca = @Marca, Tipo = @Tipo WHERE Id_producto = @Id_producto";
+            string query = "UPDATE Producto SET Id_producto = @Id_producto, Precio_unitario = @Precio_unitario, Stock = @Stock, Estilo = @Estilo, Marca = @Marca, Tipo = @Tipo WHERE Id_producto = @Id_producto";
             SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
             conexion.Open();
             SqlCommand comandoBaja = new SqlCommand(query, conexion);
@@ -108,7 +109,6 @@ namespace CapaPresentacion.Capa_datos
 
                 /*comandoBaja.Parameters.AddWithValue("@estadoEmpleado", estadoEmpleado);*/
                 comandoBaja.Parameters.AddWithValue("@Id_producto", id_producto);
-                comandoBaja.Parameters.AddWithValue("Nombre", nombreProducto);
                 comandoBaja.Parameters.AddWithValue("Precio_unitario", precioProducto);
                 comandoBaja.Parameters.AddWithValue("Stock", stockProducto);
                 comandoBaja.Parameters.AddWithValue("Estilo", estiloProducto);
@@ -126,42 +126,68 @@ namespace CapaPresentacion.Capa_datos
             }
             catch (SqlException j)
             {
-                MessageBox.Show("Error en: " + j.ToString(), "Error al dar de baja", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error en: " + j.ToString(), "Error al hacer modificacion de producto", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         public void bajaProducto (DataGridView dataGridProd)
         {
+            //Funcion que da de baja un producto
             DataGridViewRow fila = dataGridProd.SelectedRows[0];
-            int id_empleado = (int)fila.Cells["ID_empleado"].Value;
-            bool estadoEmpleado = false;
+            int id_producto = (int)fila.Cells["Id_producto"].Value;
+            bool estadoProducto = false;
             //MessageBox.Show("Valor de la celda " + @ID_empleado);
-            string query = "UPDATE UsuarioEmpleado SET Estado_empleado = @estadoEmpleado WHERE ID_empleado = @ID_empleado";
+            string query = "UPDATE Producto SET Estado_producto = @Estado_producto WHERE Id_producto = @Id_producto";
             SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
             conexion.Open();
             SqlCommand comandoBaja = new SqlCommand(query, conexion);
 
             try
             {
-                comandoBaja.Parameters.AddWithValue("@estadoEmpleado", estadoEmpleado);
-                comandoBaja.Parameters.AddWithValue("@ID_empleado", id_empleado);
+                comandoBaja.Parameters.AddWithValue("@Estado_producto", estadoProducto);
+                comandoBaja.Parameters.AddWithValue("@Id_producto", id_producto);
                 //esta linea se usa cuando se hace modificacion
                 comandoBaja.ExecuteNonQuery();
 
-                MessageBox.Show("Se ha dado de baja al empleado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Se ha dado de baja el producto", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                refrescarProductos.verProductos(dataGridProd);
             }
             catch (SqlException j)
             {
                 MessageBox.Show("Error en: " + j.ToString(), "Error al dar de baja", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            CEmpleado actualizarEmpleados = new CEmpleado();
-            actualizarEmpleados.verEmpleados(dataGridEmpleado);
+            
         }
 
         public void restaurarProd (DataGridView dataGridProd)
         {
+            //Fila que vuelve el estado del producto activo nuevamente
+            DataGridViewRow fila = dataGridProd.SelectedRows[0];
+            int id_producto = (int)fila.Cells["Id_producto"].Value;
+            bool estadoProducto = true;
+            //MessageBox.Show("Valor de la celda " + @ID_empleado);
+            string query = "UPDATE Producto SET Estado_producto = @Estado_producto WHERE Id_producto = @Id_producto";
+            SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
+            conexion.Open();
+            SqlCommand comandoBaja = new SqlCommand(query, conexion);
 
+            try
+            {
+                comandoBaja.Parameters.AddWithValue("@Estado_producto", estadoProducto);
+                comandoBaja.Parameters.AddWithValue("@Id_producto", id_producto);
+                //esta linea se usa cuando se hace modificacion
+                comandoBaja.ExecuteNonQuery();
+
+                MessageBox.Show("Se ha restaurado el producto", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                refrescarProductos.verProductos(dataGridProd);
+            }
+            catch (SqlException j)
+            {
+                MessageBox.Show("Error en: " + j.ToString(), "Error al restaurar el producto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

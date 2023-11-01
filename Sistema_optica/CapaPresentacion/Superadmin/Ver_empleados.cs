@@ -100,13 +100,13 @@ namespace CapaPresentacion.Superadmin
             //Se comprueba que almenos se haya seleccionado una fila
             if (dataGridView1.SelectedRows.Count == 1)
             {
+                //Despues de comprobar que se haya seleccionado una fila se debe comprobar que esa fila este deshabilitada para volver a habilitarla
                 CEmpleado resturarEmpleado = new CEmpleado();
                 resturarEmpleado.restaurarEmpleado(dataGridView1);
-                
             }
             else
             {
-                MessageBox.Show("Seleccione almenos una fila", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seleccione almenos una fila para habilitar un empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }

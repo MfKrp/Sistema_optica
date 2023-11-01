@@ -30,5 +30,20 @@ namespace CapaPresentacion.Secretaria
         {
 
         }
+
+        private void BModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BRestaurar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
