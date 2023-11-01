@@ -120,6 +120,7 @@
             BModificarReg.TabIndex = 83;
             BModificarReg.Text = "Modificar";
             BModificarReg.UseVisualStyleBackColor = false;
+            BModificarReg.Click += BModificarReg_Click;
             // 
             // Ver_empleados
             // 

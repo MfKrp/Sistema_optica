@@ -220,5 +220,10 @@ namespace CapaPresentacion.Superadmin
                 */
             }
         }
+
+        private void ComboBox_Perfil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

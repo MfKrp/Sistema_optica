@@ -254,6 +254,7 @@
             ComboBox_Perfil.Name = "ComboBox_Perfil";
             ComboBox_Perfil.Size = new Size(196, 23);
             ComboBox_Perfil.TabIndex = 18;
+            ComboBox_Perfil.SelectedIndexChanged += ComboBox_Perfil_SelectedIndexChanged;
             // 
             // TCodigo_emp
             // 

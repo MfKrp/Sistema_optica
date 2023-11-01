@@ -72,6 +72,20 @@ namespace CapaPresentacion.Entidades_Clases
             }
         }
 
+        public void modificacionEmpleado (string dniEmp,
+        string codigoPerfilEmp,
+        int idEmpleado,
+        string nombreEmple,
+        string apellidoEmple,
+        string telefonoEmple,
+        string direccionEmple,
+        string correoEmple,
+        string fecha_NacimientoEmple,
+        string contrasenaEmp)
+        {
+
+        }
+
         public void verEmpleados(DataGridView dataGridEmpleados)
         {
             using (SqlConnection sqlcon = new SqlConnection(connectionStringEscritorio))

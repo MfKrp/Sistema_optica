@@ -1,4 +1,5 @@
 ﻿using CapaPresentacion.Entidades_Clases;
+using CapaPresentacion.Secretaria;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,10 @@ namespace CapaPresentacion.Superadmin
 {
     public partial class Ver_empleados : Form
     {
+        private static ToolStripMenuItem menuActivo = null;
+        private static Form formActivo = null;
+
+        //Strings de conexion a la base de datos
         //string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
         string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
         public Ver_empleados()
@@ -66,7 +71,14 @@ namespace CapaPresentacion.Superadmin
 
             CEmpleado actualizarEmpleados = new CEmpleado();
             actualizarEmpleados.verEmpleados(dataGridView1);
-            
+
+        }
+
+        private void BModificarReg_Click(object sender, EventArgs e)
+        {
+            Modif_Empleado modificacionEmp = new Modif_Empleado();
+            modificacionEmp.Show();
+            this.Hide();
         }
     }
 }

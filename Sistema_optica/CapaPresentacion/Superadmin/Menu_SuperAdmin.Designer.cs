@@ -36,9 +36,9 @@
             TSMBVerProductos = new ToolStripMenuItem();
             TSMBVerPerfil = new ToolStripMenuItem();
             MSBCerrarSesion = new ToolStripMenuItem();
-            contenedor = new Panel();
-            TSMButtonRestoreBD = new ToolStripMenuItem();
             TSMBBackupBD = new ToolStripMenuItem();
+            TSMButtonRestoreBD = new ToolStripMenuItem();
+            contenedor = new Panel();
             menuStrip1.SuspendLayout();
             MSSuperAdmin.SuspendLayout();
             SuspendLayout();
@@ -73,6 +73,7 @@
             MSSuperAdmin.Size = new Size(174, 578);
             MSSuperAdmin.TabIndex = 3;
             MSSuperAdmin.Text = "menuStrip2";
+            MSSuperAdmin.ItemClicked += MSSuperAdmin_ItemClicked;
             // 
             // TSMRegistrarEmpleado
             // 
@@ -124,12 +125,14 @@
             MSBCerrarSesion.Text = "Cerrar Sesión";
             MSBCerrarSesion.Click += MSBCerrarSesion_Click;
             // 
-            // contenedor
+            // TSMBBackupBD
             // 
-            contenedor.Location = new Point(177, 98);
-            contenedor.Name = "contenedor";
-            contenedor.Size = new Size(1005, 563);
-            contenedor.TabIndex = 4;
+            TSMBBackupBD.BackColor = Color.FromArgb(0, 64, 64);
+            TSMBBackupBD.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMBBackupBD.ForeColor = Color.White;
+            TSMBBackupBD.Name = "TSMBBackupBD";
+            TSMBBackupBD.Size = new Size(167, 27);
+            TSMBBackupBD.Text = "Backup BD";
             // 
             // TSMButtonRestoreBD
             // 
@@ -140,14 +143,13 @@
             TSMButtonRestoreBD.Size = new Size(167, 27);
             TSMButtonRestoreBD.Text = "Restore BD";
             // 
-            // TSMBBackupBD
+            // contenedor
             // 
-            TSMBBackupBD.BackColor = Color.FromArgb(0, 64, 64);
-            TSMBBackupBD.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TSMBBackupBD.ForeColor = Color.White;
-            TSMBBackupBD.Name = "TSMBBackupBD";
-            TSMBBackupBD.Size = new Size(167, 27);
-            TSMBBackupBD.Text = "Backup BD";
+            contenedor.Location = new Point(177, 98);
+            contenedor.Name = "contenedor";
+            contenedor.Size = new Size(1005, 563);
+            contenedor.TabIndex = 4;
+            contenedor.Paint += contenedor_Paint;
             // 
             // Menu_SuperAdmin
             // 
