@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Windows.Media.Animation;
 
 namespace CapaPresentacion.Entidades_Clases
@@ -72,8 +73,8 @@ namespace CapaPresentacion.Entidades_Clases
             }
         }
 
-        public void modificacionEmpleado (string dniEmp,
-        string codigoPerfilEmp,
+        public void modificacionEmpleado (string dniEmple,
+        int codigoPerfilEmple,
         int idEmpleado,
         string nombreEmple,
         string apellidoEmple,
@@ -81,9 +82,58 @@ namespace CapaPresentacion.Entidades_Clases
         string direccionEmple,
         string correoEmple,
         string fecha_NacimientoEmple,
-        string contrasenaEmp)
+        string contrasenaEmple,
+        DataGridView DataGridEmpleados)
         {
+            DataGridViewRow fila = DataGridEmpleados.SelectedRows[0];
+            //El ID del empleado no sera modificable ya que sera su numero de identificacion
+            int id_empleado = (int)fila.Cells["ID_empleado"].Value;
+            string nombreEmp = nombreEmple;//TNombre.Text;
+            string apellidoEmp = apellidoEmple;//TApellido.Text;
+            string telEmp = telefonoEmple;//TTelefono.Text;
+            string emailEmp = correoEmple;//TCorreo.Text;
+            string nacEmp = fecha_NacimientoEmple;//DTPFechaNac.Value.ToShortDateString();
+            string dniEmp = dniEmple;//TDni.Text;
+            string dirEmp = correoEmple;//TCorreo.Text;
+            int perfilEmp = codigoPerfilEmple;//int.Parse(ComboBox_Perfil.SelectedValue.ToString());
+            string contrasenaEmp = contrasenaEmple;//TContrasena.Text;
+            //MessageBox.Show("Valor de la celda " + @ID_empleado);
+            string query = "UPDATE UsuarioEmpleado SET Nombre = @Nombre, Apellido = @Apellido, Telefono = @Telefono, Email = @Email, Fecha_nacimiento = @Fecha_nacimiento, DNI = @DNI, Direccion = @Direccion, ID_Perfil = @ID_Perfil, Contrasena = @Contrasena WHERE ID_empleado = @ID_empleado";
+            SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
+            conexion.Open();
+            SqlCommand comandoBaja = new SqlCommand(query, conexion);
 
+            try
+            {
+
+                /*comandoBaja.Parameters.AddWithValue("@estadoEmpleado", estadoEmpleado);*/
+                comandoBaja.Parameters.AddWithValue("@ID_empleado", id_empleado);
+                comandoBaja.Parameters.AddWithValue("Nombre", nombreEmp);
+                comandoBaja.Parameters.AddWithValue("Apellido", apellidoEmp);
+                comandoBaja.Parameters.AddWithValue("Telefono", telEmp);
+                comandoBaja.Parameters.AddWithValue("Email", emailEmp);
+                comandoBaja.Parameters.AddWithValue("Fecha_nacimiento", nacEmp);
+                comandoBaja.Parameters.AddWithValue("DNI", dniEmp);
+                comandoBaja.Parameters.AddWithValue("Direccion", dirEmp);
+                comandoBaja.Parameters.AddWithValue("ID_Perfil", perfilEmp);
+                comandoBaja.Parameters.AddWithValue("Contrasena", contrasenaEmp);
+
+                //esta linea se usa cuando se hace modificacion, por lo tanto siempre debe ir incluida, caso opuesto en las lecturas que se usa ExecuteReader
+                comandoBaja.ExecuteNonQuery();
+
+                MessageBox.Show("Se ha modificado con exito el empleado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //Si el empleado se ha registrado con exito se debe refrescar el datagridview de los empleados para poder ver los cambios
+                CEmpleado verEmpleados = new CEmpleado();
+                verEmpleados.verEmpleados(DataGridEmpleados);
+            }
+            catch (SqlException j)
+            {
+                MessageBox.Show("Error en: " + j.ToString(), "Error al dar de baja", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            CEmpleado actualizarEmpleados = new CEmpleado();
+            actualizarEmpleados.verEmpleados(DataGridEmpleados);
         }
 
         public void verEmpleados(DataGridView dataGridEmpleados)
@@ -101,8 +151,62 @@ namespace CapaPresentacion.Entidades_Clases
 
         public void darDeBajaEmpleado(DataGridView dataGridEmpleado)
         {
-            
-            
+
+            DataGridViewRow fila = dataGridEmpleado.SelectedRows[0];
+            int id_empleado = (int)fila.Cells["ID_empleado"].Value;
+            bool estadoEmpleado = false;
+            //MessageBox.Show("Valor de la celda " + @ID_empleado);
+            string query = "UPDATE UsuarioEmpleado SET Estado_empleado = @estadoEmpleado WHERE ID_empleado = @ID_empleado";
+            SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
+            conexion.Open();
+            SqlCommand comandoBaja = new SqlCommand(query, conexion);
+
+            try
+            {
+                comandoBaja.Parameters.AddWithValue("@estadoEmpleado", estadoEmpleado);
+                comandoBaja.Parameters.AddWithValue("@ID_empleado", id_empleado);
+                //esta linea se usa cuando se hace modificacion
+                comandoBaja.ExecuteNonQuery();
+
+                MessageBox.Show("Se ha dado de baja al empleado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (SqlException j)
+            {
+                MessageBox.Show("Error en: " + j.ToString(), "Error al dar de baja", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            CEmpleado actualizarEmpleados = new CEmpleado();
+            actualizarEmpleados.verEmpleados(dataGridEmpleado);
+        }
+
+        public void restaurarEmpleado (DataGridView dataGridEmpleado)
+        {
+            //Se comprueba que almenos se haya seleccionado una fila
+                DataGridViewRow fila = dataGridEmpleado.SelectedRows[0];
+                int id_empleado = (int)fila.Cells["ID_empleado"].Value;
+                //se cambia el estado del empleado a true, comprobandose que antes este en false
+                bool estadoEmpleado = true;
+                string query = "UPDATE UsuarioEmpleado SET Estado_empleado = @estadoEmpleado WHERE ID_empleado = @ID_empleado";
+                SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
+                conexion.Open();
+                SqlCommand comandoBaja = new SqlCommand(query, conexion);
+
+                try
+                {
+                    comandoBaja.Parameters.AddWithValue("@estadoEmpleado", estadoEmpleado);
+                    comandoBaja.Parameters.AddWithValue("@ID_empleado", id_empleado);
+                    //esta linea se usa cuando se hace modificacion
+                    comandoBaja.ExecuteNonQuery();
+
+                    MessageBox.Show("Se ha dado restaurado al empleado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (SqlException j)
+                {
+                    MessageBox.Show("Error en: " + j.ToString(), "Error al restaurar empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                CEmpleado actualizarEmpleados = new CEmpleado();
+                actualizarEmpleados.verEmpleados(dataGridEmpleado);
         }
     }
 }

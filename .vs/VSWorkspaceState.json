@@ -3,11 +3,8 @@
     "",
     "\\Sistema_optica",
     "\\Sistema_optica\\CapaPresentacion",
-    "\\Sistema_optica\\CapaPresentacion\\Entidades_Clases",
-    "\\Sistema_optica\\CapaPresentacion\\Secretaria",
-    "\\Sistema_optica\\CapaPresentacion\\Superadmin",
-    "\\Sistema_optica\\CapaPresentacion\\Vendedor"
+    "\\Sistema_optica\\CapaPresentacion\\Superadmin"
   ],
-  "SelectedNode": "\\Sistema_optica\\CapaPresentacion\\Superadmin\\Ver_empleados.cs",
+  "SelectedNode": "\\Sistema_optica\\CapaPresentacion\\Superadmin\\Modif_Empleado.cs",
   "PreviewInSolutionExplorer": false
 }

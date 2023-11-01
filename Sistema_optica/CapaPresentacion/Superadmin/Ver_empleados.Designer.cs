@@ -35,6 +35,7 @@
             BVerEmpleados = new Button();
             BEliminarReg = new Button();
             BModificarReg = new Button();
+            BHabilitar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -85,7 +86,7 @@
             // BVerEmpleados
             // 
             BVerEmpleados.Anchor = AnchorStyles.None;
-            BVerEmpleados.BackColor = Color.ForestGreen;
+            BVerEmpleados.BackColor = Color.LimeGreen;
             BVerEmpleados.FlatStyle = FlatStyle.Flat;
             BVerEmpleados.Location = new Point(816, 36);
             BVerEmpleados.Name = "BVerEmpleados";
@@ -122,11 +123,24 @@
             BModificarReg.UseVisualStyleBackColor = false;
             BModificarReg.Click += BModificarReg_Click;
             // 
+            // BHabilitar
+            // 
+            BHabilitar.BackColor = Color.Orange;
+            BHabilitar.FlatStyle = FlatStyle.Flat;
+            BHabilitar.Location = new Point(573, 36);
+            BHabilitar.Name = "BHabilitar";
+            BHabilitar.Size = new Size(75, 23);
+            BHabilitar.TabIndex = 84;
+            BHabilitar.Text = "Habilitar";
+            BHabilitar.UseVisualStyleBackColor = false;
+            BHabilitar.Click += BHabilitar_Click;
+            // 
             // Ver_empleados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(939, 441);
+            Controls.Add(BHabilitar);
             Controls.Add(BModificarReg);
             Controls.Add(BEliminarReg);
             Controls.Add(BVerEmpleados);
@@ -151,5 +165,6 @@
         private Button BVerEmpleados;
         private Button BEliminarReg;
         private Button BModificarReg;
+        private Button BHabilitar;
     }
 }

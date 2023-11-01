@@ -207,55 +207,33 @@ namespace CapaPresentacion.Superadmin
             }
             else
             {
-                DataGridViewRow fila = DGVEmpleadosReg.SelectedRows[0];
-                //El ID del empleado no sera modificable ya que sera su numero de identificacion
-                int id_empleado = (int)fila.Cells["ID_empleado"].Value;
-                string nombreEmp = TNombre.Text;
-                string apellidoEmp = TApellido.Text;
-                string telEmp = TTelefono.Text;
-                string emailEmp = TCorreo.Text;
-                string nacEmp = DTPFechaNac.Value.ToShortDateString();
-                string dniEmp = TDni.Text;
-                string dirEmp = TCorreo.Text;
-                int perfilEmp = int.Parse(ComboBox_Perfil.SelectedValue.ToString());
-                string contrasenaEmp = TContrasena.Text;
-                //MessageBox.Show("Valor de la celda " + @ID_empleado);
-                string query = "UPDATE UsuarioEmpleado SET Nombre = @Nombre, Apellido = @Apellido, Telefono = @Telefono, Email = @Email, Fecha_nacimiento = @Fecha_nacimiento, DNI = @DNI, Direccion = @Direccion, ID_Perfil = @ID_Perfil, Contrasena = @Contrasena WHERE ID_empleado = @ID_empleado";
-                SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
-                conexion.Open();
-                SqlCommand comandoBaja = new SqlCommand(query, conexion);
+                /*Orden de los parametros de la funcion de modificacion*/
+                /*
+                    string dniEmple,
+                    int codigoPerfilEmple,
+                    int idEmpleado,
+                    string nombreEmple,
+                    string apellidoEmple,
+                    string telefonoEmple,
+                    string direccionEmple,
+                    string correoEmple,
+                    string fecha_NacimientoEmple,
+                    string contrasenaEmple,
+                    DataGridView DataGridEmpleados
+                 */
 
-                try
-                {
-
-                    /*comandoBaja.Parameters.AddWithValue("@estadoEmpleado", estadoEmpleado);*/
-                    comandoBaja.Parameters.AddWithValue("@ID_empleado", id_empleado);
-                    comandoBaja.Parameters.AddWithValue("Nombre", nombreEmp);
-                    comandoBaja.Parameters.AddWithValue("Apellido", apellidoEmp);
-                    comandoBaja.Parameters.AddWithValue("Telefono", telEmp);
-                    comandoBaja.Parameters.AddWithValue("Email", emailEmp);
-                    comandoBaja.Parameters.AddWithValue("Fecha_nacimiento", nacEmp);
-                    comandoBaja.Parameters.AddWithValue("DNI", dniEmp);
-                    comandoBaja.Parameters.AddWithValue("Direccion", dirEmp);
-                    comandoBaja.Parameters.AddWithValue("ID_Perfil", perfilEmp);
-                    comandoBaja.Parameters.AddWithValue("Contrasena", contrasenaEmp);
-
-                    //esta linea se usa cuando se hace modificacion, por lo tanto siempre debe ir incluida, caso opuesto en las lecturas que se usa ExecuteReader
-                    comandoBaja.ExecuteNonQuery();
-
-                    MessageBox.Show("Se ha modificado con exito el empleado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    //Si el empleado se ha registrado con exito se debe refrescar el datagridview de los empleados para poder ver los cambios
-                    CEmpleado verEmpleados = new CEmpleado();
-                    verEmpleados.verEmpleados(DGVEmpleadosReg);
-                }
-                catch (SqlException j)
-                {
-                    MessageBox.Show("Error en: " + j.ToString(), "Error al dar de baja", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                CEmpleado actualizarEmpleados = new CEmpleado();
-                actualizarEmpleados.verEmpleados(DGVEmpleadosReg);
+                CEmpleado modificacionEmpleado = new CEmpleado();
+                modificacionEmpleado.modificacionEmpleado(TDni.Text,
+                int.Parse(ComboBox_Perfil.SelectedValue.ToString()),
+                int.Parse(TCodigo_emp.Text),
+                TNombre.Text,
+                TApellido.Text,
+                TTelefono.Text,
+                TDireccion.Text,
+                TCorreo.Text,
+                DTPFechaNac.Value.ToShortDateString(),
+                TContrasena.Text,
+                DGVEmpleadosReg);
             }
         }
 

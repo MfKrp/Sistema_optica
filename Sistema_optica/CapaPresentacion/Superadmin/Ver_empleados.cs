@@ -11,6 +11,7 @@ using System.IO.Packaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace CapaPresentacion.Superadmin
@@ -46,6 +47,18 @@ namespace CapaPresentacion.Superadmin
 
         private void BEliminarReg_Click(object sender, EventArgs e)
         {
+            //Se Comprueba que al menos se haya seleccionado una fila
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                CEmpleado bajaEmpleado = new CEmpleado();
+                bajaEmpleado.darDeBajaEmpleado(dataGridView1);
+            }
+            else
+            {
+                //Sino se muestra un mensaje de error
+                MessageBox.Show("Seleccione almenos una fila para dar de baja al empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            /*
             DataGridViewRow fila = dataGridView1.SelectedRows[0];
             int id_empleado = (int)fila.Cells["ID_empleado"].Value;
             bool estadoEmpleado = false;
@@ -71,7 +84,7 @@ namespace CapaPresentacion.Superadmin
 
             CEmpleado actualizarEmpleados = new CEmpleado();
             actualizarEmpleados.verEmpleados(dataGridView1);
-
+            */
         }
 
         private void BModificarReg_Click(object sender, EventArgs e)
@@ -79,6 +92,23 @@ namespace CapaPresentacion.Superadmin
             Modif_Empleado modificacionEmp = new Modif_Empleado();
             modificacionEmp.Show();
             this.Hide();
+        }
+
+        private void BHabilitar_Click(object sender, EventArgs e)
+        {
+            
+            //Se comprueba que almenos se haya seleccionado una fila
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                CEmpleado resturarEmpleado = new CEmpleado();
+                resturarEmpleado.restaurarEmpleado(dataGridView1);
+                
+            }
+            else
+            {
+                MessageBox.Show("Seleccione almenos una fila", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

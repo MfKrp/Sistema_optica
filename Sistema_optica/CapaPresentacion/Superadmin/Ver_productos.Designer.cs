@@ -30,19 +30,12 @@
         {
             label2 = new Label();
             DGV_ListaProd = new DataGridView();
-            CId = new DataGridViewTextBoxColumn();
-            DGVButtonEliminar = new DataGridViewTextBoxColumn();
-            DGVButton = new DataGridViewTextBoxColumn();
-            CTipo = new DataGridViewTextBoxColumn();
-            CMarca = new DataGridViewTextBoxColumn();
-            CEstilo = new DataGridViewTextBoxColumn();
-            CColor = new DataGridViewTextBoxColumn();
-            CGenero = new DataGridViewTextBoxColumn();
-            CTalle = new DataGridViewTextBoxColumn();
-            CPrecio = new DataGridViewTextBoxColumn();
             LBuscar = new Label();
             TBuscar = new TextBox();
             BVerRegistros = new Button();
+            BModificar = new Button();
+            BEliminar = new Button();
+            BHabilitar = new Button();
             ((System.ComponentModel.ISupportInitialize)DGV_ListaProd).BeginInit();
             SuspendLayout();
             // 
@@ -52,7 +45,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 64, 64);
-            label2.Location = new Point(350, 34);
+            label2.Location = new Point(291, 34);
             label2.Name = "label2";
             label2.Size = new Size(222, 28);
             label2.TabIndex = 76;
@@ -63,63 +56,12 @@
             DGV_ListaProd.Anchor = AnchorStyles.None;
             DGV_ListaProd.BackgroundColor = Color.CadetBlue;
             DGV_ListaProd.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DGV_ListaProd.Columns.AddRange(new DataGridViewColumn[] { CId, DGVButtonEliminar, DGVButton, CTipo, CMarca, CEstilo, CColor, CGenero, CTalle, CPrecio });
             DGV_ListaProd.Location = new Point(26, 77);
             DGV_ListaProd.Name = "DGV_ListaProd";
             DGV_ListaProd.RowTemplate.Height = 25;
             DGV_ListaProd.Size = new Size(882, 337);
             DGV_ListaProd.TabIndex = 77;
             DGV_ListaProd.CellContentClick += DGV_ListaProd_CellContentClick;
-            // 
-            // CId
-            // 
-            CId.HeaderText = "ID";
-            CId.Name = "CId";
-            // 
-            // DGVButtonEliminar
-            // 
-            DGVButtonEliminar.HeaderText = "Eliminar";
-            DGVButtonEliminar.Name = "DGVButtonEliminar";
-            // 
-            // DGVButton
-            // 
-            DGVButton.HeaderText = "Modificar";
-            DGVButton.Name = "DGVButton";
-            // 
-            // CTipo
-            // 
-            CTipo.HeaderText = "Tipo";
-            CTipo.Name = "CTipo";
-            // 
-            // CMarca
-            // 
-            CMarca.HeaderText = "Marca";
-            CMarca.Name = "CMarca";
-            // 
-            // CEstilo
-            // 
-            CEstilo.HeaderText = "Estilo";
-            CEstilo.Name = "CEstilo";
-            // 
-            // CColor
-            // 
-            CColor.HeaderText = "Color";
-            CColor.Name = "CColor";
-            // 
-            // CGenero
-            // 
-            CGenero.HeaderText = "Genero";
-            CGenero.Name = "CGenero";
-            // 
-            // CTalle
-            // 
-            CTalle.HeaderText = "Talle";
-            CTalle.Name = "CTalle";
-            // 
-            // CPrecio
-            // 
-            CPrecio.HeaderText = "Precio";
-            CPrecio.Name = "CPrecio";
             // 
             // LBuscar
             // 
@@ -142,19 +84,57 @@
             // BVerRegistros
             // 
             BVerRegistros.Anchor = AnchorStyles.None;
-            BVerRegistros.Location = new Point(799, 40);
+            BVerRegistros.BackColor = Color.LimeGreen;
+            BVerRegistros.FlatStyle = FlatStyle.Flat;
+            BVerRegistros.Location = new Point(811, 39);
             BVerRegistros.Name = "BVerRegistros";
             BVerRegistros.Size = new Size(97, 23);
             BVerRegistros.TabIndex = 82;
             BVerRegistros.Text = "Ver Productos";
-            BVerRegistros.UseVisualStyleBackColor = true;
+            BVerRegistros.UseVisualStyleBackColor = false;
             BVerRegistros.Click += BVerRegistros_Click;
+            // 
+            // BModificar
+            // 
+            BModificar.BackColor = Color.DodgerBlue;
+            BModificar.FlatStyle = FlatStyle.Flat;
+            BModificar.Location = new Point(730, 39);
+            BModificar.Name = "BModificar";
+            BModificar.Size = new Size(75, 23);
+            BModificar.TabIndex = 83;
+            BModificar.Text = "Modificar";
+            BModificar.UseVisualStyleBackColor = false;
+            // 
+            // BEliminar
+            // 
+            BEliminar.BackColor = Color.Red;
+            BEliminar.FlatStyle = FlatStyle.Flat;
+            BEliminar.Location = new Point(649, 39);
+            BEliminar.Name = "BEliminar";
+            BEliminar.Size = new Size(75, 23);
+            BEliminar.TabIndex = 84;
+            BEliminar.Text = "Eliminar";
+            BEliminar.UseVisualStyleBackColor = false;
+            // 
+            // BHabilitar
+            // 
+            BHabilitar.BackColor = Color.Orange;
+            BHabilitar.FlatStyle = FlatStyle.Flat;
+            BHabilitar.Location = new Point(568, 39);
+            BHabilitar.Name = "BHabilitar";
+            BHabilitar.Size = new Size(75, 23);
+            BHabilitar.TabIndex = 85;
+            BHabilitar.Text = "Habilitar";
+            BHabilitar.UseVisualStyleBackColor = false;
             // 
             // Ver_productos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(939, 441);
+            Controls.Add(BHabilitar);
+            Controls.Add(BEliminar);
+            Controls.Add(BModificar);
             Controls.Add(BVerRegistros);
             Controls.Add(LBuscar);
             Controls.Add(TBuscar);
@@ -174,16 +154,9 @@
         private DataGridView DGV_ListaProd;
         private Label LBuscar;
         private TextBox TBuscar;
-        private DataGridViewTextBoxColumn CId;
-        private DataGridViewTextBoxColumn DGVButtonEliminar;
-        private DataGridViewTextBoxColumn DGVButton;
-        private DataGridViewTextBoxColumn CTipo;
-        private DataGridViewTextBoxColumn CMarca;
-        private DataGridViewTextBoxColumn CEstilo;
-        private DataGridViewTextBoxColumn CColor;
-        private DataGridViewTextBoxColumn CGenero;
-        private DataGridViewTextBoxColumn CTalle;
-        private DataGridViewTextBoxColumn CPrecio;
         private Button BVerRegistros;
+        private Button BModificar;
+        private Button BEliminar;
+        private Button BHabilitar;
     }
 }
