@@ -33,7 +33,9 @@ namespace CapaPresentacion.Secretaria
 
         private void BModificar_Click(object sender, EventArgs e)
         {
-
+            Modif_producto formModifProd = new Modif_producto();
+            formModifProd.Show();
+            this.Hide();
         }
 
         private void BEliminar_Click(object sender, EventArgs e)

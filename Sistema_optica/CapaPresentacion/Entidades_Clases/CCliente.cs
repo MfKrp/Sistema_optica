@@ -11,8 +11,8 @@ namespace CapaPresentacion.Entidades_Clases
 {
     internal class CCliente
     {
-        //string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
-        string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        //string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
         public void altaCliente (string dniCl,
         string nombreCl,
@@ -29,7 +29,7 @@ namespace CapaPresentacion.Entidades_Clases
             string correo = correoCl;
             bool estadoCliente = true;
 
-            SqlConnection con = new SqlConnection(connectionStringEscritorio);
+            SqlConnection con = new SqlConnection(connectionString);
 
             string consulta = "INSERT INTO Cliente (DNI, Nombre, Apellido, Telefono, Direccion, Email, Estado_cliente) VALUES (@DNI, @Nombre, @Apellido, @Telefono, @Direccion, @Correo, @Estado_cliente)";
             SqlCommand comandoInsercion = new SqlCommand(consulta, con);
@@ -60,7 +60,7 @@ namespace CapaPresentacion.Entidades_Clases
 
         public void verClientes(DataGridView dataGridClientes)
         {
-            using (SqlConnection sqlcon = new SqlConnection(connectionStringEscritorio))
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Cliente", sqlcon);
@@ -79,7 +79,43 @@ namespace CapaPresentacion.Entidades_Clases
             string emailCliente,
             DataGridView datagridClientes)
         {
+            DataGridViewRow fila = datagridClientes.SelectedRows[0];
+            //El ID del cliente no sera modificable ya que sera su numero de identificacion
+            int dniNuevoCl = dniCliente;//int.Parse(TDni.Text)
+            string nombreNuevoCl = nombreCliente;//TNombre.Text
+            string apellidoNuevoCl = apellidoCliente;//TApellido.Text
+            string telNuevoCl = telefonoCliente;//TTelefono.Text
+            string dirNuevoCl = direccionCliente;//TDirecion.Text
+            string emailNuevoCl = emailCliente;//TDireccion.Text
+            
+            string query = "UPDATE Cliente SET DNI = @DNI, Nombre = @Nombre, Apellido = @Apellido, Telefono = @Telefono, Email = @Email, Direccion = @Direccion, WHERE DNI = @DNI";
+            SqlConnection conexion = new SqlConnection(connectionString);
+            conexion.Open();
+            SqlCommand comandoBaja = new SqlCommand(query, conexion);
 
+            try
+            {
+                /*comandoBaja.Parameters.AddWithValue("@estadoEmpleado", estadoEmpleado);*/
+                comandoBaja.Parameters.AddWithValue("@DNI", dniNuevoCl);
+                comandoBaja.Parameters.AddWithValue("@Nombre", nombreNuevoCl);
+                comandoBaja.Parameters.AddWithValue("@Apellido", apellidoNuevoCl);
+                comandoBaja.Parameters.AddWithValue("@Telefono", telNuevoCl);
+                comandoBaja.Parameters.AddWithValue("@Email", emailCliente);
+                comandoBaja.Parameters.AddWithValue("@Direccion", dirNuevoCl);
+
+                //esta linea se usa cuando se hace modificacion, por lo tanto siempre debe ir incluida, caso opuesto en las lecturas que se usa ExecuteReader
+                comandoBaja.ExecuteNonQuery();
+
+                MessageBox.Show("Se ha modificado con exito el Cliente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //Si el empleado se ha registrado con exito se debe refrescar el datagridview de los empleados para poder ver los cambios
+                CEmpleado verEmpleados = new CEmpleado();
+                verEmpleados.verEmpleados(datagridClientes);
+            }
+            catch (SqlException j)
+            {
+                MessageBox.Show("Error en: " + j.ToString(), "Error al dar de baja", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void bajaCliente (DataGridView dataGridClientes)
@@ -90,7 +126,7 @@ namespace CapaPresentacion.Entidades_Clases
             bool estadoCliente = false;
             //MessageBox.Show("Valor de la celda " + @ID_empleado);
             string query = "UPDATE Cliente SET Estado_cliente = @Estado_cliente WHERE DNI = @DNI";
-            SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
+            SqlConnection conexion = new SqlConnection(connectionString);
             conexion.Open();
             SqlCommand comandoBaja = new SqlCommand(query, conexion);
 
@@ -121,7 +157,7 @@ namespace CapaPresentacion.Entidades_Clases
             bool estadoCliente = true;
             //MessageBox.Show("Valor de la celda " + @ID_empleado);
             string query = "UPDATE Cliente SET Estado_cliente = @Estado_cliente WHERE DNI = @DNI";
-            SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
+            SqlConnection conexion = new SqlConnection(connectionString);
             conexion.Open();
             SqlCommand comandoBaja = new SqlCommand(query, conexion);
 

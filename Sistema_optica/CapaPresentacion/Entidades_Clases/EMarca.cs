@@ -11,6 +11,7 @@ namespace CapaPresentacion.Entidades_Clases
     internal class EMarca
     {
         string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        //string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
         //Se carga el combobox de marca con los datos guardados en los registros de esa tabla
         public void cargarComboBox(ComboBox ComboBox)
         {

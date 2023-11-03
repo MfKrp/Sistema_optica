@@ -43,6 +43,8 @@
             LDni = new Label();
             LApellido = new Label();
             LNombre = new Label();
+            DGVClientes = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)DGVClientes).BeginInit();
             SuspendLayout();
             // 
             // BBorrar
@@ -51,7 +53,7 @@
             BBorrar.BackColor = Color.Red;
             BBorrar.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             BBorrar.ForeColor = Color.White;
-            BBorrar.Location = new Point(344, 375);
+            BBorrar.Location = new Point(196, 393);
             BBorrar.Name = "BBorrar";
             BBorrar.Size = new Size(88, 36);
             BBorrar.TabIndex = 89;
@@ -65,7 +67,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 64, 64);
-            label2.Location = new Point(185, 30);
+            label2.Location = new Point(186, 9);
             label2.Name = "label2";
             label2.Size = new Size(215, 28);
             label2.TabIndex = 88;
@@ -77,7 +79,7 @@
             BGuardar.BackColor = Color.Green;
             BGuardar.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             BGuardar.ForeColor = Color.White;
-            BGuardar.Location = new Point(450, 375);
+            BGuardar.Location = new Point(302, 393);
             BGuardar.Name = "BGuardar";
             BGuardar.Size = new Size(88, 36);
             BGuardar.TabIndex = 87;
@@ -88,25 +90,25 @@
             // TDireccion
             // 
             TDireccion.Anchor = AnchorStyles.None;
-            TDireccion.Location = new Point(117, 297);
+            TDireccion.Location = new Point(117, 119);
             TDireccion.Name = "TDireccion";
-            TDireccion.Size = new Size(421, 23);
+            TDireccion.Size = new Size(435, 23);
             TDireccion.TabIndex = 86;
             TDireccion.TextChanged += TDireccion_TextChanged;
             // 
             // TCorreo
             // 
             TCorreo.Anchor = AnchorStyles.None;
-            TCorreo.Location = new Point(254, 236);
+            TCorreo.Location = new Point(339, 80);
             TCorreo.Name = "TCorreo";
-            TCorreo.Size = new Size(284, 23);
+            TCorreo.Size = new Size(213, 23);
             TCorreo.TabIndex = 85;
             TCorreo.KeyPress += TTelefono_KeyPressEventArgs;
             // 
             // TTelefono
             // 
             TTelefono.Anchor = AnchorStyles.None;
-            TTelefono.Location = new Point(33, 236);
+            TTelefono.Location = new Point(101, 80);
             TTelefono.Name = "TTelefono";
             TTelefono.Size = new Size(159, 23);
             TTelefono.TabIndex = 84;
@@ -116,9 +118,9 @@
             // TDni
             // 
             TDni.Anchor = AnchorStyles.None;
-            TDni.Location = new Point(83, 96);
+            TDni.Location = new Point(66, 40);
             TDni.Name = "TDni";
-            TDni.Size = new Size(139, 23);
+            TDni.Size = new Size(126, 23);
             TDni.TabIndex = 83;
             TDni.TextChanged += TDni_TextChanged;
             TDni.KeyPress += TDni_KeyPressEventArgs;
@@ -126,9 +128,9 @@
             // TNombre
             // 
             TNombre.Anchor = AnchorStyles.None;
-            TNombre.Location = new Point(33, 169);
+            TNombre.Location = new Point(273, 40);
             TNombre.Name = "TNombre";
-            TNombre.Size = new Size(233, 23);
+            TNombre.Size = new Size(104, 23);
             TNombre.TabIndex = 82;
             TNombre.TextChanged += TNombre_TextChanged;
             TNombre.KeyPress += TNombre_KeyPressEventArgs;
@@ -136,9 +138,9 @@
             // TApellido
             // 
             TApellido.Anchor = AnchorStyles.None;
-            TApellido.Location = new Point(305, 169);
+            TApellido.Location = new Point(450, 40);
             TApellido.Name = "TApellido";
-            TApellido.Size = new Size(233, 23);
+            TApellido.Size = new Size(102, 23);
             TApellido.TabIndex = 81;
             TApellido.TextChanged += TApellido_TextChanged;
             TApellido.KeyPress += TApellido_KeyPressEventArgs;
@@ -149,7 +151,7 @@
             LDireccion.AutoSize = true;
             LDireccion.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LDireccion.ForeColor = Color.FromArgb(0, 64, 64);
-            LDireccion.Location = new Point(30, 297);
+            LDireccion.Location = new Point(21, 119);
             LDireccion.Name = "LDireccion";
             LDireccion.Size = new Size(81, 23);
             LDireccion.TabIndex = 80;
@@ -161,7 +163,7 @@
             LCorreo.AutoSize = true;
             LCorreo.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LCorreo.ForeColor = Color.FromArgb(0, 64, 64);
-            LCorreo.Location = new Point(254, 210);
+            LCorreo.Location = new Point(273, 80);
             LCorreo.Name = "LCorreo";
             LCorreo.Size = new Size(60, 23);
             LCorreo.TabIndex = 79;
@@ -173,7 +175,7 @@
             LTelefono.AutoSize = true;
             LTelefono.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LTelefono.ForeColor = Color.FromArgb(0, 64, 64);
-            LTelefono.Location = new Point(27, 210);
+            LTelefono.Location = new Point(21, 80);
             LTelefono.Name = "LTelefono";
             LTelefono.Size = new Size(74, 23);
             LTelefono.TabIndex = 78;
@@ -185,7 +187,7 @@
             LDni.AutoSize = true;
             LDni.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LDni.ForeColor = Color.FromArgb(0, 64, 64);
-            LDni.Location = new Point(36, 93);
+            LDni.Location = new Point(21, 40);
             LDni.Name = "LDni";
             LDni.Size = new Size(39, 23);
             LDni.TabIndex = 77;
@@ -197,7 +199,7 @@
             LApellido.AutoSize = true;
             LApellido.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LApellido.ForeColor = Color.FromArgb(0, 64, 64);
-            LApellido.Location = new Point(305, 143);
+            LApellido.Location = new Point(383, 40);
             LApellido.Name = "LApellido";
             LApellido.Size = new Size(70, 23);
             LApellido.TabIndex = 76;
@@ -209,17 +211,28 @@
             LNombre.AutoSize = true;
             LNombre.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LNombre.ForeColor = Color.FromArgb(0, 64, 64);
-            LNombre.Location = new Point(33, 143);
+            LNombre.Location = new Point(198, 40);
             LNombre.Name = "LNombre";
             LNombre.Size = new Size(69, 23);
             LNombre.TabIndex = 75;
             LNombre.Text = "Nombre";
+            // 
+            // DGVClientes
+            // 
+            DGVClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DGVClientes.Location = new Point(20, 157);
+            DGVClientes.Name = "DGVClientes";
+            DGVClientes.RowTemplate.Height = 25;
+            DGVClientes.Size = new Size(532, 230);
+            DGVClientes.TabIndex = 90;
+            DGVClientes.CellContentClick += DGVClientes_CellContentClick;
             // 
             // Modif_Cliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(564, 441);
+            Controls.Add(DGVClientes);
             Controls.Add(BBorrar);
             Controls.Add(label2);
             Controls.Add(BGuardar);
@@ -237,6 +250,8 @@
             Controls.Add(LNombre);
             Name = "Modif_Cliente";
             Text = "Modificar Cliente";
+            Load += Modif_Cliente_Load;
+            ((System.ComponentModel.ISupportInitialize)DGVClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -258,5 +273,6 @@
         private Label LDni;
         private Label LApellido;
         private Label LNombre;
+        private DataGridView DGVClientes;
     }
 }

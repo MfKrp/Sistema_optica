@@ -12,8 +12,8 @@ namespace CapaPresentacion.Entidades_Clases
 {
     internal class CEmpleado
     {
-        //string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
-        string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        //string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
         public void altaEmpleado(string dniEmp,
         string codigoPerfilEmp,
@@ -39,7 +39,7 @@ namespace CapaPresentacion.Entidades_Clases
             string fecha_Nacimiento = fecha_NacimientoEmple;
             string contrasena = contrasenaEmp;
 
-            SqlConnection con = new SqlConnection(connectionStringEscritorio);
+            SqlConnection con = new SqlConnection(connectionString);
 
             string consulta = "INSERT INTO UsuarioEmpleado (ID_empleado, Nombre, Apellido, Telefono, Email, Fecha_Nacimiento, DNI, Direccion, ID_perfil, Estado_empleado, Contrasena) VALUES (@ID_empleado, @Nombre, @Apellido, @Telefono, @Email, @Fecha_nacimiento, @DNI, @Direccion, @ID_perfil, @Estado_empleado, @Contrasena)";
             SqlCommand comandoInsercion = new SqlCommand(consulta, con);
@@ -99,7 +99,7 @@ namespace CapaPresentacion.Entidades_Clases
             string contrasenaEmp = contrasenaEmple;//TContrasena.Text;
             //MessageBox.Show("Valor de la celda " + @ID_empleado);
             string query = "UPDATE UsuarioEmpleado SET Nombre = @Nombre, Apellido = @Apellido, Telefono = @Telefono, Email = @Email, Fecha_nacimiento = @Fecha_nacimiento, DNI = @DNI, Direccion = @Direccion, ID_Perfil = @ID_Perfil, Contrasena = @Contrasena WHERE ID_empleado = @ID_empleado";
-            SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
+            SqlConnection conexion = new SqlConnection(connectionString);
             conexion.Open();
             SqlCommand comandoBaja = new SqlCommand(query, conexion);
 
@@ -138,7 +138,7 @@ namespace CapaPresentacion.Entidades_Clases
 
         public void verEmpleados(DataGridView dataGridEmpleados)
         {
-            using (SqlConnection sqlcon = new SqlConnection(connectionStringEscritorio))
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Usuarioempleado", sqlcon);
@@ -157,7 +157,7 @@ namespace CapaPresentacion.Entidades_Clases
             bool estadoEmpleado = false;
             //MessageBox.Show("Valor de la celda " + @ID_empleado);
             string query = "UPDATE UsuarioEmpleado SET Estado_empleado = @estadoEmpleado WHERE ID_empleado = @ID_empleado";
-            SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
+            SqlConnection conexion = new SqlConnection(connectionString);
             conexion.Open();
             SqlCommand comandoBaja = new SqlCommand(query, conexion);
 
@@ -190,7 +190,7 @@ namespace CapaPresentacion.Entidades_Clases
                 //se cambia el estado del empleado a true, comprobandose que antes este en false
                 bool estadoEmpleado = true;
                 string query = "UPDATE UsuarioEmpleado SET Estado_empleado = @estadoEmpleado WHERE ID_empleado = @ID_empleado";
-                SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
+                SqlConnection conexion = new SqlConnection(connectionString);
                 conexion.Open();
                 SqlCommand comandoBaja = new SqlCommand(query, conexion);
 

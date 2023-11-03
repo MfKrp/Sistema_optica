@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaPresentacion.Entidades_Clases;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -101,7 +103,31 @@ namespace CapaPresentacion.Secretaria
             }
             else
             {
-                MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (DGVClientes.SelectedRows.Count < 0)
+                {
+                    MessageBox.Show("Seleccione almenos una fila", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    /*Parametros de la funcion de modificacion
+                     *  int dniCliente,
+                        string nombreCliente,
+                        string apellidoCliente,
+                        string telefonoCliente,
+                        string direccionCliente,
+                        string emailCliente,
+                        DataGridView datagridClientes
+                     */
+                    CCliente modificarCliente = new CCliente();
+                    modificarCliente.modificarCliente(int.Parse(TDni.Text),
+                        TNombre.Text,
+                        TApellido.Text,
+                        TTelefono.Text,
+                        TDireccion.Text,
+                        TCorreo.Text,
+                        DGVClientes);
+                }
+                
             }
         }
 
@@ -113,6 +139,31 @@ namespace CapaPresentacion.Secretaria
             TTelefono.Text = "";
             TCorreo.Text = "";
             TDireccion.Text = "";
+        }
+
+
+
+        private void Modif_Cliente_Load(object sender, EventArgs e)
+        {
+            CCliente verCliente = new CCliente();
+            verCliente.verClientes(DGVClientes);
+        }
+
+        private void DGVClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = DGVClientes.SelectedRows[0];
+            int dniCliente = (int)fila.Cells["DNI"].Value;
+            float nombreCliente = (float)fila.Cells["Nombre"].Value;
+            int apellidoCliente = (int)fila.Cells["Apellido"].Value;
+            int telefonoCliente = (int)fila.Cells["Telefono"].Value;
+            int emailCliente = (int)fila.Cells["Marca"].Value;
+
+            TId_prod.Text = id_prod.ToString();
+            TPrecio.Text = precProd.ToString();
+            TStock.Text = stockProd.ToString();
+            ComboBox_Estilo.Text = estiloProd.ToString();
+            ComboBox_Marca.Text = marcaProd.ToString();
+            ComnboBox_Anteojo.Text = tipoProd.ToString();
         }
     }
 }

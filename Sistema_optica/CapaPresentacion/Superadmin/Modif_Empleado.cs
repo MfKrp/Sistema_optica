@@ -222,18 +222,27 @@ namespace CapaPresentacion.Superadmin
                     DataGridView DataGridEmpleados
                  */
 
-                CEmpleado modificacionEmpleado = new CEmpleado();
-                modificacionEmpleado.modificacionEmpleado(TDni.Text,
-                int.Parse(ComboBox_Perfil.SelectedValue.ToString()),
-                int.Parse(TCodigo_emp.Text),
-                TNombre.Text,
-                TApellido.Text,
-                TTelefono.Text,
-                TDireccion.Text,
-                TCorreo.Text,
-                DTPFechaNac.Value.ToShortDateString(),
-                TContrasena.Text,
-                DGVEmpleadosReg);
+                if (DGVEmpleadosReg.SelectedRows.Count < 1)
+                {
+                    MessageBox.Show("Seleccione almenos una fila", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    CEmpleado modificacionEmpleado = new CEmpleado();
+                    modificacionEmpleado.modificacionEmpleado(TDni.Text,
+                    int.Parse(ComboBox_Perfil.SelectedValue.ToString()),
+                    int.Parse(TCodigo_emp.Text),
+                    TNombre.Text,
+                    TApellido.Text,
+                    TTelefono.Text,
+                    TDireccion.Text,
+                    TCorreo.Text,
+                    DTPFechaNac.Value.ToShortDateString(),
+                    TContrasena.Text,
+                    DGVEmpleadosReg);
+
+                }
             }
         }
 

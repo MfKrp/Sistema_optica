@@ -13,10 +13,9 @@ namespace CapaPresentacion.Capa_datos
 {
     internal class CProducto
     {
-        CProducto refrescarProductos = new CProducto();
 
-        //string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
-        string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        //string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
         //Metodo que da de alta un producto
         public void altaProducto(string TId_prod, string ComboBox_Anteojo, string TPrecio, string ComboBox_Genero, string TColor, string TStock, string ComboBox_Marca, string ComboBox_Estilo)
@@ -36,7 +35,7 @@ namespace CapaPresentacion.Capa_datos
             int marcaProd = int.Parse(ComboBox_Marca);
             int tipoProd = int.Parse(ComboBox_Anteojo);
 
-            SqlConnection con = new SqlConnection(connectionStringEscritorio);
+            SqlConnection con = new SqlConnection(connectionString);
 
             string consulta = "INSERT INTO Producto (Id_producto, Nombre, Precio_unitario, Stock, Estilo, Marca, Tipo, Estado_producto) VALUES (@Id_Producto, @Nombre, @Precio_unitario, @Stock, @Estilo, @Marca, @Tipo, @Estado_producto)";
 
@@ -72,7 +71,7 @@ namespace CapaPresentacion.Capa_datos
 
         public void verProductos(DataGridView dataGridProductos)
         {
-            using (SqlConnection sqlcon = new SqlConnection(connectionStringEscritorio))
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Producto", sqlcon);
@@ -100,7 +99,7 @@ namespace CapaPresentacion.Capa_datos
             int marcaProducto = marcaProd;//DTPFechaNac.Value.ToShortDateString();
             int tipoProducto = tipoProd;//TDni.Text;
             string query = "UPDATE Producto SET Id_producto = @Id_producto, Precio_unitario = @Precio_unitario, Stock = @Stock, Estilo = @Estilo, Marca = @Marca, Tipo = @Tipo WHERE Id_producto = @Id_producto";
-            SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
+            SqlConnection conexion = new SqlConnection(connectionString);
             conexion.Open();
             SqlCommand comandoBaja = new SqlCommand(query, conexion);
 
@@ -138,7 +137,7 @@ namespace CapaPresentacion.Capa_datos
             bool estadoProducto = false;
             //MessageBox.Show("Valor de la celda " + @ID_empleado);
             string query = "UPDATE Producto SET Estado_producto = @Estado_producto WHERE Id_producto = @Id_producto";
-            SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
+            SqlConnection conexion = new SqlConnection(connectionString);
             conexion.Open();
             SqlCommand comandoBaja = new SqlCommand(query, conexion);
 
@@ -151,7 +150,8 @@ namespace CapaPresentacion.Capa_datos
 
                 MessageBox.Show("Se ha dado de baja el producto", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                refrescarProductos.verProductos(dataGridProd);
+                this.verProductos(dataGridProd);
+                
             }
             catch (SqlException j)
             {
@@ -169,7 +169,7 @@ namespace CapaPresentacion.Capa_datos
             bool estadoProducto = true;
             //MessageBox.Show("Valor de la celda " + @ID_empleado);
             string query = "UPDATE Producto SET Estado_producto = @Estado_producto WHERE Id_producto = @Id_producto";
-            SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
+            SqlConnection conexion = new SqlConnection(connectionString);
             conexion.Open();
             SqlCommand comandoBaja = new SqlCommand(query, conexion);
 
@@ -182,7 +182,7 @@ namespace CapaPresentacion.Capa_datos
 
                 MessageBox.Show("Se ha restaurado el producto", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                refrescarProductos.verProductos(dataGridProd);
+                this.verProductos(dataGridProd);
             }
             catch (SqlException j)
             {

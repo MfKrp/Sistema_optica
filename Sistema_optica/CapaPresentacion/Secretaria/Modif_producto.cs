@@ -74,7 +74,32 @@ namespace CapaPresentacion.Secretaria
             }
             else
             {
-                
+                /*Parametros funcion
+                    int id_prod,
+                    float precProd,
+                    int stockProd,
+                    int estiloProd,
+                    int marcaProd,
+                    int tipoProd,
+                    DataGridView dataGridProductos
+                 */
+
+                //Si no se selecciona ninguna fila se arroja un error
+                if (DGVProductos.SelectedRows.Count < 0)
+                {
+                    MessageBox.Show("Seleccione almenos una fila", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    CProducto modificarProducto = new CProducto();
+                    modificarProducto.modificacionProducto(int.Parse(TId_prod.Text),
+                        float.Parse(TPrecio.Text),
+                        int.Parse(TStock.Text),
+                        int.Parse(ComboBox_Estilo.SelectedValue.ToString()),
+                        int.Parse(ComboBox_Marca.SelectedValue.ToString()),
+                        int.Parse(ComnboBox_Anteojo.SelectedValue.ToString()),
+                        DGVProductos);
+                }
             }
         }
 
@@ -89,7 +114,31 @@ namespace CapaPresentacion.Secretaria
 
         private void DGVProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (DGVProductos.SelectedRows.Count == 1)
+            {
+                /*
+                 * int id_prod,
+                   float precProd,
+                   int stockProd,
+                   int estiloProd,
+                   int marcaProd,
+                   int tipoProd,
+                 */
+                DataGridViewRow fila = DGVProductos.SelectedRows[0];
+                int id_prod = (int)fila.Cells["Id_producto"].Value;
+                float precProd = (float)fila.Cells["Precio_unitario"].Value;
+                int stockProd = (int)fila.Cells["Stock"].Value;
+                int estiloProd = (int)fila.Cells["Estilo"].Value;
+                int marcaProd = (int)fila.Cells["Marca"].Value;
+                int tipoProd = (int)fila.Cells["Tipo"].Value;
 
+                TId_prod.Text = id_prod.ToString();
+                TPrecio.Text = precProd.ToString();
+                TStock.Text = stockProd.ToString();
+                ComboBox_Estilo.Text = estiloProd.ToString();
+                ComboBox_Marca.Text = marcaProd.ToString();
+                ComnboBox_Anteojo.Text = tipoProd.ToString();
+            }
         }
 
         private void Modif_producto_Load(object sender, EventArgs e)
