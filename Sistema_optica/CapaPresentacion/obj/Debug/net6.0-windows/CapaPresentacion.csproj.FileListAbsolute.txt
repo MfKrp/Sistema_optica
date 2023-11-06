@@ -130,3 +130,4 @@ C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\De
 C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.pdb
 C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.genruntimeconfig.cache
 C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\ref\CapaPresentacion.dll
+C:\Users\User\source\repos\Sistema_Optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Sesion.Form1.resources

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaNegocio\\CapaNegocio.csproj": {}
+    "C:\\Users\\User\\source\\repos\\Sistema_Optica\\Sistema_optica\\CapaNegocio\\CapaNegocio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaNegocio\\CapaNegocio.csproj": {
+    "C:\\Users\\User\\source\\repos\\Sistema_Optica\\Sistema_optica\\CapaNegocio\\CapaNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaNegocio\\CapaNegocio.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Sistema_Optica\\Sistema_optica\\CapaNegocio\\CapaNegocio.csproj",
         "projectName": "CapaNegocio",
-        "projectPath": "C:\\Users\\User\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaNegocio\\CapaNegocio.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\Sistema_Optica\\Sistema_optica\\CapaNegocio\\CapaNegocio.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\User\\Source\\Repos\\Sistema_optica\\Sistema_optica\\CapaNegocio\\obj\\",
         "projectStyle": "PackageReference",

@@ -22,7 +22,7 @@ namespace CapaPresentacion.Superadmin
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
-            abrirForm((ToolStripMenuItem)sender, new Ver_empleados());
+
         }
         private void abrirForm(ToolStripMenuItem menu, Form formulario)
         {
@@ -47,7 +47,7 @@ namespace CapaPresentacion.Superadmin
         }
         private void TSMRegistrarEmpleado_Click(object sender, EventArgs e)
         {
-            abrirForm((ToolStripMenuItem)sender, new Carga_empleado());
+
         }
 
         private void TSMBVerProductos_Click(object sender, EventArgs e)
@@ -97,6 +97,16 @@ namespace CapaPresentacion.Superadmin
         private void contenedor_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void TSMIRegistrarEmpleado_Click(object sender, EventArgs e)
+        {
+            abrirForm((ToolStripMenuItem)sender, new Carga_empleado());
+        }
+
+        private void TSMIVerEmpleados_Click(object sender, EventArgs e)
+        {
+            abrirForm((ToolStripMenuItem)sender, new Ver_empleados());
         }
     }
 }

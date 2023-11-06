@@ -13,6 +13,9 @@
     <Compile Update="Secretaria\Menu_Secretaria.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Sesion\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Sesion\Iniciar_sesion.cs">
       <SubType>Form</SubType>
     </Compile>

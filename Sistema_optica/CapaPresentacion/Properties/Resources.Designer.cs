@@ -59,15 +59,5 @@ namespace CapaPresentacion.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap optica_maribel {
-            get {
-                object obj = ResourceManager.GetObject("optica_maribel", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

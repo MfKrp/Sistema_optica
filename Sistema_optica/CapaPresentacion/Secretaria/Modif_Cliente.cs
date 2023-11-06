@@ -157,13 +157,14 @@ namespace CapaPresentacion.Secretaria
             int apellidoCliente = (int)fila.Cells["Apellido"].Value;
             int telefonoCliente = (int)fila.Cells["Telefono"].Value;
             int emailCliente = (int)fila.Cells["Marca"].Value;
-
+            /*
             TId_prod.Text = id_prod.ToString();
             TPrecio.Text = precProd.ToString();
             TStock.Text = stockProd.ToString();
             ComboBox_Estilo.Text = estiloProd.ToString();
             ComboBox_Marca.Text = marcaProd.ToString();
             ComnboBox_Anteojo.Text = tipoProd.ToString();
+            */
         }
     }
 }

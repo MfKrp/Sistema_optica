@@ -14,18 +14,17 @@ namespace CapaPresentacion.Secretaria
 {
     public partial class Menu_Secretaria : Form
     {
-        private static ToolStripMenuItem menuActivo = null;
         private static Form formActivo = null;
+
         public Menu_Secretaria()
         {
             InitializeComponent();
         }
-        private void abrirForm(ToolStripMenuItem menu, Form formulario)
+
+    
+    private void abrirForm(ToolStripMenuItem menu, Form formulario)
         {
 
-            menu.BackColor = Color.Teal;
-
-            menuActivo = menu;
 
             if (formActivo != null)
             {
@@ -48,12 +47,12 @@ namespace CapaPresentacion.Secretaria
 
         private void TSMBVerClientes_Click(object sender, EventArgs e)
         {
-            abrirForm((ToolStripMenuItem)sender, new Ver_clientes());
+
         }
 
         private void TSMBVerProductos_Click(object sender, EventArgs e)
         {
-            abrirForm((ToolStripMenuItem)sender, new Ver_productos());
+
         }
         private void frm_closing(object sender, FormClosingEventArgs e)
         {
@@ -67,6 +66,41 @@ namespace CapaPresentacion.Secretaria
 
         private void TSMBCerrarSesion_Click(object sender, EventArgs e)
         {
+         
+        }
+
+        private void TSMBVerPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TSMIProductos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TSMICargarProducto_Click(object sender, EventArgs e)
+        {
+            abrirForm((ToolStripMenuItem)sender, new Alta_producto());
+        }
+
+        private void TSMIVerProductos_Click(object sender, EventArgs e)
+        {
+            abrirForm((ToolStripMenuItem)sender, new Ver_productos());
+        }
+
+        private void TSMIVerClientes_Click(object sender, EventArgs e)
+        {
+            abrirForm((ToolStripMenuItem)sender, new Ver_clientes());
+        }
+
+        private void TSMBVerPerfil_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void MSBCerrarSesion_Click(object sender, EventArgs e)
+        {
             DialogResult resultado = MessageBox.Show("Seguro que desea cerrar sesion?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
@@ -78,11 +112,6 @@ namespace CapaPresentacion.Secretaria
 
                 // form.FormClosing += frm_closing;
             }
-        }
-
-        private void TSMBVerPerfil_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

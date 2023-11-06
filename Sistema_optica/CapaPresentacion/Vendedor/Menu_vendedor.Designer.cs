@@ -28,29 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
+            contenedor = new Panel();
+            panel1 = new Panel();
+            MSSuperAdmin = new MenuStrip();
+            TSMClientes = new ToolStripMenuItem();
+            TSMIRegistrarCliente = new ToolStripMenuItem();
+            TSMBVentas = new ToolStripMenuItem();
+            TSMBVerPerfil = new ToolStripMenuItem();
+            TSMVerProductos = new ToolStripMenuItem();
+            MSBCerrarSesion = new ToolStripMenuItem();
             menuStrip1 = new MenuStrip();
             MSLMenu = new ToolStripMenuItem();
-            menuStrip2 = new MenuStrip();
-            TSMBRegistrarCliente = new ToolStripMenuItem();
-            TSMBGenerarVenta = new ToolStripMenuItem();
-            TSMBVerProductos = new ToolStripMenuItem();
-            TSMBVerVentas = new ToolStripMenuItem();
-            TSMBVerPerfil = new ToolStripMenuItem();
-            TSMBCerrarSesion = new ToolStripMenuItem();
-            contenedor = new Panel();
+            TSMIRealizarVenta = new ToolStripMenuItem();
+            TSMIMisVentas = new ToolStripMenuItem();
+            TSMIVerClientes = new ToolStripMenuItem();
+            contenedor.SuspendLayout();
+            MSSuperAdmin.SuspendLayout();
             menuStrip1.SuspendLayout();
-            menuStrip2.SuspendLayout();
             SuspendLayout();
+            // 
+            // contenedor
+            // 
+            contenedor.BackColor = Color.FromArgb(255, 255, 192);
+            contenedor.Controls.Add(panel1);
+            contenedor.Location = new Point(167, 95);
+            contenedor.Name = "contenedor";
+            contenedor.Size = new Size(1027, 578);
+            contenedor.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(255, 213, 0);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(10, 578);
+            panel1.TabIndex = 1;
+            // 
+            // MSSuperAdmin
+            // 
+            MSSuperAdmin.AutoSize = false;
+            MSSuperAdmin.BackColor = Color.FromArgb(223, 54, 12);
+            MSSuperAdmin.Dock = DockStyle.Left;
+            MSSuperAdmin.Items.AddRange(new ToolStripItem[] { TSMClientes, TSMBVentas, TSMVerProductos, TSMBVerPerfil, MSBCerrarSesion });
+            MSSuperAdmin.Location = new Point(0, 95);
+            MSSuperAdmin.Name = "MSSuperAdmin";
+            MSSuperAdmin.Size = new Size(174, 578);
+            MSSuperAdmin.TabIndex = 6;
+            MSSuperAdmin.Text = "menuStrip2";
+            // 
+            // TSMClientes
+            // 
+            TSMClientes.AutoSize = false;
+            TSMClientes.BackColor = Color.FromArgb(223, 54, 12);
+            TSMClientes.DropDownItems.AddRange(new ToolStripItem[] { TSMIRegistrarCliente, TSMIVerClientes });
+            TSMClientes.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMClientes.ForeColor = Color.White;
+            TSMClientes.Name = "TSMClientes";
+            TSMClientes.Size = new Size(175, 35);
+            TSMClientes.Text = "Clientes";
+            // 
+            // TSMIRegistrarCliente
+            // 
+            TSMIRegistrarCliente.BackColor = Color.FromArgb(100, 26, 126);
+            TSMIRegistrarCliente.ForeColor = Color.White;
+            TSMIRegistrarCliente.Name = "TSMIRegistrarCliente";
+            TSMIRegistrarCliente.Size = new Size(227, 28);
+            TSMIRegistrarCliente.Text = "Registrar Cliente";
+            // 
+            // TSMBVentas
+            // 
+            TSMBVentas.AutoSize = false;
+            TSMBVentas.BackColor = Color.FromArgb(223, 54, 12);
+            TSMBVentas.DropDownItems.AddRange(new ToolStripItem[] { TSMIRealizarVenta, TSMIMisVentas });
+            TSMBVentas.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMBVentas.ForeColor = Color.White;
+            TSMBVentas.Name = "TSMBVentas";
+            TSMBVentas.Size = new Size(175, 35);
+            TSMBVentas.Text = "Ventas";
+            // 
+            // TSMBVerPerfil
+            // 
+            TSMBVerPerfil.AutoSize = false;
+            TSMBVerPerfil.BackColor = Color.FromArgb(223, 54, 12);
+            TSMBVerPerfil.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMBVerPerfil.ForeColor = Color.White;
+            TSMBVerPerfil.Name = "TSMBVerPerfil";
+            TSMBVerPerfil.Size = new Size(175, 35);
+            TSMBVerPerfil.Text = "Ver Perfil";
+            // 
+            // TSMVerProductos
+            // 
+            TSMVerProductos.AutoSize = false;
+            TSMVerProductos.BackColor = Color.FromArgb(223, 54, 12);
+            TSMVerProductos.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMVerProductos.ForeColor = Color.White;
+            TSMVerProductos.Name = "TSMVerProductos";
+            TSMVerProductos.Size = new Size(175, 35);
+            TSMVerProductos.Text = "Ver Productos";
+            // 
+            // MSBCerrarSesion
+            // 
+            MSBCerrarSesion.AutoSize = false;
+            MSBCerrarSesion.BackColor = Color.FromArgb(223, 54, 12);
+            MSBCerrarSesion.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            MSBCerrarSesion.ForeColor = Color.White;
+            MSBCerrarSesion.Name = "MSBCerrarSesion";
+            MSBCerrarSesion.Size = new Size(175, 35);
+            MSBCerrarSesion.Text = "Cerrar Sesión";
             // 
             // menuStrip1
             // 
             menuStrip1.AutoSize = false;
-            menuStrip1.BackColor = Color.CadetBlue;
+            menuStrip1.BackColor = Color.FromArgb(33, 8, 42);
             menuStrip1.Items.AddRange(new ToolStripItem[] { MSLMenu });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1194, 95);
-            menuStrip1.TabIndex = 2;
+            menuStrip1.TabIndex = 5;
             menuStrip1.Text = "menuStrip1";
             // 
             // MSLMenu
@@ -61,84 +155,29 @@
             MSLMenu.Size = new Size(243, 91);
             MSLMenu.Text = "Optica Maribel";
             // 
-            // menuStrip2
+            // TSMIRealizarVenta
             // 
-            menuStrip2.AutoSize = false;
-            menuStrip2.BackColor = Color.CadetBlue;
-            menuStrip2.Dock = DockStyle.Left;
-            menuStrip2.Items.AddRange(new ToolStripItem[] { TSMBRegistrarCliente, TSMBGenerarVenta, TSMBVerProductos, TSMBVerVentas, TSMBVerPerfil, TSMBCerrarSesion });
-            menuStrip2.Location = new Point(0, 95);
-            menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(180, 578);
-            menuStrip2.TabIndex = 3;
-            menuStrip2.Text = "menuStrip2";
+            TSMIRealizarVenta.BackColor = Color.FromArgb(100, 26, 126);
+            TSMIRealizarVenta.ForeColor = Color.White;
+            TSMIRealizarVenta.Name = "TSMIRealizarVenta";
+            TSMIRealizarVenta.Size = new Size(189, 28);
+            TSMIRealizarVenta.Text = "Realizar Venta";
             // 
-            // TSMBRegistrarCliente
+            // TSMIMisVentas
             // 
-            TSMBRegistrarCliente.BackColor = Color.FromArgb(0, 64, 64);
-            TSMBRegistrarCliente.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TSMBRegistrarCliente.ForeColor = Color.White;
-            TSMBRegistrarCliente.Name = "TSMBRegistrarCliente";
-            TSMBRegistrarCliente.Size = new Size(173, 27);
-            TSMBRegistrarCliente.Text = "Registrar Cliente";
-            TSMBRegistrarCliente.Click += TSMBRegistrarCliente_Click;
+            TSMIMisVentas.BackColor = Color.FromArgb(100, 26, 126);
+            TSMIMisVentas.ForeColor = Color.White;
+            TSMIMisVentas.Name = "TSMIMisVentas";
+            TSMIMisVentas.Size = new Size(189, 28);
+            TSMIMisVentas.Text = "Mis ventas";
             // 
-            // TSMBGenerarVenta
+            // TSMIVerClientes
             // 
-            TSMBGenerarVenta.BackColor = Color.FromArgb(0, 64, 64);
-            TSMBGenerarVenta.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TSMBGenerarVenta.ForeColor = Color.White;
-            TSMBGenerarVenta.Name = "TSMBGenerarVenta";
-            TSMBGenerarVenta.Size = new Size(173, 27);
-            TSMBGenerarVenta.Text = "Generar Venta";
-            TSMBGenerarVenta.Click += toolStripMenuItem1_Click;
-            // 
-            // TSMBVerProductos
-            // 
-            TSMBVerProductos.BackColor = Color.FromArgb(0, 64, 64);
-            TSMBVerProductos.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TSMBVerProductos.ForeColor = Color.White;
-            TSMBVerProductos.Name = "TSMBVerProductos";
-            TSMBVerProductos.Size = new Size(173, 27);
-            TSMBVerProductos.Text = "Productos";
-            TSMBVerProductos.Click += TSMBVerProductos_Click;
-            // 
-            // TSMBVerVentas
-            // 
-            TSMBVerVentas.BackColor = Color.FromArgb(0, 64, 64);
-            TSMBVerVentas.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TSMBVerVentas.ForeColor = Color.White;
-            TSMBVerVentas.Name = "TSMBVerVentas";
-            TSMBVerVentas.Size = new Size(173, 27);
-            TSMBVerVentas.Text = "Ventas";
-            TSMBVerVentas.Click += TSMBVerVentas_Click;
-            // 
-            // TSMBVerPerfil
-            // 
-            TSMBVerPerfil.BackColor = Color.FromArgb(0, 64, 64);
-            TSMBVerPerfil.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TSMBVerPerfil.ForeColor = Color.White;
-            TSMBVerPerfil.Name = "TSMBVerPerfil";
-            TSMBVerPerfil.Size = new Size(173, 27);
-            TSMBVerPerfil.Text = "Ver Perfil";
-            TSMBVerPerfil.Click += TSMBVerPerfil_Click;
-            // 
-            // TSMBCerrarSesion
-            // 
-            TSMBCerrarSesion.BackColor = Color.FromArgb(0, 64, 64);
-            TSMBCerrarSesion.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TSMBCerrarSesion.ForeColor = Color.White;
-            TSMBCerrarSesion.Name = "TSMBCerrarSesion";
-            TSMBCerrarSesion.Size = new Size(173, 27);
-            TSMBCerrarSesion.Text = "Cerrar Sesión";
-            TSMBCerrarSesion.Click += TSMBCerrarSesion_Click;
-            // 
-            // contenedor
-            // 
-            contenedor.Location = new Point(183, 98);
-            contenedor.Name = "contenedor";
-            contenedor.Size = new Size(1005, 571);
-            contenedor.TabIndex = 5;
+            TSMIVerClientes.BackColor = Color.FromArgb(100, 26, 126);
+            TSMIVerClientes.ForeColor = Color.White;
+            TSMIVerClientes.Name = "TSMIVerClientes";
+            TSMIVerClientes.Size = new Size(227, 28);
+            TSMIVerClientes.Text = "Ver lista de Clientes";
             // 
             // Menu_vendedor
             // 
@@ -146,30 +185,36 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1194, 673);
             Controls.Add(contenedor);
-            Controls.Add(menuStrip2);
+            Controls.Add(MSSuperAdmin);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Menu_vendedor";
-            Text = "Form1";
+            Text = "   ";
             Load += Menu_vendedor_Load;
+            contenedor.ResumeLayout(false);
+            MSSuperAdmin.ResumeLayout(false);
+            MSSuperAdmin.PerformLayout();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            menuStrip2.ResumeLayout(false);
-            menuStrip2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
+        private Panel contenedor;
+        private Panel panel1;
+        private MenuStrip MSSuperAdmin;
+        private ToolStripMenuItem TSMClientes;
+        private ToolStripMenuItem registrarEmpleadoToolStripMenuItem;
+        private ToolStripMenuItem TSMIRegistrarCliente;
+        private ToolStripMenuItem TSMBVentas;
+        private ToolStripMenuItem TSMIRealizarVenta;
+        private ToolStripMenuItem TSMIMisVentas;
+        private ToolStripMenuItem TSMVerProductos;
+        private ToolStripMenuItem TSMBVerPerfil;
+        private ToolStripMenuItem MSBCerrarSesion;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem MSLMenu;
-        private MenuStrip menuStrip2;
-        private ToolStripMenuItem TSMBRegistrarCliente;
-        private ToolStripMenuItem TSMBGenerarVenta;
-        private ToolStripMenuItem TSMBVerProductos;
-        private ToolStripMenuItem TSMBVerPerfil;
-        private ToolStripMenuItem TSMBVerVentas;
-        private ToolStripMenuItem TSMBCerrarSesion;
-        private Panel contenedor;
+        private ToolStripMenuItem TSMIVerClientes;
     }
 }
