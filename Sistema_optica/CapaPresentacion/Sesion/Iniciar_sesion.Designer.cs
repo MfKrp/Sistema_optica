@@ -111,6 +111,7 @@
             // 
             TCodigo_empleado_sesion.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             TCodigo_empleado_sesion.Location = new Point(278, 107);
+            TCodigo_empleado_sesion.MaxLength = 4;
             TCodigo_empleado_sesion.Name = "TCodigo_empleado_sesion";
             TCodigo_empleado_sesion.Size = new Size(200, 25);
             TCodigo_empleado_sesion.TabIndex = 9;
@@ -132,6 +133,7 @@
             TContraseña_sesion.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             TContraseña_sesion.Location = new Point(278, 207);
             TContraseña_sesion.Name = "TContraseña_sesion";
+            TContraseña_sesion.PasswordChar = '*';
             TContraseña_sesion.Size = new Size(200, 25);
             TContraseña_sesion.TabIndex = 10;
             TContraseña_sesion.TextChanged += TContraseña_sesion_TextChanged_1;

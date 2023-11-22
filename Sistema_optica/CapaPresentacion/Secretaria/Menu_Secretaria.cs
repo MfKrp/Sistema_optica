@@ -23,13 +23,11 @@ namespace CapaPresentacion.Secretaria
         public Menu_Secretaria(CEmpleado usuarioActual)
         {
             InitializeComponent();
+            empleadoLogueado = usuarioActual;
         }
         private void abrirForm(ToolStripMenuItem menu, Form formulario)
         {
 
-            menu.BackColor = Color.Teal;
-
-            menuActivo = menu;
 
             if (formActivo != null)
             {

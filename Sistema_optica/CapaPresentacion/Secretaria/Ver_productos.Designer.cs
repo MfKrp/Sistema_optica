@@ -30,8 +30,6 @@
         {
             label2 = new Label();
             DGV_ListaProd = new DataGridView();
-            LBuscar = new Label();
-            TBuscar = new TextBox();
             BVerProductos = new Button();
             BModificar = new Button();
             BEliminar = new Button();
@@ -69,22 +67,6 @@
             DGV_ListaProd.TabIndex = 77;
             DGV_ListaProd.CellContentClick += DGV_ListaProd_CellContentClick;
             // 
-            // LBuscar
-            // 
-            LBuscar.AutoSize = true;
-            LBuscar.Location = new Point(35, 41);
-            LBuscar.Name = "LBuscar";
-            LBuscar.Size = new Size(42, 15);
-            LBuscar.TabIndex = 80;
-            LBuscar.Text = "Buscar";
-            // 
-            // TBuscar
-            // 
-            TBuscar.Location = new Point(95, 38);
-            TBuscar.Name = "TBuscar";
-            TBuscar.Size = new Size(100, 23);
-            TBuscar.TabIndex = 79;
-            // 
             // BVerProductos
             // 
             BVerProductos.Anchor = AnchorStyles.None;
@@ -100,6 +82,7 @@
             // 
             // BModificar
             // 
+            BModificar.Anchor = AnchorStyles.None;
             BModificar.BackColor = Color.DodgerBlue;
             BModificar.FlatStyle = FlatStyle.Flat;
             BModificar.Location = new Point(714, 38);
@@ -112,6 +95,7 @@
             // 
             // BEliminar
             // 
+            BEliminar.Anchor = AnchorStyles.None;
             BEliminar.BackColor = Color.Red;
             BEliminar.FlatStyle = FlatStyle.Flat;
             BEliminar.Location = new Point(630, 38);
@@ -124,6 +108,7 @@
             // 
             // BRestaurar
             // 
+            BRestaurar.Anchor = AnchorStyles.None;
             BRestaurar.BackColor = Color.Orange;
             BRestaurar.FlatStyle = FlatStyle.Flat;
             BRestaurar.Location = new Point(549, 38);
@@ -143,8 +128,6 @@
             Controls.Add(BEliminar);
             Controls.Add(BModificar);
             Controls.Add(BVerProductos);
-            Controls.Add(LBuscar);
-            Controls.Add(TBuscar);
             Controls.Add(DGV_ListaProd);
             Controls.Add(label2);
             Name = "Ver_productos";
@@ -159,8 +142,6 @@
         private Label label2;
         private DataGridView dataGridView1;
         private DataGridView DGV_ListaProd;
-        private Label LBuscar;
-        private TextBox TBuscar;
         private Button BVerProductos;
         private Button BModificar;
         private Button BEliminar;

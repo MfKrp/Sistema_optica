@@ -30,8 +30,6 @@
         {
             label2 = new Label();
             dataGridView1 = new DataGridView();
-            LBuscar = new Label();
-            TBuscar = new TextBox();
             BVerEmpleados = new Button();
             BEliminarReg = new Button();
             BModificarReg = new Button();
@@ -64,24 +62,6 @@
             dataGridView1.Size = new Size(882, 337);
             dataGridView1.TabIndex = 78;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // LBuscar
-            // 
-            LBuscar.Anchor = AnchorStyles.None;
-            LBuscar.AutoSize = true;
-            LBuscar.Location = new Point(28, 39);
-            LBuscar.Name = "LBuscar";
-            LBuscar.Size = new Size(42, 15);
-            LBuscar.TabIndex = 80;
-            LBuscar.Text = "Buscar";
-            // 
-            // TBuscar
-            // 
-            TBuscar.Anchor = AnchorStyles.None;
-            TBuscar.Location = new Point(88, 36);
-            TBuscar.Name = "TBuscar";
-            TBuscar.Size = new Size(100, 23);
-            TBuscar.TabIndex = 79;
             // 
             // BVerEmpleados
             // 
@@ -125,6 +105,7 @@
             // 
             // BHabilitar
             // 
+            BHabilitar.Anchor = AnchorStyles.None;
             BHabilitar.BackColor = Color.Orange;
             BHabilitar.FlatStyle = FlatStyle.Flat;
             BHabilitar.Location = new Point(573, 36);
@@ -144,8 +125,6 @@
             Controls.Add(BModificarReg);
             Controls.Add(BEliminarReg);
             Controls.Add(BVerEmpleados);
-            Controls.Add(LBuscar);
-            Controls.Add(TBuscar);
             Controls.Add(dataGridView1);
             Controls.Add(label2);
             Name = "Ver_empleados";
@@ -160,8 +139,6 @@
 
         private Label label2;
         private DataGridView dataGridView1;
-        private Label LBuscar;
-        private TextBox TBuscar;
         private Button BVerEmpleados;
         private Button BEliminarReg;
         private Button BModificarReg;

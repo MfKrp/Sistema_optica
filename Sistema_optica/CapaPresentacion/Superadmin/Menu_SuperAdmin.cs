@@ -19,8 +19,11 @@ namespace CapaPresentacion.Superadmin
         private static ToolStripMenuItem menuActivo = null;
         private static Form formActivo = null;
 
-        //string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
-        string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        //String para conectarse en netbook
+        string connectionStringEscritorio = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+
+        //String para conectarse en escritorio
+        //string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
         CEmpleado empleadoLogueado = new CEmpleado();
 
@@ -37,9 +40,6 @@ namespace CapaPresentacion.Superadmin
         private void abrirForm(ToolStripMenuItem menu, Form formulario)
         {
 
-            menu.BackColor = Color.Teal;
-
-            menuActivo = menu;
 
             if (formActivo != null)
             {
@@ -134,7 +134,7 @@ namespace CapaPresentacion.Superadmin
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Si quiere volver a realizar una copia de seguridad, espere un momento y vuelva a presionar el boton");
+                MessageBox.Show("Si quiere volver a realizar una copia de seguridad, espere un momento y vuelva a presionar el boton\n" + ex.ToString());
             }
             finally
             {

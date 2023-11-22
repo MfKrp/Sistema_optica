@@ -30,8 +30,6 @@
         {
             label2 = new Label();
             DGV_ListaProd = new DataGridView();
-            LBuscar = new Label();
-            TBuscar = new TextBox();
             BVerRegistros = new Button();
             BModificar = new Button();
             BEliminar = new Button();
@@ -65,24 +63,6 @@
             DGV_ListaProd.TabIndex = 77;
             DGV_ListaProd.CellContentClick += DGV_ListaProd_CellContentClick;
             // 
-            // LBuscar
-            // 
-            LBuscar.Anchor = AnchorStyles.None;
-            LBuscar.AutoSize = true;
-            LBuscar.Location = new Point(25, 41);
-            LBuscar.Name = "LBuscar";
-            LBuscar.Size = new Size(42, 15);
-            LBuscar.TabIndex = 80;
-            LBuscar.Text = "Buscar";
-            // 
-            // TBuscar
-            // 
-            TBuscar.Anchor = AnchorStyles.None;
-            TBuscar.Location = new Point(85, 38);
-            TBuscar.Name = "TBuscar";
-            TBuscar.Size = new Size(100, 23);
-            TBuscar.TabIndex = 79;
-            // 
             // BVerRegistros
             // 
             BVerRegistros.Anchor = AnchorStyles.None;
@@ -98,6 +78,7 @@
             // 
             // BModificar
             // 
+            BModificar.Anchor = AnchorStyles.None;
             BModificar.BackColor = Color.DodgerBlue;
             BModificar.FlatStyle = FlatStyle.Flat;
             BModificar.Location = new Point(730, 39);
@@ -110,6 +91,7 @@
             // 
             // BEliminar
             // 
+            BEliminar.Anchor = AnchorStyles.None;
             BEliminar.BackColor = Color.Red;
             BEliminar.FlatStyle = FlatStyle.Flat;
             BEliminar.Location = new Point(649, 39);
@@ -122,6 +104,7 @@
             // 
             // BHabilitar
             // 
+            BHabilitar.Anchor = AnchorStyles.None;
             BHabilitar.BackColor = Color.Orange;
             BHabilitar.FlatStyle = FlatStyle.Flat;
             BHabilitar.Location = new Point(568, 39);
@@ -141,8 +124,6 @@
             Controls.Add(BEliminar);
             Controls.Add(BModificar);
             Controls.Add(BVerRegistros);
-            Controls.Add(LBuscar);
-            Controls.Add(TBuscar);
             Controls.Add(DGV_ListaProd);
             Controls.Add(label2);
             Name = "Ver_productos";
@@ -157,8 +138,6 @@
         private DataGridView dataGridView1;
         private Label label2;
         private DataGridView DGV_ListaProd;
-        private Label LBuscar;
-        private TextBox TBuscar;
         private Button BVerRegistros;
         private Button BModificar;
         private Button BEliminar;

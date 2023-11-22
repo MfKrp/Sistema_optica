@@ -31,8 +31,6 @@
             dataGridView1 = new DataGridView();
             label2 = new Label();
             ViewDataButton = new Button();
-            TBuscar = new TextBox();
-            LBuscar = new Label();
             BModificar = new Button();
             BEliminar = new Button();
             BRestaurar = new Button();
@@ -78,22 +76,6 @@
             ViewDataButton.UseVisualStyleBackColor = false;
             ViewDataButton.Click += ViewDataButton_Click;
             // 
-            // TBuscar
-            // 
-            TBuscar.Location = new Point(76, 40);
-            TBuscar.Name = "TBuscar";
-            TBuscar.Size = new Size(100, 23);
-            TBuscar.TabIndex = 77;
-            // 
-            // LBuscar
-            // 
-            LBuscar.AutoSize = true;
-            LBuscar.Location = new Point(28, 43);
-            LBuscar.Name = "LBuscar";
-            LBuscar.Size = new Size(42, 15);
-            LBuscar.TabIndex = 78;
-            LBuscar.Text = "Buscar";
-            // 
             // BModificar
             // 
             BModificar.BackColor = Color.DodgerBlue;
@@ -138,8 +120,6 @@
             Controls.Add(BRestaurar);
             Controls.Add(BEliminar);
             Controls.Add(BModificar);
-            Controls.Add(LBuscar);
-            Controls.Add(TBuscar);
             Controls.Add(ViewDataButton);
             Controls.Add(label2);
             Controls.Add(dataGridView1);
@@ -156,8 +136,6 @@
         private DataGridView dataGridView1;
         private Label label2;
         private Button ViewDataButton;
-        private TextBox TBuscar;
-        private Label LBuscar;
         private Button BModificar;
         private Button BEliminar;
         private Button BRestaurar;

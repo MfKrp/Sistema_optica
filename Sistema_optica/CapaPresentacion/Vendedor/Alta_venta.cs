@@ -120,6 +120,9 @@ namespace CapaPresentacion.Vendedor
                 }
 
                 TPrecioTotal.Text = precioTotal.ToString();
+
+                CProducto verProductos = new CProducto();
+                verProductos.verProductos(DGProductos);
             }
 
         }
@@ -454,6 +457,10 @@ namespace CapaPresentacion.Vendedor
 
             if (DTGDatosCompra.SelectedRows.Count > 0)
             {
+                //Cuando un producto se elimina del carrito lo que se hace es devolver el stock de ese producto que estaba en el carrito
+                CProducto recuperarStock = new CProducto();
+                //recuperarStock.recuperarStock();
+
                 int indiceDeFila = DTGDatosCompra.CurrentCell.RowIndex;
                 DataGridViewRow fila = DTGDatosCompra.SelectedRows[0];
                 int cantidadProducto = Convert.ToInt32(fila.Cells["DGVColumnaCantidad"].Value);

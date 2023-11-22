@@ -220,5 +220,23 @@ namespace CapaPresentacion.Capa_datos
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        public void recuperarStock(int cantidadElegida, int id_producto)
+        {
+            SqlConnection con = new SqlConnection(connectionStringEscritorio);
+
+            try
+            {
+                string queryUpdate = "UPDATE Producto set Stock = Stock + @cantidad WHERE Id_producto = @id_producto";
+                SqlCommand comandoAct = new SqlCommand(queryUpdate, con);
+                comandoAct.Parameters.AddWithValue("@cantidad", cantidadElegida);
+                comandoAct.Parameters.AddWithValue("@id_producto", id_producto);
+                con.Open();
+                comandoAct.ExecuteNonQuery();
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

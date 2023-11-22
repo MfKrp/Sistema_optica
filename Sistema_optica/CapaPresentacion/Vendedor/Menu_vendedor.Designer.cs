@@ -39,6 +39,7 @@
             TSMBVerPerfil = new ToolStripMenuItem();
             TSMBCerrarSesion = new ToolStripMenuItem();
             contenedor = new Panel();
+            TSMBVer_Clientes = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             menuStrip2.SuspendLayout();
             SuspendLayout();
@@ -75,7 +76,7 @@
             menuStrip2.AutoSize = false;
             menuStrip2.BackColor = Color.CadetBlue;
             menuStrip2.Dock = DockStyle.Left;
-            menuStrip2.Items.AddRange(new ToolStripItem[] { TSMBRegistrarCliente, TSMBGenerarVenta, TSMBVerProductos, TSMBVerVentas, TSMBVerPerfil, TSMBCerrarSesion });
+            menuStrip2.Items.AddRange(new ToolStripItem[] { TSMBRegistrarCliente, TSMBGenerarVenta, TSMBVerProductos, TSMBVerVentas, TSMBVer_Clientes, TSMBVerPerfil, TSMBCerrarSesion });
             menuStrip2.Location = new Point(0, 95);
             menuStrip2.Name = "menuStrip2";
             menuStrip2.Size = new Size(180, 578);
@@ -149,6 +150,16 @@
             contenedor.Size = new Size(1005, 571);
             contenedor.TabIndex = 5;
             // 
+            // TSMBVer_Clientes
+            // 
+            TSMBVer_Clientes.BackColor = Color.FromArgb(0, 64, 64);
+            TSMBVer_Clientes.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TSMBVer_Clientes.ForeColor = Color.White;
+            TSMBVer_Clientes.Name = "TSMBVer_Clientes";
+            TSMBVer_Clientes.Size = new Size(173, 27);
+            TSMBVer_Clientes.Text = "Ver Clientes";
+            TSMBVer_Clientes.Click += TSMBVer_Clientes_Click;
+            // 
             // Menu_vendedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -181,5 +192,6 @@
         private ToolStripMenuItem TSMBCerrarSesion;
         private Panel contenedor;
         private ToolStripMenuItem LBienvenido;
+        private ToolStripMenuItem TSMBVer_Clientes;
     }
 }

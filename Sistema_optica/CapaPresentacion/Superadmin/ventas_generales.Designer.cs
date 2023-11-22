@@ -45,7 +45,7 @@
             DGVListaVentas.Name = "DGVListaVentas";
             DGVListaVentas.ReadOnly = true;
             DGVListaVentas.RowTemplate.Height = 25;
-            DGVListaVentas.Size = new Size(380, 377);
+            DGVListaVentas.Size = new Size(776, 178);
             DGVListaVentas.TabIndex = 79;
             DGVListaVentas.CellContentClick += DGVListaVentas_CellContentClick;
             // 
@@ -57,21 +57,21 @@
             LVentas.ForeColor = Color.FromArgb(0, 64, 64);
             LVentas.Location = new Point(297, 21);
             LVentas.Name = "LVentas";
-            LVentas.Size = new Size(222, 28);
+            LVentas.Size = new Size(191, 28);
             LVentas.TabIndex = 78;
-            LVentas.Text = "LISTA DE PRODUCTOS";
+            LVentas.Text = "Facturas y Detalles";
             // 
             // DGVentasDetalles
             // 
             DGVentasDetalles.Anchor = AnchorStyles.None;
             DGVentasDetalles.BackgroundColor = Color.CadetBlue;
             DGVentasDetalles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DGVentasDetalles.Location = new Point(408, 61);
+            DGVentasDetalles.Location = new Point(12, 245);
             DGVentasDetalles.MultiSelect = false;
             DGVentasDetalles.Name = "DGVentasDetalles";
             DGVentasDetalles.ReadOnly = true;
             DGVentasDetalles.RowTemplate.Height = 25;
-            DGVentasDetalles.Size = new Size(380, 377);
+            DGVentasDetalles.Size = new Size(776, 193);
             DGVentasDetalles.TabIndex = 80;
             DGVentasDetalles.CellContentClick += DGVentasDetalles_CellContentClick;
             // 

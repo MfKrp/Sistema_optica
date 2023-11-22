@@ -37,9 +37,8 @@
             TSMBVerPerfil = new ToolStripMenuItem();
             MSBCerrarSesion = new ToolStripMenuItem();
             TSMBBackupBD = new ToolStripMenuItem();
-            TSMButtonRestoreBD = new ToolStripMenuItem();
-            contenedor = new Panel();
             TSVentas = new ToolStripMenuItem();
+            contenedor = new Panel();
             menuStrip1.SuspendLayout();
             MSSuperAdmin.SuspendLayout();
             SuspendLayout();
@@ -68,7 +67,7 @@
             MSSuperAdmin.AutoSize = false;
             MSSuperAdmin.BackColor = Color.CadetBlue;
             MSSuperAdmin.Dock = DockStyle.Left;
-            MSSuperAdmin.Items.AddRange(new ToolStripItem[] { TSMRegistrarEmpleado, TSMBVerEmpleados, TSMBVerProductos, TSMBVerPerfil, MSBCerrarSesion, TSMBBackupBD, TSMButtonRestoreBD, TSVentas });
+            MSSuperAdmin.Items.AddRange(new ToolStripItem[] { TSMRegistrarEmpleado, TSMBVerEmpleados, TSMBVerProductos, TSMBVerPerfil, TSMBBackupBD, TSVentas, MSBCerrarSesion });
             MSSuperAdmin.Location = new Point(0, 95);
             MSSuperAdmin.Name = "MSSuperAdmin";
             MSSuperAdmin.Size = new Size(174, 578);
@@ -136,24 +135,6 @@
             TSMBBackupBD.Text = "Backup BD";
             TSMBBackupBD.Click += TSMBBackupBD_Click;
             // 
-            // TSMButtonRestoreBD
-            // 
-            TSMButtonRestoreBD.BackColor = Color.FromArgb(0, 64, 64);
-            TSMButtonRestoreBD.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TSMButtonRestoreBD.ForeColor = Color.White;
-            TSMButtonRestoreBD.Name = "TSMButtonRestoreBD";
-            TSMButtonRestoreBD.Size = new Size(167, 27);
-            TSMButtonRestoreBD.Text = "Restore BD";
-            TSMButtonRestoreBD.Click += TSMButtonRestoreBD_Click;
-            // 
-            // contenedor
-            // 
-            contenedor.Location = new Point(177, 98);
-            contenedor.Name = "contenedor";
-            contenedor.Size = new Size(1005, 563);
-            contenedor.TabIndex = 4;
-            contenedor.Paint += contenedor_Paint;
-            // 
             // TSVentas
             // 
             TSVentas.BackColor = Color.FromArgb(0, 64, 64);
@@ -163,6 +144,14 @@
             TSVentas.Size = new Size(167, 27);
             TSVentas.Text = "Ventas Generales";
             TSVentas.Click += TSVentas_Click;
+            // 
+            // contenedor
+            // 
+            contenedor.Location = new Point(177, 98);
+            contenedor.Name = "contenedor";
+            contenedor.Size = new Size(1005, 563);
+            contenedor.TabIndex = 4;
+            contenedor.Paint += contenedor_Paint;
             // 
             // Menu_SuperAdmin
             // 
@@ -196,7 +185,6 @@
         private ToolStripMenuItem MSBCerrarSesion;
         private Panel contenedor;
         private ToolStripMenuItem TSMBBackupBD;
-        private ToolStripMenuItem TSMButtonRestoreBD;
         private ToolStripMenuItem TSVentas;
     }
 }

@@ -29,7 +29,7 @@ namespace CapaPresentacion.Secretaria
 
         private void DGV_ListaProd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void BModificar_Click(object sender, EventArgs e)

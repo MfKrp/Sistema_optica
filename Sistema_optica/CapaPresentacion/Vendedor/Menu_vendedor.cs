@@ -1,6 +1,7 @@
 ﻿using CapaPresentacion.Sesion;
 using CapaPresentacion.Inicio_sesion;
 using CapaPresentacion.Superadmin;
+using CapaPresentacion.Secretaria;
 using CapaPresentacion;
 using System;
 using System.Collections.Generic;
@@ -35,13 +36,7 @@ namespace CapaPresentacion.Vendedor
 
         private void abrirForm(ToolStripMenuItem menu, Form formulario)
         {
-            if (menuActivo != null)
-            {
-                menuActivo.BackColor = Color.Teal;
-            }
-            menu.BackColor = Color.Red;
 
-            menuActivo = menu;
 
             if (formActivo != null)
             {
@@ -70,7 +65,7 @@ namespace CapaPresentacion.Vendedor
 
         private void TSMBVerProductos_Click(object sender, EventArgs e)
         {
-            abrirForm((ToolStripMenuItem)sender, new Ver_productos());
+            abrirForm((ToolStripMenuItem)sender, new Secretaria.Ver_productos());
         }
 
         private void TSMBVerVentas_Click(object sender, EventArgs e)
@@ -111,6 +106,7 @@ namespace CapaPresentacion.Vendedor
             //MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Ver_perfil verPerfil = new Ver_perfil(empleadoLogueado);
+            verPerfil.Show();
         }
 
         private void LBienvenido_Click(object sender, EventArgs e)
@@ -121,6 +117,12 @@ namespace CapaPresentacion.Vendedor
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void TSMBVer_Clientes_Click(object sender, EventArgs e)
+        {
+
+            abrirForm((ToolStripMenuItem)sender, new Ver_clientes());
         }
     }
 }

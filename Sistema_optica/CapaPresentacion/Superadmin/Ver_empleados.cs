@@ -96,7 +96,7 @@ namespace CapaPresentacion.Superadmin
 
         private void BHabilitar_Click(object sender, EventArgs e)
         {
-            
+
             //Se comprueba que almenos se haya seleccionado una fila
             if (dataGridView1.SelectedRows.Count == 1)
             {
@@ -108,7 +108,7 @@ namespace CapaPresentacion.Superadmin
             {
                 MessageBox.Show("Seleccione almenos una fila para habilitar un empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
     }
 }
