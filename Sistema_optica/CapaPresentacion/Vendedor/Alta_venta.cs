@@ -14,6 +14,11 @@ using CapaPresentacion;
 using CapaPresentacion.Capa_datos;
 using CapaPresentacion.Entidades_Clases;
 
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
+
 namespace CapaPresentacion.Vendedor
 {
     public partial class Alta_venta : Form
@@ -74,7 +79,7 @@ namespace CapaPresentacion.Vendedor
         {
             //MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            
+
             if (DTGDatosCompra.RowCount > 0)
             {
                 DTGDatosCompra.Rows.Clear();
@@ -95,6 +100,9 @@ namespace CapaPresentacion.Vendedor
             else
             {
                 DTGDatosCompra.Rows.Add(TCodigoProducto.Text, TMarcaAnt.Text, TTipoAnt.Text, TEstiloAnt.Text, CColor.Text, CBGenero.Text, NCantidadCompra.Value, TPrecio.Text);
+
+                CProducto descontarStock = new CProducto();
+                descontarStock.descontarStock(Convert.ToInt32(NCantidadCompra.Value), Convert.ToInt32(TCodigoProducto.Text));
 
                 float precioTotal = 0;
 
@@ -120,6 +128,8 @@ namespace CapaPresentacion.Vendedor
         {
             //en esta variable se guardaran la cantidad de registros que posee el datagrid
             int cantidadRegistros = 0;
+            CFactura ultimoDetalle = new CFactura();
+            int detalleAnterior = ultimoDetalle.obtenerUltimoDetalle();
 
             //Si la cuenta de registros es igual a 0 entonces no se realiza la venta
             if (DTGDatosCompra.RowCount == 0 || TDniCliente.Text == "")
@@ -131,9 +141,14 @@ namespace CapaPresentacion.Vendedor
                 //MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 cantidadRegistros = DTGDatosCompra.RowCount;
-                compraCliente.registrarCabecera(Convert.ToInt32(TNumeroFactura.Text), empleadoLogueado.id_empleado, Convert.ToInt32(TDniCliente.Text), Convert.ToInt32(CBFormaPago.SelectedValue.ToString()), FechaVenta.Value.ToShortDateString());
+                compraCliente.registrarCabecera(Convert.ToInt32(TNumeroFactura.Text),
+                    Convert.ToSingle(TPrecioTotal.Text),
+                    empleadoLogueado.id_empleado,
+                    Convert.ToInt32(TDniCliente.Text),
+                    Convert.ToInt32(CBFormaPago.SelectedValue.ToString()),
+                    FechaVenta.Value.ToShortDateString());
 
-                for (int i = 0; i < DTGDatosCompra.RowCount; i++)
+                for (int i = detalleAnterior; i < DTGDatosCompra.RowCount; i++)
                 {
                     DataGridViewRow row = DTGDatosCompra.Rows[i];
 
@@ -144,17 +159,84 @@ namespace CapaPresentacion.Vendedor
                     string Color = row.Cells["DGVColumnaColor"].Value.ToString();
                     string Genero = row.Cells["DGVColumnaGenero"].Value.ToString();
 
-                    compraCliente.registrarDetalle(idDetalle, cantidad, idProducto, nroFactura, Color, Genero);
+                    compraCliente.registrarDetalle(idDetalle,
+                        cantidad,
+                        idProducto,
+                        nroFactura,
+                        Color,
+                        Genero);
                 }
 
                 MessageBox.Show("Se han cargado todos los registros de venta exitosamente!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                //Imprime ticket de la venta
-                /*pdfactura = new PrintDocument();
-                PrinterSettings ps = new PrinterSettings();
-                pdfactura.PrinterSettings = ps;
-                pdfactura.PrintPage += pdfactura_PrintPage;
-                pdfactura.Print();*/
+                /*-----------SE GENERA TICKET DE VENTA--------------*/
+
+                SaveFileDialog guardar = new SaveFileDialog();
+                guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
+
+                string paginahtml_text = Properties.Resources.plantilla.ToString();
+
+                //Reemplazo de valores que se encuentran en la factura
+                paginahtml_text = paginahtml_text.Replace("@CLIENTE", clienteSeleccionado.Nombre + " " + clienteSeleccionado.Apellido);
+                paginahtml_text = paginahtml_text.Replace("@Descripcion", CBFormaPago.Text);
+                paginahtml_text = paginahtml_text.Replace("@Nro_factura", TNumeroFactura.Text);
+                paginahtml_text = paginahtml_text.Replace("@Nombre", empleadoLogueado.nombreEmpleado);
+                paginahtml_text = paginahtml_text.Replace("@Apellido", empleadoLogueado.apellidoEmpleado);
+                paginahtml_text = paginahtml_text.Replace("@DOCUMENTO", clienteSeleccionado.DNI.ToString());
+                paginahtml_text = paginahtml_text.Replace("@FECHA", FechaVenta.Value.ToShortDateString());
+                paginahtml_text = paginahtml_text.Replace("@TOTAL", TPrecioTotal.Text);
+
+                string filas = string.Empty;
+
+                foreach (DataGridViewRow row in DTGDatosCompra.Rows)
+                {
+                    filas += "<tr>";
+                    filas += "<td>" + row.Cells["DGVColumnaCantidad"].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells["DTGColumaIdProducto"].Value.ToString() + " " + row.Cells["DGVColumnaMarca"].Value.ToString() + " " + row.Cells["DGVColumnaTipo"].Value.ToString() + " " + row.Cells["DGVColumnaEstiloanteojo"].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells["DTCPrecioUnitario"].Value.ToString() + "</td>";
+                    filas += "</tr>";
+                }
+
+                paginahtml_text = paginahtml_text.Replace("@FILAS", filas);
+
+                if (guardar.ShowDialog() == DialogResult.OK)
+                {
+                    using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
+                    {
+                        Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+
+                        PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+
+                        pdfDoc.Open();
+
+                        pdfDoc.Add(new Phrase(""));
+
+                        using (StringReader sr = new StringReader(paginahtml_text))
+                        {
+                            XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                        }
+
+                        pdfDoc.Close();
+
+                        stream.Close();
+                    }
+                }
+
+                //===== LIMPIAR LOS CAMPOS =======
+
+                DTGDatosCompra.Rows.Clear();
+                TDniCliente.Clear();
+                TNumeroFactura.Text = generarNumeroAleatorio().ToString();
+                TCodigoProducto.Clear();
+                TTipoAnt.Clear();
+                TMarcaAnt.Clear();
+                TEstiloAnt.Clear();
+                CBGenero.SelectedItem = null;
+                CColor.SelectedItem = null;
+                TPrecio.Clear();
+                TPrecioTotal.Clear();
+                CBFormaPago.SelectedItem = null;
+
             }
         }
 
@@ -247,6 +329,8 @@ namespace CapaPresentacion.Vendedor
                 {
                     TDniCliente.Text = modal.clienteSeleccionado.DNI.ToString();
                 }
+
+                clienteSeleccionado = modal.clienteSeleccionado;
 
             }
         }
@@ -390,6 +474,15 @@ namespace CapaPresentacion.Vendedor
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void bultimodetalle_Click(object sender, EventArgs e)
+        {
+            /*CFactura verUltimodetalle = new CFactura();
+            int ultimo = verUltimodetalle.obtenerUltimoDetalle();
+
+            MessageBox.Show("Ultimo detalle: " + ultimo.ToString());*/
 
         }
     }

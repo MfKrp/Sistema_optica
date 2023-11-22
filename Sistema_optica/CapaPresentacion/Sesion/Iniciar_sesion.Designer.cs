@@ -155,6 +155,7 @@
             Name = "Iniciar_sesion";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Iniciar_sesion";
+            Load += Iniciar_sesion_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

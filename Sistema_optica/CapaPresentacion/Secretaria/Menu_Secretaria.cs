@@ -1,4 +1,5 @@
 ﻿using CapaPresentacion.Entidades_Clases;
+using CapaPresentacion.Inicio_sesion;
 using CapaPresentacion.Sesion;
 using CapaPresentacion.Superadmin;
 using System;
@@ -85,7 +86,10 @@ namespace CapaPresentacion.Secretaria
 
         private void TSMBVerPerfil_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            Ver_perfil verPerfil = new Ver_perfil(empleadoLogueado);
+            verPerfil.Show();
         }
     }
 }

@@ -32,17 +32,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label2 = new Label();
             DTGDatosCompra = new DataGridView();
-            LBuscar = new Label();
-            TBuscar = new TextBox();
-            DGCId_Producto = new DataGridViewTextBoxColumn();
-            DGCNombreProd = new DataGridViewTextBoxColumn();
-            DTCVendedorCargo = new DataGridViewTextBoxColumn();
-            DGCCliente = new DataGridViewTextBoxColumn();
-            DTCFecha = new DataGridViewTextBoxColumn();
-            DTGCCantidad = new DataGridViewTextBoxColumn();
-            DTCPrecioUnitario = new DataGridViewTextBoxColumn();
-            DGVButtonModificar = new DataGridViewButtonColumn();
-            DGVButtonEliminar = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)DTGDatosCompra).BeginInit();
             SuspendLayout();
             // 
@@ -62,6 +51,8 @@
             // 
             DTGDatosCompra.AllowUserToAddRows = false;
             DTGDatosCompra.AllowUserToDeleteRows = false;
+            DTGDatosCompra.AllowUserToResizeColumns = false;
+            DTGDatosCompra.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Font = new Font("Sitka Text", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
             DTGDatosCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             DTGDatosCompra.Anchor = AnchorStyles.None;
@@ -75,85 +66,24 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             DTGDatosCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             DTGDatosCompra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DTGDatosCompra.Columns.AddRange(new DataGridViewColumn[] { DGCId_Producto, DGCNombreProd, DTCVendedorCargo, DGCCliente, DTCFecha, DTGCCantidad, DTCPrecioUnitario, DGVButtonModificar, DGVButtonEliminar });
             DTGDatosCompra.Location = new Point(29, 76);
             DTGDatosCompra.Name = "DTGDatosCompra";
+            DTGDatosCompra.ReadOnly = true;
             DTGDatosCompra.RowTemplate.Height = 25;
             DTGDatosCompra.Size = new Size(882, 337);
             DTGDatosCompra.TabIndex = 76;
-            // 
-            // LBuscar
-            // 
-            LBuscar.AutoSize = true;
-            LBuscar.Location = new Point(32, 39);
-            LBuscar.Name = "LBuscar";
-            LBuscar.Size = new Size(42, 15);
-            LBuscar.TabIndex = 80;
-            LBuscar.Text = "Buscar";
-            // 
-            // TBuscar
-            // 
-            TBuscar.Location = new Point(92, 36);
-            TBuscar.Name = "TBuscar";
-            TBuscar.Size = new Size(100, 23);
-            TBuscar.TabIndex = 79;
-            // 
-            // DGCId_Producto
-            // 
-            DGCId_Producto.HeaderText = "ID Producto";
-            DGCId_Producto.Name = "DGCId_Producto";
-            // 
-            // DGCNombreProd
-            // 
-            DGCNombreProd.HeaderText = "Nombre";
-            DGCNombreProd.Name = "DGCNombreProd";
-            // 
-            // DTCVendedorCargo
-            // 
-            DTCVendedorCargo.HeaderText = "Vendedor";
-            DTCVendedorCargo.Name = "DTCVendedorCargo";
-            // 
-            // DGCCliente
-            // 
-            DGCCliente.HeaderText = "Cliente";
-            DGCCliente.Name = "DGCCliente";
-            // 
-            // DTCFecha
-            // 
-            DTCFecha.HeaderText = "Fecha";
-            DTCFecha.Name = "DTCFecha";
-            // 
-            // DTGCCantidad
-            // 
-            DTGCCantidad.HeaderText = "Cantidad";
-            DTGCCantidad.Name = "DTGCCantidad";
-            // 
-            // DTCPrecioUnitario
-            // 
-            DTCPrecioUnitario.HeaderText = "Precio Unitario";
-            DTCPrecioUnitario.Name = "DTCPrecioUnitario";
-            // 
-            // DGVButtonModificar
-            // 
-            DGVButtonModificar.HeaderText = "Modificar";
-            DGVButtonModificar.Name = "DGVButtonModificar";
-            // 
-            // DGVButtonEliminar
-            // 
-            DGVButtonEliminar.HeaderText = "Eliminar";
-            DGVButtonEliminar.Name = "DGVButtonEliminar";
+            DTGDatosCompra.CellContentClick += DTGDatosCompra_CellContentClick;
             // 
             // Ver_ventas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(939, 441);
-            Controls.Add(LBuscar);
-            Controls.Add(TBuscar);
             Controls.Add(DTGDatosCompra);
             Controls.Add(label2);
             Name = "Ver_ventas";
             Text = "Form1";
+            Load += Ver_ventas_Load;
             ((System.ComponentModel.ISupportInitialize)DTGDatosCompra).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -164,16 +94,5 @@
         private DataGridView dataGridView1;
         private Label label2;
         private DataGridView DTGDatosCompra;
-        private Label LBuscar;
-        private TextBox TBuscar;
-        private DataGridViewTextBoxColumn DGCId_Producto;
-        private DataGridViewTextBoxColumn DGCNombreProd;
-        private DataGridViewTextBoxColumn DTCVendedorCargo;
-        private DataGridViewTextBoxColumn DGCCliente;
-        private DataGridViewTextBoxColumn DTCFecha;
-        private DataGridViewTextBoxColumn DTGCCantidad;
-        private DataGridViewTextBoxColumn DTCPrecioUnitario;
-        private DataGridViewButtonColumn DGVButtonModificar;
-        private DataGridViewTextBoxColumn DGVButtonEliminar;
     }
 }

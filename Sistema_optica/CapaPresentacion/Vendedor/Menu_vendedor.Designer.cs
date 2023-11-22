@@ -30,6 +30,7 @@
         {
             menuStrip1 = new MenuStrip();
             MSLMenu = new ToolStripMenuItem();
+            LBienvenido = new ToolStripMenuItem();
             menuStrip2 = new MenuStrip();
             TSMBRegistrarCliente = new ToolStripMenuItem();
             TSMBGenerarVenta = new ToolStripMenuItem();
@@ -38,7 +39,6 @@
             TSMBVerPerfil = new ToolStripMenuItem();
             TSMBCerrarSesion = new ToolStripMenuItem();
             contenedor = new Panel();
-            LBienvenido = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             menuStrip2.SuspendLayout();
             SuspendLayout();
@@ -53,6 +53,7 @@
             menuStrip1.Size = new Size(1194, 95);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // MSLMenu
             // 
@@ -61,6 +62,13 @@
             MSLMenu.Name = "MSLMenu";
             MSLMenu.Size = new Size(243, 91);
             MSLMenu.Text = "Optica Maribel";
+            // 
+            // LBienvenido
+            // 
+            LBienvenido.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LBienvenido.Name = "LBienvenido";
+            LBienvenido.Size = new Size(12, 91);
+            LBienvenido.Click += LBienvenido_Click;
             // 
             // menuStrip2
             // 
@@ -140,13 +148,6 @@
             contenedor.Name = "contenedor";
             contenedor.Size = new Size(1005, 571);
             contenedor.TabIndex = 5;
-            // 
-            // LBienvenido
-            // 
-            LBienvenido.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LBienvenido.Name = "LBienvenido";
-            LBienvenido.Size = new Size(12, 91);
-            LBienvenido.Click += LBienvenido_Click;
             // 
             // Menu_vendedor
             // 

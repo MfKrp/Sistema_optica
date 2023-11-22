@@ -40,10 +40,10 @@ namespace CapaDatos
                 return idCorrelativo;
         }
 
-        public bool Registrar (Factura obj, DataTable)
+        /*public bool Registrar (Factura obj, DataTable)
         {
 
-        }
+        }*/
 
     }
 }

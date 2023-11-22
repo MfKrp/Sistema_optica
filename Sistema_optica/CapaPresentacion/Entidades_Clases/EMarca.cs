@@ -11,9 +11,9 @@ namespace CapaPresentacion.Entidades_Clases
     internal class EMarca
     {
         //String para conectarse en netbook
-        //string connectionStringEscritorio = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        string connectionStringEscritorio = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
         //String para conectarse en escritorio
-        string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        //string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
         
         public int Id_Marca { get; set; }
         public string DescripcionProd { get; set; }

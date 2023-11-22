@@ -116,7 +116,6 @@ C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\De
 C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Vendedor.Alta_cliente.resources
 C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Vendedor.Alta_venta.resources
 C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Vendedor.Menu_vendedor.resources
-C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Vendedor.Ver_productos.resources
 C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Vendedor.Ver_ventas.resources
 C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.csproj.GenerateResource.cache
 C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.GeneratedMSBuildEditorConfig.editorconfig
@@ -132,3 +131,8 @@ C:\Users\User\Source\Repos\Sistema_optica\Sistema_optica\CapaPresentacion\obj\De
 C:\Users\matias\Source\Repos\Sistema_Optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Vendedor.Lista_clientes_vendedor.resources
 C:\Users\matias\Source\Repos\Sistema_Optica\Sistema_optica\CapaPresentacion\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
 C:\Users\matias\Source\Repos\Sistema_Optica\Sistema_optica\CapaPresentacion\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\User\source\repos\Sistema_Optica\Sistema_optica\CapaPresentacion\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\User\source\repos\Sistema_Optica\Sistema_optica\CapaPresentacion\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\User\source\repos\Sistema_Optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Vendedor.Lista_clientes_vendedor.resources
+C:\Users\User\source\repos\Sistema_Optica\Sistema_optica\CapaPresentacion\bin\Debug\net6.0-windows\itextsharp.xmlworker.dll
+C:\Users\User\source\repos\Sistema_Optica\Sistema_optica\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Superadmin.ventas_generales.resources

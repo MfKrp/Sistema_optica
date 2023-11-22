@@ -38,14 +38,14 @@
             LDni = new Label();
             LDirección = new Label();
             LTipoEmpleado = new Label();
-            LDatoNombre = new Label();
-            LDatoApellido = new Label();
-            LDatoTelefono = new Label();
-            LDatoEmail = new Label();
-            LDatoFecha = new Label();
-            LDatoDni = new Label();
-            LDatoDireccion = new Label();
-            LDatoRol = new Label();
+            TNombre = new TextBox();
+            TApellido = new TextBox();
+            TTelefono = new TextBox();
+            TEmail = new TextBox();
+            TFecha = new TextBox();
+            TDni = new TextBox();
+            TDireccion = new TextBox();
+            TRol = new TextBox();
             MSPerfil.SuspendLayout();
             SuspendLayout();
             // 
@@ -120,9 +120,9 @@
             LFecha.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LFecha.Location = new Point(32, 340);
             LFecha.Name = "LFecha";
-            LFecha.Size = new Size(169, 23);
+            LFecha.Size = new Size(148, 23);
             LFecha.TabIndex = 5;
-            LFecha.Text = "Fecha de incorporación:";
+            LFecha.Text = "Fecha de Nacimiento";
             // 
             // LDni
             // 
@@ -140,7 +140,7 @@
             LDirección.AutoSize = true;
             LDirección.FlatStyle = FlatStyle.System;
             LDirección.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDirección.Location = new Point(291, 118);
+            LDirección.Location = new Point(308, 121);
             LDirección.Name = "LDirección";
             LDirección.Size = new Size(77, 23);
             LDirección.TabIndex = 7;
@@ -151,99 +151,83 @@
             LTipoEmpleado.AutoSize = true;
             LTipoEmpleado.FlatStyle = FlatStyle.System;
             LTipoEmpleado.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LTipoEmpleado.Location = new Point(291, 171);
+            LTipoEmpleado.Location = new Point(308, 174);
             LTipoEmpleado.Name = "LTipoEmpleado";
             LTipoEmpleado.Size = new Size(127, 23);
             LTipoEmpleado.TabIndex = 8;
             LTipoEmpleado.Text = "Rol del empleado:";
             // 
-            // LDatoNombre
+            // TNombre
             // 
-            LDatoNombre.AutoSize = true;
-            LDatoNombre.FlatStyle = FlatStyle.System;
-            LDatoNombre.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoNombre.Location = new Point(196, 118);
-            LDatoNombre.Name = "LDatoNombre";
-            LDatoNombre.Size = new Size(61, 23);
-            LDatoNombre.TabIndex = 9;
-            LDatoNombre.Text = "nombre";
+            TNombre.Location = new Point(196, 121);
+            TNombre.Name = "TNombre";
+            TNombre.ReadOnly = true;
+            TNombre.Size = new Size(100, 23);
+            TNombre.TabIndex = 9;
+            TNombre.TextChanged += TNombre_TextChanged;
             // 
-            // LDatoApellido
+            // TApellido
             // 
-            LDatoApellido.AutoSize = true;
-            LDatoApellido.FlatStyle = FlatStyle.System;
-            LDatoApellido.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoApellido.Location = new Point(196, 171);
-            LDatoApellido.Name = "LDatoApellido";
-            LDatoApellido.Size = new Size(61, 23);
-            LDatoApellido.TabIndex = 10;
-            LDatoApellido.Text = "apellido";
+            TApellido.Location = new Point(196, 174);
+            TApellido.Name = "TApellido";
+            TApellido.ReadOnly = true;
+            TApellido.Size = new Size(100, 23);
+            TApellido.TabIndex = 10;
+            TApellido.TextChanged += TApellido_TextChanged;
             // 
-            // LDatoTelefono
+            // TTelefono
             // 
-            LDatoTelefono.AutoSize = true;
-            LDatoTelefono.FlatStyle = FlatStyle.System;
-            LDatoTelefono.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoTelefono.Location = new Point(196, 225);
-            LDatoTelefono.Name = "LDatoTelefono";
-            LDatoTelefono.Size = new Size(63, 23);
-            LDatoTelefono.TabIndex = 11;
-            LDatoTelefono.Text = "telefono";
+            TTelefono.Location = new Point(196, 228);
+            TTelefono.Name = "TTelefono";
+            TTelefono.ReadOnly = true;
+            TTelefono.Size = new Size(100, 23);
+            TTelefono.TabIndex = 11;
+            TTelefono.TextChanged += TTelefono_TextChanged;
             // 
-            // LDatoEmail
+            // TEmail
             // 
-            LDatoEmail.AutoSize = true;
-            LDatoEmail.FlatStyle = FlatStyle.System;
-            LDatoEmail.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoEmail.Location = new Point(196, 280);
-            LDatoEmail.Name = "LDatoEmail";
-            LDatoEmail.Size = new Size(48, 23);
-            LDatoEmail.TabIndex = 12;
-            LDatoEmail.Text = "Email";
+            TEmail.Location = new Point(196, 283);
+            TEmail.Name = "TEmail";
+            TEmail.ReadOnly = true;
+            TEmail.Size = new Size(100, 23);
+            TEmail.TabIndex = 12;
+            TEmail.TextChanged += TEmail_TextChanged;
             // 
-            // LDatoFecha
+            // TFecha
             // 
-            LDatoFecha.AutoSize = true;
-            LDatoFecha.FlatStyle = FlatStyle.System;
-            LDatoFecha.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoFecha.Location = new Point(196, 340);
-            LDatoFecha.Name = "LDatoFecha";
-            LDatoFecha.Size = new Size(46, 23);
-            LDatoFecha.TabIndex = 13;
-            LDatoFecha.Text = "fecha";
+            TFecha.Location = new Point(196, 340);
+            TFecha.Name = "TFecha";
+            TFecha.ReadOnly = true;
+            TFecha.Size = new Size(100, 23);
+            TFecha.TabIndex = 13;
+            TFecha.TextChanged += TFecha_TextChanged;
             // 
-            // LDatoDni
+            // TDni
             // 
-            LDatoDni.AutoSize = true;
-            LDatoDni.FlatStyle = FlatStyle.System;
-            LDatoDni.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoDni.Location = new Point(196, 396);
-            LDatoDni.Name = "LDatoDni";
-            LDatoDni.Size = new Size(31, 23);
-            LDatoDni.TabIndex = 14;
-            LDatoDni.Text = "dni";
+            TDni.Location = new Point(196, 399);
+            TDni.Name = "TDni";
+            TDni.ReadOnly = true;
+            TDni.Size = new Size(100, 23);
+            TDni.TabIndex = 14;
+            TDni.TextChanged += TDni_TextChanged;
             // 
-            // LDatoDireccion
+            // TDireccion
             // 
-            LDatoDireccion.AutoSize = true;
-            LDatoDireccion.FlatStyle = FlatStyle.System;
-            LDatoDireccion.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoDireccion.Location = new Point(414, 118);
-            LDatoDireccion.Name = "LDatoDireccion";
-            LDatoDireccion.Size = new Size(70, 23);
-            LDatoDireccion.TabIndex = 15;
-            LDatoDireccion.Text = "direccion";
+            TDireccion.Location = new Point(437, 124);
+            TDireccion.Name = "TDireccion";
+            TDireccion.ReadOnly = true;
+            TDireccion.Size = new Size(100, 23);
+            TDireccion.TabIndex = 15;
+            TDireccion.TextChanged += TDireccion_TextChanged;
             // 
-            // LDatoRol
+            // TRol
             // 
-            LDatoRol.AutoSize = true;
-            LDatoRol.FlatStyle = FlatStyle.System;
-            LDatoRol.Font = new Font("Sitka Heading", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LDatoRol.Location = new Point(414, 171);
-            LDatoRol.Name = "LDatoRol";
-            LDatoRol.Size = new Size(114, 23);
-            LDatoRol.TabIndex = 16;
-            LDatoRol.Text = "rol de empleado";
+            TRol.Location = new Point(437, 174);
+            TRol.Name = "TRol";
+            TRol.ReadOnly = true;
+            TRol.Size = new Size(100, 23);
+            TRol.TabIndex = 16;
+            TRol.TextChanged += TRol_TextChanged;
             // 
             // Ver_perfil
             // 
@@ -251,14 +235,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(549, 450);
-            Controls.Add(LDatoRol);
-            Controls.Add(LDatoDireccion);
-            Controls.Add(LDatoDni);
-            Controls.Add(LDatoFecha);
-            Controls.Add(LDatoEmail);
-            Controls.Add(LDatoTelefono);
-            Controls.Add(LDatoApellido);
-            Controls.Add(LDatoNombre);
+            Controls.Add(TRol);
+            Controls.Add(TDireccion);
+            Controls.Add(TDni);
+            Controls.Add(TFecha);
+            Controls.Add(TEmail);
+            Controls.Add(TTelefono);
+            Controls.Add(TApellido);
+            Controls.Add(TNombre);
             Controls.Add(LTipoEmpleado);
             Controls.Add(LDirección);
             Controls.Add(LDni);
@@ -290,13 +274,13 @@
         private Label LDni;
         private Label LDirección;
         private Label LTipoEmpleado;
-        private Label LDatoNombre;
-        private Label LDatoApellido;
-        private Label LDatoTelefono;
-        private Label LDatoEmail;
-        private Label LDatoFecha;
-        private Label LDatoDni;
-        private Label LDatoDireccion;
-        private Label LDatoRol;
+        private TextBox TNombre;
+        private TextBox TApellido;
+        private TextBox TTelefono;
+        private TextBox TEmail;
+        private TextBox TFecha;
+        private TextBox TDni;
+        private TextBox TDireccion;
+        private TextBox TRol;
     }
 }

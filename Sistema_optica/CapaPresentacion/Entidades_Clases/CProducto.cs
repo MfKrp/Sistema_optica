@@ -14,9 +14,11 @@ namespace CapaPresentacion.Capa_datos
 {
     internal class CProducto
     {
-
-        //string connectionString = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
-        string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        //String que se usa para conectarse en Netbook
+        string connectionStringEscritorio = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        
+        //String que se usa para conectarse en Pc de escritorio
+        //string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
 
         public int ID_producto { get; set; }
@@ -199,31 +201,23 @@ namespace CapaPresentacion.Capa_datos
             }
         }
 
-        public void descontarStock(int cantidadElegida, DataGridView dataGridProd)
+        public void descontarStock(int cantidadElegida, int id_producto)
         {
-            //Fila que vuelve el estado del producto activo nuevamente
-            DataGridViewRow fila = dataGridProd.SelectedRows[0];
-            int id_producto = (int)fila.Cells["Id_producto"].Value;
-            //MessageBox.Show("Valor de la celda " + @ID_empleado);
-            string query = "UPDATE Producto SET Stock = @Stock WHERE Id_producto = @Id_producto";
-            SqlConnection conexion = new SqlConnection(connectionStringEscritorio);
-            conexion.Open();
-            SqlCommand comandoBaja = new SqlCommand(query, conexion);
+
+            SqlConnection con = new SqlConnection(connectionStringEscritorio);
 
             try
             {
-                comandoBaja.Parameters.AddWithValue("@Estado_producto", (Convert.ToInt32(fila.Cells["DGVColumnaCantidad"].Value)) - cantidadElegida);
-                comandoBaja.Parameters.AddWithValue("@Id_producto", id_producto);
-                //esta linea se usa cuando se hace modificacion
-                comandoBaja.ExecuteNonQuery();
-
-                MessageBox.Show("Se ha restaurado el producto", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                this.verProductos(dataGridProd);
+                string queryUpdate = "UPDATE Producto set Stock = Stock - @cantidad where Id_producto = @id_producto";
+                SqlCommand comandoAct = new SqlCommand(queryUpdate, con);
+                comandoAct.Parameters.AddWithValue("@cantidad", cantidadElegida);
+                comandoAct.Parameters.AddWithValue("@id_producto", id_producto);
+                con.Open();
+                comandoAct.ExecuteNonQuery();
             }
-            catch (SqlException j)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error en: " + j.ToString(), "Error al restaurar el producto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString());
             }
         }
     }

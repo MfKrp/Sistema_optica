@@ -11,9 +11,9 @@ namespace CapaPresentacion.Entidades_Clases
     public class CTipoPago
     {
         //Strin para conectarse en Netbook
-        //string connectionStringEscritorio = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        string connectionStringEscritorio = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
         //String para conectarse en Pc de escritorio
-        string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        //string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
         public int Id_tipo_pago { get; set; }
         public string Descripcion { get; set; }

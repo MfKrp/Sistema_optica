@@ -273,6 +273,7 @@
             // 
             TCodigoProducto.Location = new Point(145, 36);
             TCodigoProducto.Name = "TCodigoProducto";
+            TCodigoProducto.ReadOnly = true;
             TCodigoProducto.Size = new Size(77, 23);
             TCodigoProducto.TabIndex = 4;
             TCodigoProducto.TextChanged += TCodigoProducto_TextChanged;
@@ -357,6 +358,7 @@
             TPrecioTotal.Anchor = AnchorStyles.None;
             TPrecioTotal.Location = new Point(832, 360);
             TPrecioTotal.Name = "TPrecioTotal";
+            TPrecioTotal.ReadOnly = true;
             TPrecioTotal.Size = new Size(104, 23);
             TPrecioTotal.TabIndex = 16;
             TPrecioTotal.TextChanged += TPrecioTotal_TextChanged;
@@ -559,6 +561,7 @@
             // 
             // BBuscarDni
             // 
+            BBuscarDni.Anchor = AnchorStyles.None;
             BBuscarDni.BackColor = Color.SteelBlue;
             BBuscarDni.FlatStyle = FlatStyle.Flat;
             BBuscarDni.ForeColor = Color.Black;
@@ -572,6 +575,7 @@
             // 
             // TDniCliente
             // 
+            TDniCliente.Anchor = AnchorStyles.None;
             TDniCliente.Location = new Point(297, 94);
             TDniCliente.Name = "TDniCliente";
             TDniCliente.ReadOnly = true;
@@ -595,6 +599,8 @@
             // 
             // CBFormaPago
             // 
+            CBFormaPago.Anchor = AnchorStyles.None;
+            CBFormaPago.DropDownStyle = ComboBoxStyle.DropDownList;
             CBFormaPago.FormattingEnabled = true;
             CBFormaPago.Items.AddRange(new object[] { "Debito", "Efectivo", "Mercado Pago" });
             CBFormaPago.Location = new Point(832, 412);

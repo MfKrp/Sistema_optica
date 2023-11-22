@@ -12,10 +12,10 @@ namespace CapaPresentacion.Entidades_Clases
     {
 
         //String para conectarse en netbook
-        //string connectionStringEscritorio = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        string connectionStringEscritorio = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
         //String para conectarse en escritorio
-        string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        //string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
         public int Nro_factura { get; set; }
         public string Fecha_factura { get; set; }
@@ -79,10 +79,10 @@ namespace CapaPresentacion.Entidades_Clases
             return idCorrelativo;
         }
         */
-        public void inicializarCabecera(int nroFactura, int idUsuario, int idCliente, int idTipoPago, string fechaVenta)
+        public void inicializarCabecera(int nroFactura, float precioTotal ,int idUsuario, int idCliente, int idTipoPago, string fechaVenta)
         {
             SqlConnection con = new SqlConnection(connectionStringEscritorio);
-            string insercion = "INSERT INTO Factura (Nro_factura, Fecha_factura, Vendedor, Cliente, Tipo_pago) VALUES (" + nroFactura + ", " + fechaVenta + "," + idUsuario + ", " + idCliente + ", " + idTipoPago + ")";
+            string insercion = "INSERT INTO Factura (Nro_factura, Precio_total ,Fecha_factura, Vendedor, Cliente, Tipo_pago) VALUES (" + nroFactura + ", " + precioTotal + " , '" + fechaVenta + "' ," + idUsuario + ", " + idCliente + ", " + idTipoPago + ")";
             SqlCommand comandoInsercionVenta = new SqlCommand(insercion, con);
 
             try
@@ -103,17 +103,17 @@ namespace CapaPresentacion.Entidades_Clases
             
         }
 
-        public void registrarCabecera (int nroFactura, int idUsuario, int idCliente, int idTipoPago, string fechaVenta)
+        public void registrarCabecera (int nroFactura, float precioTotal, int idUsuario, int idCliente, int idTipoPago, string fechaVenta)
         {
             CFactura nuevaCabecera = new CFactura();
-            nuevaCabecera.inicializarCabecera(nroFactura, idUsuario, idCliente, idTipoPago, fechaVenta);
+            nuevaCabecera.inicializarCabecera(nroFactura, precioTotal, idUsuario, idCliente, idTipoPago, fechaVenta);
         }
 
 
-        public void registrarDetalle(int idDetalle, int cantidadProd, int idProd, int nroFactura, string color, string genero)
+        public void registrarDetalle(int idDetalle,int cantidadProd, int idProd, int nroFactura, string color, string genero)
         {
             SqlConnection con = new SqlConnection(connectionStringEscritorio);
-            string queryInsercionDetalle = "INSERT INTO Detalle (Id_detalle, Cantidad, ID_producto, Nro_factura, Color, Genero) VALUES (" + idDetalle + ", " + cantidadProd + ", " + idProd + ", " + nroFactura + ", " + "'"+color+"'" + ", " + "'"+genero+"'" + ")";
+            string queryInsercionDetalle = "INSERT INTO Detalle (Id_detalle, Cantidad, ID_producto, Nro_factura, Color, Genero) VALUES (" + idDetalle + "," + cantidadProd + ", " + idProd + ", " + nroFactura + ", " + "'"+color+"'" + ", " + "'"+genero+"'" + ")";
 
             SqlCommand comandoInsercion = new SqlCommand(queryInsercionDetalle, con);
 
@@ -132,14 +132,59 @@ namespace CapaPresentacion.Entidades_Clases
             }
 
         }
+
+        public int obtenerUltimoDetalle()
+        {
+            int ultimo = 0;
+            string idUltimoDetalle = "SELECT TOP 1 Id_detalle FROM Detalle ORDER BY Id_detalle DESC";
+            SqlConnection con = new SqlConnection(connectionStringEscritorio);
+            SqlCommand ejecutar = new SqlCommand(idUltimoDetalle, con);
+
+            con.Open();
+
+            SqlDataReader leer = ejecutar.ExecuteReader();
+            if (leer.Read() == true)
+            {
+                ultimo = Convert.ToInt32(leer["Id_detalle"].ToString());
+                ultimo++;
+                con.Close();
+            }
+            return ultimo;
+        }
         //public int 
 
-            /*
-        public int obtenerUltimaCabecera()
+        /*
+    public int obtenerUltimaCabecera()
+    {
+        SqlConnection con = new SqlConnection(connectionStringEscritorio);
+        string query = "SELECT Nro_factura FROM Factura "
+    }
+        */
+
+        public void verFacturasPersonales(DataGridView dataGridProductos, int idEmpleado)
         {
-            SqlConnection con = new SqlConnection(connectionStringEscritorio);
-            string query = "SELECT Nro_factura FROM Factura "
+            using (SqlConnection sqlcon = new SqlConnection(connectionStringEscritorio))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Factura WHERE Vendedor = " + idEmpleado, sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                dataGridProductos.DataSource = dtbl;
+            }
         }
-            */
+
+        public void verFacturasGenerales(DataGridView dataGridProductos)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionStringEscritorio))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Factura", sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                dataGridProductos.DataSource = dtbl;
+            }
+        }
     }
 }

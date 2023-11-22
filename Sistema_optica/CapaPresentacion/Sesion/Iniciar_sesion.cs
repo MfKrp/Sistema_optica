@@ -19,9 +19,9 @@ namespace CapaPresentacion.Sesion
     public partial class Iniciar_sesion : Form
     {
         //string usado para conectarse en netbook
-        //string connectionStringEscritorio = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        string connectionStringEscritorio = "Data Source=DESKTOP-0KBKDQS\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True";
         //String usado para conectarse en escritorio
-        string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+        //ring connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
         private CEmpleado empleadoLogueado = new CEmpleado();
 
@@ -176,6 +176,11 @@ namespace CapaPresentacion.Sesion
         }
 
         private void TContraseña_sesion_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Iniciar_sesion_Load(object sender, EventArgs e)
         {
 
         }

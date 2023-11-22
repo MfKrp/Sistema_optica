@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaPresentacion.Inicio_sesion;
 
 namespace CapaPresentacion.Superadmin
 {
@@ -26,6 +27,7 @@ namespace CapaPresentacion.Superadmin
         public Menu_SuperAdmin(CEmpleado empleadoQueIngresa)
         {
             InitializeComponent();
+            empleadoLogueado = empleadoQueIngresa;
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
@@ -94,7 +96,8 @@ namespace CapaPresentacion.Superadmin
 
         private void TSMBVerPerfil_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Esta Funcion todavia se encuentra en desarrollo", "Funcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Ver_perfil verPerfil = new Ver_perfil(empleadoLogueado);
+            verPerfil.Show();
         }
 
         private void MSSuperAdmin_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -145,6 +148,12 @@ namespace CapaPresentacion.Superadmin
             //Boton que realiza el restore de la base de datos
 
             string queryRestore = "BACKUP LOG [OpticaMaribel] TO  DISK = N'G:\\Program Files (x86)\\MSSQL16.MSSQLSERVER\\MSSQL\\Backup\\OpticaMaribel_LogBackup_2023-11-06_17-08-39.bak' WITH NOFORMAT, NOINIT,  NAME = N'OpticaMaribel_LogBackup_2023-11-06_17-08-39', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5 RESTORE DATABASE [OpticaMaribel] FROM  DISK = N'C:\\Backups_bdd\\6-11-2023-17-4-27 OpticaMaribel' WITH  FILE = 1,  NOUNLOAD,  STATS = 5";
+        }
+
+        private void TSVentas_Click(object sender, EventArgs e)
+        {
+            ventas_generales verVentas = new ventas_generales();
+            verVentas.Show();
         }
     }
 }
