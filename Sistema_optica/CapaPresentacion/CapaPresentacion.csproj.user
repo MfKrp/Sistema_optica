@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Secretaria\Cristales\Alta_cristal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Cristales\Modif_cristal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Cristales\Ver_cristales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Estilos\Alta_estilo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Estilos\Modif_estilo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Estilos\Ver_estilos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Forma\Alta_forma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Forma\Modif_forma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Forma\Ver_formas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Marcas\Alta_marca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Marcas\Modif_marca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Marcas\Ver_marcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\MenuSecretaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Obra_social\Alta_obra_social.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Obra_social\Modif_obra_social.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Obra_social\Ver_obras_sociales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Productos\Ver_productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Clientes\Ver_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Clientes\Modif_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Menu_Secretaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Sesion\Iniciar_sesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Sesion\Ver_perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Productos\Alta_productoTerapeutico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Productos\Modif_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Superadmin\Empleados\Carga_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Secretaria\Productos\Alta_productoAccesorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Superadmin\MenuSuperAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Superadmin\Productos\Ver_productosSuperAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Superadmin\Ventas\ventas_generales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Superadmin\Empleados\Ver_empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Superadmin\Empleados\Modif_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Superadmin\Menu_SuperAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Superadmin\Ventas\Ver_detalle_venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vendedor\Clientes\Modificar_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vendedor\MenuVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vendedor\Productos\Alta_anteojoTerapeutico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vendedor\Productos\Ver_productos_vendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vendedor\Ventas\Alta_venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vendedor\Clientes\Alta_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vendedor\Clientes\Lista_clientes_vendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vendedor\Ventas\Ver_detalle_venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vendedor\Ventas\Ver_ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vendedor\Menu_vendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
