@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            IBResDatos = new FontAwesome.Sharp.IconButton();
+            IBAgregarMarca = new FontAwesome.Sharp.IconButton();
             TDescMarca = new TextBox();
             LDescripcion = new Label();
             LAgregarMarca = new Label();
-            IBResDatos = new FontAwesome.Sharp.IconButton();
-            IBAgregarMarca = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,37 +45,12 @@
             panel1.Controls.Add(TDescMarca);
             panel1.Controls.Add(LDescripcion);
             panel1.Controls.Add(LAgregarMarca);
-            panel1.Location = new Point(12, 12);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(334, 127);
+            panel1.Size = new Size(1187, 477);
             panel1.TabIndex = 0;
-            // 
-            // TDescMarca
-            // 
-            TDescMarca.Location = new Point(150, 43);
-            TDescMarca.Name = "TDescMarca";
-            TDescMarca.Size = new Size(171, 23);
-            TDescMarca.TabIndex = 2;
-            // 
-            // LDescripcion
-            // 
-            LDescripcion.AutoSize = true;
-            LDescripcion.Font = new Font("Sitka Text", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LDescripcion.Location = new Point(12, 43);
-            LDescripcion.Name = "LDescripcion";
-            LDescripcion.Size = new Size(132, 20);
-            LDescripcion.TabIndex = 1;
-            LDescripcion.Text = "Nombre de Marca:";
-            // 
-            // LAgregarMarca
-            // 
-            LAgregarMarca.AutoSize = true;
-            LAgregarMarca.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LAgregarMarca.Location = new Point(12, 11);
-            LAgregarMarca.Name = "LAgregarMarca";
-            LAgregarMarca.Size = new Size(121, 23);
-            LAgregarMarca.TabIndex = 0;
-            LAgregarMarca.Text = "Agregar Marca";
+            panel1.Paint += panel1_Paint;
             // 
             // IBResDatos
             // 
@@ -85,14 +60,15 @@
             IBResDatos.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
             IBResDatos.ForeColor = SystemColors.ControlText;
             IBResDatos.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
-            IBResDatos.IconColor = Color.Purple;
+            IBResDatos.IconColor = Color.White;
             IBResDatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBResDatos.IconSize = 27;
-            IBResDatos.Location = new Point(245, 80);
+            IBResDatos.Location = new Point(642, 255);
             IBResDatos.Name = "IBResDatos";
             IBResDatos.Size = new Size(35, 35);
             IBResDatos.TabIndex = 11;
             IBResDatos.UseVisualStyleBackColor = false;
+            IBResDatos.Click += IBResDatos_Click;
             // 
             // IBAgregarMarca
             // 
@@ -102,23 +78,56 @@
             IBAgregarMarca.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
             IBAgregarMarca.ForeColor = SystemColors.ControlText;
             IBAgregarMarca.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            IBAgregarMarca.IconColor = Color.Purple;
+            IBAgregarMarca.IconColor = Color.White;
             IBAgregarMarca.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBAgregarMarca.IconSize = 27;
-            IBAgregarMarca.Location = new Point(286, 80);
+            IBAgregarMarca.Location = new Point(683, 255);
             IBAgregarMarca.Name = "IBAgregarMarca";
             IBAgregarMarca.Size = new Size(35, 35);
             IBAgregarMarca.TabIndex = 10;
             IBAgregarMarca.UseVisualStyleBackColor = false;
+            IBAgregarMarca.Click += IBAgregarMarca_Click;
+            // 
+            // TDescMarca
+            // 
+            TDescMarca.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            TDescMarca.Location = new Point(671, 198);
+            TDescMarca.Name = "TDescMarca";
+            TDescMarca.Size = new Size(171, 32);
+            TDescMarca.TabIndex = 2;
+            TDescMarca.TextChanged += TDescMarca_TextChanged;
+            // 
+            // LDescripcion
+            // 
+            LDescripcion.AutoSize = true;
+            LDescripcion.Font = new Font("Sitka Text", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            LDescripcion.ForeColor = Color.White;
+            LDescripcion.Location = new Point(487, 198);
+            LDescripcion.Name = "LDescripcion";
+            LDescripcion.Size = new Size(178, 28);
+            LDescripcion.TabIndex = 1;
+            LDescripcion.Text = "Nombre de Marca:";
+            // 
+            // LAgregarMarca
+            // 
+            LAgregarMarca.AutoSize = true;
+            LAgregarMarca.Font = new Font("Sitka Text", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            LAgregarMarca.ForeColor = Color.White;
+            LAgregarMarca.Location = new Point(610, 146);
+            LAgregarMarca.Name = "LAgregarMarca";
+            LAgregarMarca.Size = new Size(137, 26);
+            LAgregarMarca.TabIndex = 0;
+            LAgregarMarca.Text = "Agregar Marca";
             // 
             // Alta_marca
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(358, 151);
+            ClientSize = new Size(1187, 477);
             Controls.Add(panel1);
             Name = "Alta_marca";
             Text = "Alta_marca";
+            Load += Alta_marca_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

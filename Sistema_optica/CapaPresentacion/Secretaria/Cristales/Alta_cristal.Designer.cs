@@ -49,10 +49,12 @@
             panel1.Controls.Add(TMaterialCristal);
             panel1.Controls.Add(LMaterialCristal);
             panel1.Controls.Add(LAgregarCristal);
-            panel1.Location = new Point(12, 12);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(293, 148);
+            panel1.Size = new Size(1185, 477);
             panel1.TabIndex = 3;
+            panel1.Paint += panel1_Paint;
             // 
             // IBResDatos
             // 
@@ -62,14 +64,15 @@
             IBResDatos.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
             IBResDatos.ForeColor = SystemColors.ControlText;
             IBResDatos.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
-            IBResDatos.IconColor = Color.Purple;
+            IBResDatos.IconColor = Color.White;
             IBResDatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBResDatos.IconSize = 27;
-            IBResDatos.Location = new Point(207, 105);
+            IBResDatos.Location = new Point(651, 313);
             IBResDatos.Name = "IBResDatos";
             IBResDatos.Size = new Size(35, 35);
             IBResDatos.TabIndex = 11;
             IBResDatos.UseVisualStyleBackColor = false;
+            IBResDatos.Click += IBResDatos_Click;
             // 
             // IBAgregarOS
             // 
@@ -79,56 +82,66 @@
             IBAgregarOS.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
             IBAgregarOS.ForeColor = SystemColors.ControlText;
             IBAgregarOS.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            IBAgregarOS.IconColor = Color.Purple;
+            IBAgregarOS.IconColor = Color.White;
             IBAgregarOS.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBAgregarOS.IconSize = 27;
-            IBAgregarOS.Location = new Point(248, 105);
+            IBAgregarOS.Location = new Point(692, 313);
             IBAgregarOS.Name = "IBAgregarOS";
             IBAgregarOS.Size = new Size(35, 35);
             IBAgregarOS.TabIndex = 10;
             IBAgregarOS.UseVisualStyleBackColor = false;
+            IBAgregarOS.Click += IBAgregarOS_Click;
             // 
             // TStockCristal
             // 
-            TStockCristal.Location = new Point(160, 76);
+            TStockCristal.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            TStockCristal.Location = new Point(626, 265);
             TStockCristal.Name = "TStockCristal";
-            TStockCristal.Size = new Size(123, 23);
+            TStockCristal.Size = new Size(123, 32);
             TStockCristal.TabIndex = 4;
+            TStockCristal.TextChanged += TStockCristal_TextChanged;
+            TStockCristal.KeyPress += TStockCristal_KeyPress;
             // 
             // LStockCristal
             // 
             LStockCristal.AutoSize = true;
-            LStockCristal.Font = new Font("Sitka Text", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LStockCristal.Location = new Point(15, 76);
+            LStockCristal.Font = new Font("Sitka Text", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            LStockCristal.ForeColor = Color.White;
+            LStockCristal.Location = new Point(603, 224);
             LStockCristal.Name = "LStockCristal";
-            LStockCristal.Size = new Size(122, 20);
+            LStockCristal.Size = new Size(166, 28);
             LStockCristal.TabIndex = 3;
             LStockCristal.Text = "Stock disponible:";
             // 
             // TMaterialCristal
             // 
-            TMaterialCristal.Location = new Point(160, 43);
+            TMaterialCristal.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            TMaterialCristal.Location = new Point(626, 178);
             TMaterialCristal.Name = "TMaterialCristal";
-            TMaterialCristal.Size = new Size(123, 23);
+            TMaterialCristal.Size = new Size(123, 32);
             TMaterialCristal.TabIndex = 2;
+            TMaterialCristal.TextChanged += TMaterialCristal_TextChanged;
+            TMaterialCristal.KeyPress += TMaterialCristal_KeyPress;
             // 
             // LMaterialCristal
             // 
             LMaterialCristal.AutoSize = true;
-            LMaterialCristal.Font = new Font("Sitka Text", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LMaterialCristal.Location = new Point(15, 43);
+            LMaterialCristal.Font = new Font("Sitka Text", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            LMaterialCristal.ForeColor = Color.White;
+            LMaterialCristal.Location = new Point(593, 134);
             LMaterialCristal.Name = "LMaterialCristal";
-            LMaterialCristal.Size = new Size(139, 20);
+            LMaterialCristal.Size = new Size(187, 28);
             LMaterialCristal.TabIndex = 1;
             LMaterialCristal.Text = "Material del cristal:";
             // 
             // LAgregarCristal
             // 
             LAgregarCristal.AutoSize = true;
-            LAgregarCristal.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LAgregarCristal.Location = new Point(12, 11);
+            LAgregarCristal.Font = new Font("Sitka Text", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            LAgregarCristal.ForeColor = Color.White;
+            LAgregarCristal.Location = new Point(612, 88);
             LAgregarCristal.Name = "LAgregarCristal";
-            LAgregarCristal.Size = new Size(123, 23);
+            LAgregarCristal.Size = new Size(146, 28);
             LAgregarCristal.TabIndex = 0;
             LAgregarCristal.Text = "Agregar Cristal";
             // 
@@ -136,7 +149,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(316, 172);
+            ClientSize = new Size(1185, 477);
             Controls.Add(panel1);
             Name = "Alta_cristal";
             Text = "Alta_cristal";

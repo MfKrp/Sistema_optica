@@ -4,8 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,6 +24,13 @@ namespace CapaPresentacion.Secretaria
         private void TPrecio_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void LoadTheme()
+        {
+            panel1.BackColor = TemaColor.TertiaryColor;
+            PListaAnteojos.BackColor = TemaColor.TertiaryColor;
+            DTGListaAnteojos.BackgroundColor = TemaColor.SecondaryColor;
         }
 
         private void TPrecio_KeyPressEventArgs(object sender, KeyPressEventArgs e)
@@ -153,6 +162,10 @@ namespace CapaPresentacion.Secretaria
 
         private void Modif_producto_Load(object sender, EventArgs e)
         {
+            //Carga del tema visual
+            LoadTheme();
+
+            //Se cargan los datos los anteojos en el datagrid
             CAnteojo verProductos = new CAnteojo();
             verProductos.verProductos(DTGListaAnteojos);
 
@@ -189,6 +202,27 @@ namespace CapaPresentacion.Secretaria
         private void DTGListaAnteojos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PListaAnteojos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TStock_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //solo se aceptan numeros
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

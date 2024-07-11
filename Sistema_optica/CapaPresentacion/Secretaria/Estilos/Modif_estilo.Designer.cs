@@ -28,54 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            TDescForma = new TextBox();
-            LDescripcionForma = new Label();
-            LModifForma = new Label();
+            TDescEstilo = new TextBox();
+            LDescripcionEstilo = new Label();
+            LModifEstilo = new Label();
             panel1 = new Panel();
+            TIdEstilo = new TextBox();
+            LIdEstilo = new Label();
             IBResDatos = new FontAwesome.Sharp.IconButton();
-            IBAgregarOS = new FontAwesome.Sharp.IconButton();
+            IBModificarEstilo = new FontAwesome.Sharp.IconButton();
+            panel2 = new Panel();
+            LDTGEstilo = new Label();
+            DTGListaEstilos = new DataGridView();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)DTGListaEstilos).BeginInit();
             SuspendLayout();
             // 
-            // TDescForma
+            // TDescEstilo
             // 
-            TDescForma.Location = new Point(153, 43);
-            TDescForma.Name = "TDescForma";
-            TDescForma.Size = new Size(133, 23);
-            TDescForma.TabIndex = 2;
+            TDescEstilo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            TDescEstilo.Location = new Point(85, 285);
+            TDescEstilo.Name = "TDescEstilo";
+            TDescEstilo.Size = new Size(133, 32);
+            TDescEstilo.TabIndex = 2;
+            TDescEstilo.TextChanged += TDescEstilo_TextChanged;
             // 
-            // LDescripcionForma
+            // LDescripcionEstilo
             // 
-            LDescripcionForma.AutoSize = true;
-            LDescripcionForma.Font = new Font("Sitka Text", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LDescripcionForma.Location = new Point(14, 43);
-            LDescripcionForma.Name = "LDescripcionForma";
-            LDescripcionForma.Size = new Size(133, 20);
-            LDescripcionForma.TabIndex = 1;
-            LDescripcionForma.Text = "Nombre de Forma:";
+            LDescripcionEstilo.AutoSize = true;
+            LDescripcionEstilo.Font = new Font("Sitka Text", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            LDescripcionEstilo.ForeColor = Color.White;
+            LDescripcionEstilo.Location = new Point(61, 254);
+            LDescripcionEstilo.Name = "LDescripcionEstilo";
+            LDescripcionEstilo.Size = new Size(174, 28);
+            LDescripcionEstilo.TabIndex = 1;
+            LDescripcionEstilo.Text = "Nombre de Estilo:";
             // 
-            // LModifForma
+            // LModifEstilo
             // 
-            LModifForma.AutoSize = true;
-            LModifForma.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LModifForma.Location = new Point(12, 11);
-            LModifForma.Name = "LModifForma";
-            LModifForma.Size = new Size(135, 23);
-            LModifForma.TabIndex = 0;
-            LModifForma.Text = "Modificar Forma";
+            LModifEstilo.AutoSize = true;
+            LModifEstilo.Font = new Font("Sitka Text", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            LModifEstilo.ForeColor = Color.White;
+            LModifEstilo.Location = new Point(76, 122);
+            LModifEstilo.Name = "LModifEstilo";
+            LModifEstilo.Size = new Size(147, 26);
+            LModifEstilo.TabIndex = 0;
+            LModifEstilo.Text = "Modificar Estilo";
             // 
             // panel1
             // 
             panel1.BackColor = Color.Thistle;
+            panel1.Controls.Add(TIdEstilo);
+            panel1.Controls.Add(LIdEstilo);
             panel1.Controls.Add(IBResDatos);
-            panel1.Controls.Add(IBAgregarOS);
-            panel1.Controls.Add(TDescForma);
-            panel1.Controls.Add(LDescripcionForma);
-            panel1.Controls.Add(LModifForma);
-            panel1.Location = new Point(12, 12);
+            panel1.Controls.Add(IBModificarEstilo);
+            panel1.Controls.Add(TDescEstilo);
+            panel1.Controls.Add(LDescripcionEstilo);
+            panel1.Controls.Add(LModifEstilo);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(298, 119);
+            panel1.Size = new Size(298, 477);
             panel1.TabIndex = 3;
+            panel1.Paint += panel1_Paint;
+            // 
+            // TIdEstilo
+            // 
+            TIdEstilo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            TIdEstilo.Location = new Point(85, 203);
+            TIdEstilo.Name = "TIdEstilo";
+            TIdEstilo.ReadOnly = true;
+            TIdEstilo.Size = new Size(133, 32);
+            TIdEstilo.TabIndex = 13;
+            TIdEstilo.TextChanged += TIdEstilo_TextChanged;
+            // 
+            // LIdEstilo
+            // 
+            LIdEstilo.AutoSize = true;
+            LIdEstilo.Font = new Font("Sitka Text", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            LIdEstilo.ForeColor = Color.White;
+            LIdEstilo.Location = new Point(85, 160);
+            LIdEstilo.Name = "LIdEstilo";
+            LIdEstilo.Size = new Size(121, 28);
+            LIdEstilo.TabIndex = 12;
+            LIdEstilo.Text = "ID de Estilo:";
             // 
             // IBResDatos
             // 
@@ -85,52 +121,98 @@
             IBResDatos.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
             IBResDatos.ForeColor = SystemColors.ControlText;
             IBResDatos.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
-            IBResDatos.IconColor = Color.Purple;
+            IBResDatos.IconColor = Color.White;
             IBResDatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBResDatos.IconSize = 27;
-            IBResDatos.Location = new Point(210, 72);
+            IBResDatos.Location = new Point(117, 332);
             IBResDatos.Name = "IBResDatos";
             IBResDatos.Size = new Size(35, 35);
             IBResDatos.TabIndex = 11;
             IBResDatos.UseVisualStyleBackColor = false;
+            IBResDatos.Click += IBResDatos_Click;
             // 
-            // IBAgregarOS
+            // IBModificarEstilo
             // 
-            IBAgregarOS.Anchor = AnchorStyles.None;
-            IBAgregarOS.BackColor = Color.Transparent;
-            IBAgregarOS.FlatStyle = FlatStyle.Flat;
-            IBAgregarOS.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
-            IBAgregarOS.ForeColor = SystemColors.ControlText;
-            IBAgregarOS.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            IBAgregarOS.IconColor = Color.Purple;
-            IBAgregarOS.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            IBAgregarOS.IconSize = 27;
-            IBAgregarOS.Location = new Point(251, 72);
-            IBAgregarOS.Name = "IBAgregarOS";
-            IBAgregarOS.Size = new Size(35, 35);
-            IBAgregarOS.TabIndex = 10;
-            IBAgregarOS.UseVisualStyleBackColor = false;
+            IBModificarEstilo.Anchor = AnchorStyles.None;
+            IBModificarEstilo.BackColor = Color.Transparent;
+            IBModificarEstilo.FlatStyle = FlatStyle.Flat;
+            IBModificarEstilo.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
+            IBModificarEstilo.ForeColor = SystemColors.ControlText;
+            IBModificarEstilo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            IBModificarEstilo.IconColor = Color.White;
+            IBModificarEstilo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            IBModificarEstilo.IconSize = 27;
+            IBModificarEstilo.Location = new Point(158, 332);
+            IBModificarEstilo.Name = "IBModificarEstilo";
+            IBModificarEstilo.Size = new Size(35, 35);
+            IBModificarEstilo.TabIndex = 10;
+            IBModificarEstilo.UseVisualStyleBackColor = false;
+            IBModificarEstilo.Click += IBModificarEstilo_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Thistle;
+            panel2.Controls.Add(LDTGEstilo);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(298, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(889, 72);
+            panel2.TabIndex = 4;
+            panel2.Paint += panel2_Paint;
+            // 
+            // LDTGEstilo
+            // 
+            LDTGEstilo.AutoSize = true;
+            LDTGEstilo.Font = new Font("Sitka Text", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            LDTGEstilo.ForeColor = Color.White;
+            LDTGEstilo.Location = new Point(368, 23);
+            LDTGEstilo.Name = "LDTGEstilo";
+            LDTGEstilo.Size = new Size(147, 26);
+            LDTGEstilo.TabIndex = 1;
+            LDTGEstilo.Text = "Modificar Estilo";
+            // 
+            // DTGListaEstilos
+            // 
+            DTGListaEstilos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DTGListaEstilos.Dock = DockStyle.Fill;
+            DTGListaEstilos.Location = new Point(298, 72);
+            DTGListaEstilos.Name = "DTGListaEstilos";
+            DTGListaEstilos.RowTemplate.Height = 25;
+            DTGListaEstilos.Size = new Size(889, 405);
+            DTGListaEstilos.TabIndex = 5;
+            DTGListaEstilos.CellContentClick += DTGListaEstilos_CellContentClick;
             // 
             // Modif_estilo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(327, 143);
+            ClientSize = new Size(1187, 477);
+            Controls.Add(DTGListaEstilos);
+            Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Modif_estilo";
             Text = "Modif_estilo";
+            Load += Modif_estilo_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DTGListaEstilos).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private TextBox TDescForma;
-        private Label LDescripcionForma;
-        private Label LModifForma;
+        private TextBox TDescEstilo;
+        private Label LDescripcionEstilo;
+        private Label LModifEstilo;
         private Panel panel1;
         private FontAwesome.Sharp.IconButton IBResDatos;
-        private FontAwesome.Sharp.IconButton IBAgregarOS;
+        private FontAwesome.Sharp.IconButton IBModificarEstilo;
+        private Panel panel2;
+        private Label LDTGEstilo;
+        private DataGridView DTGListaEstilos;
+        private TextBox TIdEstilo;
+        private Label LIdEstilo;
     }
 }

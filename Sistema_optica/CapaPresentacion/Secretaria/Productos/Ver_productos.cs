@@ -89,5 +89,10 @@ namespace CapaPresentacion.Secretaria
         {
 
         }
+
+        private void CBOpcionVistaPro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

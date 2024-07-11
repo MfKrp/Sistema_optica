@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             PVerProductos = new Panel();
+            LVerOtros = new Label();
+            CBOpcionVistaPro = new ComboBox();
             panel1 = new Panel();
             IBRehabilitarProd = new FontAwesome.Sharp.IconButton();
             IBEditar = new FontAwesome.Sharp.IconButton();
@@ -47,6 +49,8 @@
             // PVerProductos
             // 
             PVerProductos.BackColor = Color.FromArgb(0, 175, 176);
+            PVerProductos.Controls.Add(LVerOtros);
+            PVerProductos.Controls.Add(CBOpcionVistaPro);
             PVerProductos.Controls.Add(panel1);
             PVerProductos.Controls.Add(CBOpcionesProd);
             PVerProductos.Controls.Add(LBuscar);
@@ -58,6 +62,29 @@
             PVerProductos.Size = new Size(939, 88);
             PVerProductos.TabIndex = 84;
             PVerProductos.Paint += PVerProductos_Paint;
+            // 
+            // LVerOtros
+            // 
+            LVerOtros.Anchor = AnchorStyles.None;
+            LVerOtros.AutoSize = true;
+            LVerOtros.Font = new Font("Sitka Text", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            LVerOtros.ForeColor = Color.White;
+            LVerOtros.Location = new Point(559, 12);
+            LVerOtros.Name = "LVerOtros";
+            LVerOtros.Size = new Size(94, 26);
+            LVerOtros.TabIndex = 12;
+            LVerOtros.Text = "Ver otros:";
+            // 
+            // CBOpcionVistaPro
+            // 
+            CBOpcionVistaPro.DropDownStyle = ComboBoxStyle.DropDownList;
+            CBOpcionVistaPro.FormattingEnabled = true;
+            CBOpcionVistaPro.Items.AddRange(new object[] { "Cristales", "Estilos", "Formas", "Marcas", "Obras Sociales", "Anteojos" });
+            CBOpcionVistaPro.Location = new Point(676, 15);
+            CBOpcionVistaPro.Name = "CBOpcionVistaPro";
+            CBOpcionVistaPro.Size = new Size(121, 23);
+            CBOpcionVistaPro.TabIndex = 11;
+            CBOpcionVistaPro.SelectedIndexChanged += CBOpcionVistaPro_SelectedIndexChanged;
             // 
             // panel1
             // 
@@ -136,7 +163,7 @@
             CBOpcionesProd.Anchor = AnchorStyles.None;
             CBOpcionesProd.DropDownStyle = ComboBoxStyle.DropDownList;
             CBOpcionesProd.FormattingEnabled = true;
-            CBOpcionesProd.Location = new Point(629, 36);
+            CBOpcionesProd.Location = new Point(626, 48);
             CBOpcionesProd.Name = "CBOpcionesProd";
             CBOpcionesProd.Size = new Size(100, 23);
             CBOpcionesProd.TabIndex = 3;
@@ -147,7 +174,7 @@
             LBuscar.AutoSize = true;
             LBuscar.Font = new Font("Sitka Text", 13F, FontStyle.Regular, GraphicsUnit.Point);
             LBuscar.ForeColor = Color.White;
-            LBuscar.Location = new Point(460, 33);
+            LBuscar.Location = new Point(457, 45);
             LBuscar.Name = "LBuscar";
             LBuscar.Size = new Size(163, 26);
             LBuscar.TabIndex = 2;
@@ -156,7 +183,7 @@
             // TBuscarProd
             // 
             TBuscarProd.Anchor = AnchorStyles.None;
-            TBuscarProd.Location = new Point(735, 36);
+            TBuscarProd.Location = new Point(732, 48);
             TBuscarProd.Name = "TBuscarProd";
             TBuscarProd.Size = new Size(100, 23);
             TBuscarProd.TabIndex = 1;
@@ -221,5 +248,7 @@
         private TextBox TBuscarProd;
         private Label LTProductos;
         private DataGridView DTGListaProductos;
+        private Label LVerOtros;
+        private ComboBox CBOpcionVistaPro;
     }
 }

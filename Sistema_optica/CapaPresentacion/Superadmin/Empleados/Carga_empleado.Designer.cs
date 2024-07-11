@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            IBResDatos = new FontAwesome.Sharp.IconButton();
+            IBAgregarOS = new FontAwesome.Sharp.IconButton();
             DTPNacimiento = new DateTimePicker();
             label2 = new Label();
             label1 = new Label();
@@ -52,8 +54,6 @@
             LDni = new Label();
             LApellido = new Label();
             LNombre = new Label();
-            IBResDatos = new FontAwesome.Sharp.IconButton();
-            IBAgregarOS = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -89,6 +89,40 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(343, 404);
             panel1.TabIndex = 0;
+            // 
+            // IBResDatos
+            // 
+            IBResDatos.Anchor = AnchorStyles.None;
+            IBResDatos.BackColor = Color.Transparent;
+            IBResDatos.FlatStyle = FlatStyle.Flat;
+            IBResDatos.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
+            IBResDatos.ForeColor = SystemColors.ControlText;
+            IBResDatos.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
+            IBResDatos.IconColor = Color.Purple;
+            IBResDatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            IBResDatos.IconSize = 27;
+            IBResDatos.Location = new Point(137, 361);
+            IBResDatos.Name = "IBResDatos";
+            IBResDatos.Size = new Size(35, 35);
+            IBResDatos.TabIndex = 52;
+            IBResDatos.UseVisualStyleBackColor = false;
+            // 
+            // IBAgregarOS
+            // 
+            IBAgregarOS.Anchor = AnchorStyles.None;
+            IBAgregarOS.BackColor = Color.Transparent;
+            IBAgregarOS.FlatStyle = FlatStyle.Flat;
+            IBAgregarOS.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
+            IBAgregarOS.ForeColor = SystemColors.ControlText;
+            IBAgregarOS.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            IBAgregarOS.IconColor = Color.Purple;
+            IBAgregarOS.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            IBAgregarOS.IconSize = 27;
+            IBAgregarOS.Location = new Point(178, 361);
+            IBAgregarOS.Name = "IBAgregarOS";
+            IBAgregarOS.Size = new Size(35, 35);
+            IBAgregarOS.TabIndex = 51;
+            IBAgregarOS.UseVisualStyleBackColor = false;
             // 
             // DTPNacimiento
             // 
@@ -188,6 +222,7 @@
             TNombre.Name = "TNombre";
             TNombre.Size = new Size(139, 23);
             TNombre.TabIndex = 39;
+            TNombre.TextChanged += TNombre_TextChanged_1;
             // 
             // TApellido
             // 
@@ -328,40 +363,6 @@
             LNombre.Size = new Size(159, 20);
             LNombre.TabIndex = 27;
             LNombre.Text = "Nombre del Empleado:";
-            // 
-            // IBResDatos
-            // 
-            IBResDatos.Anchor = AnchorStyles.None;
-            IBResDatos.BackColor = Color.Transparent;
-            IBResDatos.FlatStyle = FlatStyle.Flat;
-            IBResDatos.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
-            IBResDatos.ForeColor = SystemColors.ControlText;
-            IBResDatos.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
-            IBResDatos.IconColor = Color.Purple;
-            IBResDatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            IBResDatos.IconSize = 27;
-            IBResDatos.Location = new Point(137, 361);
-            IBResDatos.Name = "IBResDatos";
-            IBResDatos.Size = new Size(35, 35);
-            IBResDatos.TabIndex = 52;
-            IBResDatos.UseVisualStyleBackColor = false;
-            // 
-            // IBAgregarOS
-            // 
-            IBAgregarOS.Anchor = AnchorStyles.None;
-            IBAgregarOS.BackColor = Color.Transparent;
-            IBAgregarOS.FlatStyle = FlatStyle.Flat;
-            IBAgregarOS.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
-            IBAgregarOS.ForeColor = SystemColors.ControlText;
-            IBAgregarOS.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            IBAgregarOS.IconColor = Color.Purple;
-            IBAgregarOS.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            IBAgregarOS.IconSize = 27;
-            IBAgregarOS.Location = new Point(178, 361);
-            IBAgregarOS.Name = "IBAgregarOS";
-            IBAgregarOS.Size = new Size(35, 35);
-            IBAgregarOS.TabIndex = 51;
-            IBAgregarOS.UseVisualStyleBackColor = false;
             // 
             // Carga_empleado
             // 

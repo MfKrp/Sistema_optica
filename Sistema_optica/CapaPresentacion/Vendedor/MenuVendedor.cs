@@ -224,7 +224,7 @@ namespace CapaPresentacion.Vendedor
 
         private void LTitle_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

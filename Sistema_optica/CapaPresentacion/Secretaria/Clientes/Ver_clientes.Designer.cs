@@ -75,6 +75,7 @@
             PVerClientes.Name = "PVerClientes";
             PVerClientes.Size = new Size(1187, 101);
             PVerClientes.TabIndex = 82;
+            PVerClientes.Paint += PVerClientes_Paint;
             // 
             // panel1
             // 
@@ -94,7 +95,7 @@
             IBRehabilitarCliente.FlatStyle = FlatStyle.Flat;
             IBRehabilitarCliente.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
             IBRehabilitarCliente.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            IBRehabilitarCliente.IconColor = Color.Crimson;
+            IBRehabilitarCliente.IconColor = Color.White;
             IBRehabilitarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBRehabilitarCliente.IconSize = 20;
             IBRehabilitarCliente.Location = new Point(3, 5);
@@ -110,7 +111,7 @@
             IBEditar.FlatStyle = FlatStyle.Flat;
             IBEditar.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
             IBEditar.IconChar = FontAwesome.Sharp.IconChar.Brush;
-            IBEditar.IconColor = Color.MediumSlateBlue;
+            IBEditar.IconColor = Color.White;
             IBEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBEditar.IconSize = 20;
             IBEditar.Location = new Point(57, 3);
@@ -126,7 +127,7 @@
             IBEliminarCliente.FlatStyle = FlatStyle.Flat;
             IBEliminarCliente.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
             IBEliminarCliente.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            IBEliminarCliente.IconColor = Color.Red;
+            IBEliminarCliente.IconColor = Color.White;
             IBEliminarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBEliminarCliente.IconSize = 20;
             IBEliminarCliente.Location = new Point(57, 59);
@@ -142,7 +143,7 @@
             IBAgregarCliente.FlatStyle = FlatStyle.Flat;
             IBAgregarCliente.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
             IBAgregarCliente.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            IBAgregarCliente.IconColor = Color.Purple;
+            IBAgregarCliente.IconColor = Color.White;
             IBAgregarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBAgregarCliente.IconSize = 20;
             IBAgregarCliente.Location = new Point(3, 59);
@@ -188,7 +189,7 @@
             LTClientes.Anchor = AnchorStyles.None;
             LTClientes.AutoSize = true;
             LTClientes.BackColor = Color.Transparent;
-            LTClientes.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
+            LTClientes.Font = new Font("Sitka Text", 14F, FontStyle.Bold, GraphicsUnit.Point);
             LTClientes.ForeColor = Color.White;
             LTClientes.Location = new Point(48, 39);
             LTClientes.Name = "LTClientes";

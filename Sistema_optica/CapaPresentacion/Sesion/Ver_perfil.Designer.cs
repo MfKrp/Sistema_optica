@@ -95,6 +95,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(549, 344);
             panel2.TabIndex = 42;
+            panel2.Paint += panel2_Paint;
             // 
             // LRolEmpValor
             // 

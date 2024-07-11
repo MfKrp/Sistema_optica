@@ -26,6 +26,9 @@ namespace CapaPresentacion.Secretaria
 
         private void Alta_producto_Load(object sender, EventArgs e)
         {
+            //Se carga tema
+            LoadTheme();
+
             //Se instancian los combobox cuando se van a cargar
             EForma OcomboBoxTipo = new EForma();
             EEstilo OcomboBoxEstilo = new EEstilo();
@@ -34,6 +37,11 @@ namespace CapaPresentacion.Secretaria
             OcomboBoxTipo.cargarComboBox(CBFormaAnteojo);
             OcomboBoxEstilo.cargarComboBoxEstilos(ComboBox_Estilo);
             OcomboBox.cargarComboBox(ComboBox_Marca);
+        }
+
+        public void LoadTheme()
+        {
+            panel1.BackColor = TemaColor.TertiaryColor;
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -134,15 +142,22 @@ namespace CapaPresentacion.Secretaria
 
         private void BBorrar_Click(object sender, EventArgs e)
         {
-            /*TId_prod.Text = "";
-            ComnboBox_Anteojo.Text = "";
-            ComboBox_Marca.Text = "";
-            ComboBox_Estilo.Text = "";
-            TPrecio.Text = "";*/
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void IBAgregarOS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IBResDatos_Click(object sender, EventArgs e)
+        {
+            //Boton que resetea los campos cuando se hace click en el
 
         }
     }

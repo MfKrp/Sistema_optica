@@ -15,8 +15,11 @@ namespace CapaPresentacion.Capa_datos
     internal class CAnteojo
     {
         //String que se usa para conectarse en Netbook
-        string connectionStringEscritorio = "Data Source=DESKTOP-RUL54CM\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True;Encrypt=False";
-        
+        //string connectionStringEscritorio = "Data Source=DESKTOP-RUL54CM\\SQLEXPRESS;Initial Catalog=OpticaMaribel;Integrated Security=True;Encrypt=False";
+
+        //String para conectarse desde la pc de escritorio
+        string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
+
         //String que se usa para conectarse en Pc de escritorio
         //string connectionStringEscritorio = "Data Source=DESKTOP-3O1V6FN;Initial Catalog=OpticaMaribel;Integrated Security=True";
 
@@ -38,6 +41,16 @@ namespace CapaPresentacion.Capa_datos
         public string Color { get; set; }
         public byte[] ImagenAnteojo { get; set; }
         
+        public void AltaProductoAccesorio()
+        {
+
+        }
+
+        public void AltaProductoTerapeutico()
+        {
+
+        }
+
         //Metodo que da de alta un producto
         public void altaProducto(string ComboBoxtipoAnteojo,
             string GradIzq,

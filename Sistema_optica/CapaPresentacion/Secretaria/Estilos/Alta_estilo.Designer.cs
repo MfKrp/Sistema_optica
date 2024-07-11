@@ -45,10 +45,12 @@
             panel1.Controls.Add(TDescEstilo);
             panel1.Controls.Add(LDescripcionEstilo);
             panel1.Controls.Add(LAgregarEstilo);
-            panel1.Location = new Point(12, 12);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(293, 120);
+            panel1.Size = new Size(1187, 477);
             panel1.TabIndex = 2;
+            panel1.Paint += panel1_Paint;
             // 
             // IBResDatos
             // 
@@ -58,14 +60,15 @@
             IBResDatos.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
             IBResDatos.ForeColor = SystemColors.ControlText;
             IBResDatos.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
-            IBResDatos.IconColor = Color.Purple;
+            IBResDatos.IconColor = Color.White;
             IBResDatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBResDatos.IconSize = 27;
-            IBResDatos.Location = new Point(205, 72);
+            IBResDatos.Location = new Point(651, 279);
             IBResDatos.Name = "IBResDatos";
             IBResDatos.Size = new Size(35, 35);
             IBResDatos.TabIndex = 11;
             IBResDatos.UseVisualStyleBackColor = false;
+            IBResDatos.Click += IBResDatos_Click;
             // 
             // IBAgregarOS
             // 
@@ -75,39 +78,44 @@
             IBAgregarOS.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
             IBAgregarOS.ForeColor = SystemColors.ControlText;
             IBAgregarOS.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            IBAgregarOS.IconColor = Color.Purple;
+            IBAgregarOS.IconColor = Color.White;
             IBAgregarOS.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBAgregarOS.IconSize = 27;
-            IBAgregarOS.Location = new Point(246, 72);
+            IBAgregarOS.Location = new Point(692, 279);
             IBAgregarOS.Name = "IBAgregarOS";
             IBAgregarOS.Size = new Size(35, 35);
             IBAgregarOS.TabIndex = 10;
             IBAgregarOS.UseVisualStyleBackColor = false;
+            IBAgregarOS.Click += IBAgregarOS_Click;
             // 
             // TDescEstilo
             // 
-            TDescEstilo.Location = new Point(146, 43);
+            TDescEstilo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            TDescEstilo.Location = new Point(618, 231);
             TDescEstilo.Name = "TDescEstilo";
-            TDescEstilo.Size = new Size(135, 23);
+            TDescEstilo.Size = new Size(135, 32);
             TDescEstilo.TabIndex = 2;
+            TDescEstilo.TextChanged += TDescEstilo_TextChanged;
             // 
             // LDescripcionEstilo
             // 
             LDescripcionEstilo.AutoSize = true;
-            LDescripcionEstilo.Font = new Font("Sitka Text", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LDescripcionEstilo.Location = new Point(12, 43);
+            LDescripcionEstilo.Font = new Font("Sitka Text", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            LDescripcionEstilo.ForeColor = Color.White;
+            LDescripcionEstilo.Location = new Point(597, 190);
             LDescripcionEstilo.Name = "LDescripcionEstilo";
-            LDescripcionEstilo.Size = new Size(128, 20);
+            LDescripcionEstilo.Size = new Size(174, 28);
             LDescripcionEstilo.TabIndex = 1;
             LDescripcionEstilo.Text = "Nombre de Estilo:";
             // 
             // LAgregarEstilo
             // 
             LAgregarEstilo.AutoSize = true;
-            LAgregarEstilo.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LAgregarEstilo.Location = new Point(12, 11);
+            LAgregarEstilo.Font = new Font("Sitka Text", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            LAgregarEstilo.ForeColor = Color.White;
+            LAgregarEstilo.Location = new Point(618, 155);
             LAgregarEstilo.Name = "LAgregarEstilo";
-            LAgregarEstilo.Size = new Size(116, 23);
+            LAgregarEstilo.Size = new Size(132, 26);
             LAgregarEstilo.TabIndex = 0;
             LAgregarEstilo.Text = "Agregar Estilo";
             // 
@@ -115,7 +123,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(320, 144);
+            ClientSize = new Size(1187, 477);
             Controls.Add(panel1);
             Name = "Alta_estilo";
             Text = "Alta_estilo";

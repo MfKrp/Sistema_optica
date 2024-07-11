@@ -13,6 +13,8 @@ namespace CapaPresentacion.Entidades_Clases
 
         public static Color TertiaryColor { get; set; }
 
+        public static Color QuaternaryColor { get; set; }
+
         public static List<string> ColorList = new List<string>()
         {
                                                                     "#3F51B5",

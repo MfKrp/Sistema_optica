@@ -225,5 +225,10 @@ namespace CapaPresentacion.Superadmin
         {
 
         }
+
+        private void TNombre_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

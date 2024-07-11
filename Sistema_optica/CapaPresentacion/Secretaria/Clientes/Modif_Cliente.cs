@@ -19,6 +19,13 @@ namespace CapaPresentacion.Secretaria
             InitializeComponent();
         }
 
+        public void LoadTheme()
+        {
+            panel1.BackColor = TemaColor.TertiaryColor;
+            panel2.BackColor = TemaColor.TertiaryColor;
+            DTGListaClientes.BackgroundColor = TemaColor.SecondaryColor;
+        }
+
         private void TDni_TextChanged(object sender, EventArgs e)
         {
 
@@ -146,6 +153,9 @@ namespace CapaPresentacion.Secretaria
 
         private void Modif_Cliente_Load(object sender, EventArgs e)
         {
+            //se cargan estilos visuales
+            this.LoadTheme();
+
             CCliente verCliente = new CCliente();
             verCliente.verClientes(DTGListaClientes);
         }
@@ -167,6 +177,21 @@ namespace CapaPresentacion.Secretaria
             TTelefono.Text = telefonoCliente;
             TDireccion.Text = direccionCliente;
             TCorreo.Text = emailCliente;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DTGListaClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

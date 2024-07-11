@@ -29,74 +29,107 @@
         private void InitializeComponent()
         {
             PVerEstilos = new Panel();
-            IBEliminarEstilo = new FontAwesome.Sharp.IconButton();
-            IBAgregarEstilo = new FontAwesome.Sharp.IconButton();
+            panel1 = new Panel();
+            IBRehabilitarCliente = new FontAwesome.Sharp.IconButton();
             IBEditar = new FontAwesome.Sharp.IconButton();
+            IBEliminarCliente = new FontAwesome.Sharp.IconButton();
+            IBAgregarCliente = new FontAwesome.Sharp.IconButton();
             CBOpcionesEstilos = new ComboBox();
             LBuscar = new Label();
             TBuscarEstilo = new TextBox();
             LTEstilos = new Label();
             DTGVEstilos = new DataGridView();
             PVerEstilos.SuspendLayout();
+            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DTGVEstilos).BeginInit();
             SuspendLayout();
             // 
             // PVerEstilos
             // 
-            PVerEstilos.Anchor = AnchorStyles.None;
             PVerEstilos.BackColor = Color.Plum;
-            PVerEstilos.Controls.Add(IBEliminarEstilo);
-            PVerEstilos.Controls.Add(IBAgregarEstilo);
-            PVerEstilos.Controls.Add(IBEditar);
+            PVerEstilos.Controls.Add(panel1);
             PVerEstilos.Controls.Add(CBOpcionesEstilos);
             PVerEstilos.Controls.Add(LBuscar);
             PVerEstilos.Controls.Add(TBuscarEstilo);
             PVerEstilos.Controls.Add(LTEstilos);
-            PVerEstilos.Location = new Point(14, 12);
+            PVerEstilos.Dock = DockStyle.Top;
+            PVerEstilos.Location = new Point(0, 0);
             PVerEstilos.Name = "PVerEstilos";
-            PVerEstilos.Size = new Size(589, 83);
+            PVerEstilos.Size = new Size(1190, 101);
             PVerEstilos.TabIndex = 7;
+            PVerEstilos.Paint += PVerEstilos_Paint;
             // 
-            // IBEliminarEstilo
+            // panel1
             // 
-            IBEliminarEstilo.Anchor = AnchorStyles.None;
-            IBEliminarEstilo.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
-            IBEliminarEstilo.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            IBEliminarEstilo.IconColor = Color.Black;
-            IBEliminarEstilo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            IBEliminarEstilo.IconSize = 20;
-            IBEliminarEstilo.Location = new Point(536, 36);
-            IBEliminarEstilo.Name = "IBEliminarEstilo";
-            IBEliminarEstilo.Size = new Size(24, 24);
-            IBEliminarEstilo.TabIndex = 8;
-            IBEliminarEstilo.UseVisualStyleBackColor = true;
+            panel1.Controls.Add(IBRehabilitarCliente);
+            panel1.Controls.Add(IBEditar);
+            panel1.Controls.Add(IBEliminarCliente);
+            panel1.Controls.Add(IBAgregarCliente);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(1095, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(95, 101);
+            panel1.TabIndex = 11;
             // 
-            // IBAgregarEstilo
+            // IBRehabilitarCliente
             // 
-            IBAgregarEstilo.Anchor = AnchorStyles.None;
-            IBAgregarEstilo.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
-            IBAgregarEstilo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            IBAgregarEstilo.IconColor = Color.Black;
-            IBAgregarEstilo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            IBAgregarEstilo.IconSize = 20;
-            IBAgregarEstilo.Location = new Point(505, 36);
-            IBAgregarEstilo.Name = "IBAgregarEstilo";
-            IBAgregarEstilo.Size = new Size(25, 24);
-            IBAgregarEstilo.TabIndex = 7;
-            IBAgregarEstilo.UseVisualStyleBackColor = true;
+            IBRehabilitarCliente.Anchor = AnchorStyles.None;
+            IBRehabilitarCliente.FlatStyle = FlatStyle.Flat;
+            IBRehabilitarCliente.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
+            IBRehabilitarCliente.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            IBRehabilitarCliente.IconColor = Color.White;
+            IBRehabilitarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            IBRehabilitarCliente.IconSize = 20;
+            IBRehabilitarCliente.Location = new Point(3, 3);
+            IBRehabilitarCliente.Name = "IBRehabilitarCliente";
+            IBRehabilitarCliente.Size = new Size(35, 35);
+            IBRehabilitarCliente.TabIndex = 9;
+            IBRehabilitarCliente.UseVisualStyleBackColor = true;
             // 
             // IBEditar
             // 
+            IBEditar.BackColor = Color.Transparent;
+            IBEditar.FlatStyle = FlatStyle.Flat;
             IBEditar.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
             IBEditar.IconChar = FontAwesome.Sharp.IconChar.Brush;
-            IBEditar.IconColor = Color.Black;
+            IBEditar.IconColor = Color.White;
             IBEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBEditar.IconSize = 20;
-            IBEditar.Location = new Point(472, 36);
+            IBEditar.Location = new Point(57, 3);
             IBEditar.Name = "IBEditar";
-            IBEditar.Size = new Size(27, 24);
+            IBEditar.Size = new Size(35, 35);
             IBEditar.TabIndex = 4;
-            IBEditar.UseVisualStyleBackColor = true;
+            IBEditar.UseVisualStyleBackColor = false;
+            // 
+            // IBEliminarCliente
+            // 
+            IBEliminarCliente.Anchor = AnchorStyles.None;
+            IBEliminarCliente.FlatStyle = FlatStyle.Flat;
+            IBEliminarCliente.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
+            IBEliminarCliente.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            IBEliminarCliente.IconColor = Color.White;
+            IBEliminarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            IBEliminarCliente.IconSize = 20;
+            IBEliminarCliente.Location = new Point(57, 63);
+            IBEliminarCliente.Name = "IBEliminarCliente";
+            IBEliminarCliente.Size = new Size(35, 35);
+            IBEliminarCliente.TabIndex = 8;
+            IBEliminarCliente.UseVisualStyleBackColor = true;
+            // 
+            // IBAgregarCliente
+            // 
+            IBAgregarCliente.Anchor = AnchorStyles.None;
+            IBAgregarCliente.FlatStyle = FlatStyle.Flat;
+            IBAgregarCliente.Font = new Font("Segoe UI", 5F, FontStyle.Regular, GraphicsUnit.Point);
+            IBAgregarCliente.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            IBAgregarCliente.IconColor = Color.White;
+            IBAgregarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            IBAgregarCliente.IconSize = 20;
+            IBAgregarCliente.Location = new Point(3, 63);
+            IBAgregarCliente.Name = "IBAgregarCliente";
+            IBAgregarCliente.Size = new Size(35, 35);
+            IBAgregarCliente.TabIndex = 7;
+            IBAgregarCliente.UseVisualStyleBackColor = true;
             // 
             // CBOpcionesEstilos
             // 
@@ -104,7 +137,7 @@
             CBOpcionesEstilos.Anchor = AnchorStyles.None;
             CBOpcionesEstilos.DropDownStyle = ComboBoxStyle.DropDownList;
             CBOpcionesEstilos.FormattingEnabled = true;
-            CBOpcionesEstilos.Location = new Point(315, 36);
+            CBOpcionesEstilos.Location = new Point(625, 46);
             CBOpcionesEstilos.Name = "CBOpcionesEstilos";
             CBOpcionesEstilos.Size = new Size(76, 23);
             CBOpcionesEstilos.TabIndex = 3;
@@ -113,16 +146,18 @@
             // 
             LBuscar.Anchor = AnchorStyles.None;
             LBuscar.AutoSize = true;
-            LBuscar.Font = new Font("Sitka Text", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LBuscar.Location = new Point(203, 36);
+            LBuscar.Font = new Font("Sitka Text", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            LBuscar.ForeColor = Color.White;
+            LBuscar.Location = new Point(500, 43);
             LBuscar.Name = "LBuscar";
-            LBuscar.Size = new Size(101, 20);
+            LBuscar.Size = new Size(128, 26);
             LBuscar.TabIndex = 2;
             LBuscar.Text = "Buscar Estilo:";
             // 
             // TBuscarEstilo
             // 
-            TBuscarEstilo.Location = new Point(397, 36);
+            TBuscarEstilo.Anchor = AnchorStyles.None;
+            TBuscarEstilo.Location = new Point(707, 47);
             TBuscarEstilo.Name = "TBuscarEstilo";
             TBuscarEstilo.Size = new Size(69, 23);
             TBuscarEstilo.TabIndex = 1;
@@ -133,8 +168,8 @@
             LTEstilos.AutoSize = true;
             LTEstilos.BackColor = Color.Transparent;
             LTEstilos.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
-            LTEstilos.ForeColor = Color.Black;
-            LTEstilos.Location = new Point(17, 29);
+            LTEstilos.ForeColor = Color.White;
+            LTEstilos.Location = new Point(45, 38);
             LTEstilos.Name = "LTEstilos";
             LTEstilos.Size = new Size(158, 28);
             LTEstilos.TabIndex = 0;
@@ -144,23 +179,27 @@
             // 
             DTGVEstilos.BackgroundColor = Color.Thistle;
             DTGVEstilos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DTGVEstilos.Location = new Point(12, 101);
+            DTGVEstilos.Dock = DockStyle.Fill;
+            DTGVEstilos.Location = new Point(0, 101);
             DTGVEstilos.Name = "DTGVEstilos";
             DTGVEstilos.RowTemplate.Height = 25;
-            DTGVEstilos.Size = new Size(589, 339);
+            DTGVEstilos.Size = new Size(1190, 376);
             DTGVEstilos.TabIndex = 6;
+            DTGVEstilos.CellContentClick += DTGVEstilos_CellContentClick;
             // 
             // Ver_estilos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(615, 450);
-            Controls.Add(PVerEstilos);
+            ClientSize = new Size(1190, 477);
             Controls.Add(DTGVEstilos);
+            Controls.Add(PVerEstilos);
             Name = "Ver_estilos";
             Text = "Ver_estilos";
+            Load += Ver_estilos_Load;
             PVerEstilos.ResumeLayout(false);
             PVerEstilos.PerformLayout();
+            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)DTGVEstilos).EndInit();
             ResumeLayout(false);
         }
@@ -168,13 +207,15 @@
         #endregion
 
         private Panel PVerEstilos;
-        private FontAwesome.Sharp.IconButton IBEliminarEstilo;
-        private FontAwesome.Sharp.IconButton IBAgregarEstilo;
-        private FontAwesome.Sharp.IconButton IBEditar;
         private ComboBox CBOpcionesEstilos;
         private Label LBuscar;
         private TextBox TBuscarEstilo;
         private Label LTEstilos;
         private DataGridView DTGVEstilos;
+        private Panel panel1;
+        private FontAwesome.Sharp.IconButton IBRehabilitarCliente;
+        private FontAwesome.Sharp.IconButton IBEditar;
+        private FontAwesome.Sharp.IconButton IBEliminarCliente;
+        private FontAwesome.Sharp.IconButton IBAgregarCliente;
     }
 }

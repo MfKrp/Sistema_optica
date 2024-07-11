@@ -73,5 +73,10 @@ namespace CapaPresentacion.Secretaria
         {
 
         }
+
+        private void PVerClientes_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
